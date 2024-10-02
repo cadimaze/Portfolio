@@ -9,10 +9,8 @@ const Contact = () => {
                 <div className="text-gray-300 my-3">
                     <h3 className="text-4xl font-semibold mb-5">Sobre <span>Mim</span></h3>
                     <p className="text-justify leading-7 w-11/12 mx-auto">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                        eos, quam vel quisquam, explicabo sit labore dignissimos optio
-                        ratione quibusdam doloribus pariatur consequuntur sint.
-                        Reprehenderit cupiditate possimus facere quasi voluptatem?
+                    Guilherme Cadima, 23 anos, moro em São Paulo Capital. Desenvolvedor de Software em formação pela Universidade Paulista.
+Sou apaixonado por aprendizado, animais, Super-Heróis, RPG de Mesa e me considero um amante do Cinema, meu livro preferido é “A Arte da Guerra” de Sun Tzu.
                     </p>
                 </div>
 

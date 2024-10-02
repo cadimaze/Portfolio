@@ -1,17 +1,18 @@
-import profilepic from "../assets/Design_sem_nome-removebg-preview.png";
+import profilepic from "../assets/ICONE.png";
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect";
 import {
   AiOutlineGithub,
   AiOutlineInstagram,
   AiOutlineLinkedin,
+  AiOutlineWhatsApp,
 } from "react-icons/ai";
 import {
   DiAws,
+  DiCode,
+  DiDatabase,
   DiGithubBadge,
-  DiNodejsSmall,
   DiPython,
-  DiReact,
 } from "react-icons/di";
 import { motion } from "framer-motion";
 
@@ -85,6 +86,10 @@ const Hero = () => {
                         <motion.a whileHover={{ scale: 1.2 }} href="https://www.instagram.com/cadimaz/">
                             <AiOutlineInstagram/>
                         </motion.a>
+
+                        <motion.a whileHover={{ scale: 1.2 }} href="https://wa.me/5511947436291?text=Olá%20Guilherme">
+                            <AiOutlineWhatsApp/>
+                        </motion.a>
                     </div>
                 </motion.div>
             </motion.div>
@@ -111,8 +116,8 @@ const Hero = () => {
             <DiPython className="text-orange-600 mx-2" />
             <DiGithubBadge className="text-white mx-2" />
             <DiAws className="text-orange-500 mx-2" />
-            <DiReact className="text-blue-500 mx-2" />
-            <DiNodejsSmall className="text-green-500 mx-2" />
+            <DiDatabase className="text-blue-500 mx-2" />
+            <DiCode className="text-green-500 mx-2" />
 
         </motion.div>
 

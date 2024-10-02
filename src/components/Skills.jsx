@@ -2,9 +2,9 @@ import {
   DiAws,
   DiPython,
   DiGithubBadge,
-  DiStreamline,
   DiDatabase,
   DiCode,
+  DiSublime,
 } from "react-icons/di"
 import Reveal from "./Reveal"
 
@@ -14,9 +14,9 @@ const skills = [
       technologies: [
         { name: 'AWS', icon: <DiAws className='text-orange-600' /> },
         { name: 'Git', icon: <DiGithubBadge className='text-blue-600' /> },
-        { name: 'SQl', icon: <DiDatabase className='text-blue-600' /> },
+        { name: 'SQl', icon: <DiDatabase className='text-yellow-600' /> },
         { name: 'Python', icon: <DiPython className='text-orange-600' /> },
-        { name: 'Service Now', icon: <DiStreamline className='text-yellow-500' /> },
+        { name: 'ServiceNow', icon: <DiSublime className='text-blue-500' /> },
         { name: 'Web', icon: <DiCode className='text-blue-500' /> },
       ],
     },

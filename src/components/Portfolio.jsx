@@ -1,16 +1,16 @@
 /* eslint-disable react/jsx-key */
-import project1 from "../assets/project1.png"
+import project1 from "../assets/CRUD.jpeg"
 import { AiOutlineGithub } from 'react-icons/ai'
 import Reveal from './Reveal';
 
 const projects = [
     {
       img: project1,
-      title: "Project #1",
-      description: "UI for frontend development using React.",
+      title: "CRUD",
+      description: "Realizei um CRUD básico para mostrar conhecimento de realização de APIs.",
       links: {
         site: "#",
-        github: "#",
+        github: "https://github.com/cadimaze/Case-Tech-Lab",
       },
     },
   ]
@@ -18,7 +18,7 @@ const projects = [
 const Portfolio = () => {
   return (
     <div className='max-w-[1000px] mx-auto p-6 md:my-20' id="portfolio">
-        <h2 className='text-3xl font-bold text-gray-200 mb-8'>Portfolio</h2>
+        <h2 className='text-3xl font-bold text-gray-200 mb-8'>Portfólio</h2>
         {projects.map((project, index) => (
             <Reveal>
             <div key={index} 
@@ -34,11 +34,11 @@ const Portfolio = () => {
                     <h3 className='text-2xl font-semibold text-gray-200 mb-4'>{project.title}</h3>
                     <p className='text-gray-300 mb-4'>{project.description}</p>
                     <div className='flex space-x-4'>
-                        <a href={project.links.site}
+                        {/* <a href={project.links.site}
                             className='px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700
                                         transition duration-300'>
                             View Site
-                        </a>
+                        </a> */}
                         <a href={project.links.github}
                             className='px-4 py-2 bg-slate-600 text-gray-200 rounded-lg hover:bg-slate-700
                                         transition duration-300'>

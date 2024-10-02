@@ -1,5 +1,4 @@
-import React from 'react'
-import { FaGithubSquare, FaInstagram } from 'react-icons/fa'
+import { FaGithubSquare, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -7,8 +6,9 @@ const Footer = () => {
         <div className='space-y-4'>
             <h3 className='text-2xl text-gray-200 font-semibold'>G. Cadima</h3>
             <div className='flex flex-row gap-6 text-gray-400 text-4xl'>
-                <a href="#"><FaGithubSquare /></a>
-                <a href="#"><FaInstagram /></a>
+                <a href="https://github.com/cadimaze"><FaGithubSquare /></a>
+                <a href="https://www.instagram.com/cadimaz/"><FaInstagram /></a>
+                <a href="https://www.linkedin.com/in/guilherme-cadima-b140871b5/"><FaLinkedin /></a>
             </div>
 
         </div>
