@@ -14,7 +14,7 @@ const skills = [
       technologies: [
         { name: 'AWS', icon: <DiAws className='text-orange-600' /> },
         { name: 'Git', icon: <DiGithubBadge className='text-blue-600' /> },
-        { name: 'SQl', icon: <DiDatabase className='text-yellow-600' /> },
+        { name: 'SQL', icon: <DiDatabase className='text-yellow-600' /> },
         { name: 'Python', icon: <DiPython className='text-orange-600' /> },
         { name: 'ServiceNow', icon: <DiSublime className='text-blue-500' /> },
         { name: 'Web', icon: <DiCode className='text-blue-500' /> },
@@ -34,7 +34,7 @@ const Skills = () => {
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8
                         ">
             {skills.map((skill, index) => (
-                <div key={index} className="border border-purple-900 p-6 rounded-lg bg-purple-900/20 shadow-lg 
+                <div key={index} className="border border-blue-900 p-6 rounded-lg bg-blue-900/20 shadow-lg 
                                 w-full md:w-1/2">
                     <h3 className="text-xl font-bold mb-4 text-center">{skill.category}</h3>
                     <div className="grid grid-cols-2 gap-4">

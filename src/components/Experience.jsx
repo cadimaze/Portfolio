@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 import Reveal from './Reveal'
 
@@ -20,7 +19,7 @@ const experiences = [
       },
       {
         company: 'Itaú Unibanco',
-        period: 'abril 2023 - Presente',
+        period: 'abril 2024 - Presente',
         description: 'Atuei no desenvolvimento de soluções utilizando Python e Terraform para o gerenciamento de recursos na AWS Lambda, integrando serviços como API Gateway, SQS e Lambda. Também fui responsável pela tratativa de eventos, incidentes e fluxos por meio da plataforma ServiceNow. Adotei a filosofia DevOps, aplicando metodologias ágeis na organização de projetos voltados à infraestrutura em AWS Cloud. Além disso, participei ativamente de processos de Integração e Entrega Contínuas (CI/CD) e conduzi troubleshooting nos produtos desenvolvidos. Durante o período, estudei e apliquei o desenvolvimento de APIs utilizando a especificação OpenAPI 3.0.',
       },
 ]
@@ -37,6 +36,7 @@ const Experience = () => {
         animate="visible"
         >
             {experiences.map((experience, index) => (
+                // eslint-disable-next-line react/jsx-key
                 <Reveal>
                 <motion.div
                     key={index}

@@ -57,7 +57,7 @@ const Hero = () => {
                 transition={{ duration: 1, delay: 1 }}
                 className="text-gray-300 max-w-[300px] md:max-w-[500px] md:text-2xl text-lg mb-6"
                 >
-                    Um entusiasta da tecnologia apaixonado pelo ramo a 4 anos.
+                    Um entusiasta da tecnologia apaixonado pelo ramo há 4 anos.
                 </motion.p>
 
                 <motion.div
