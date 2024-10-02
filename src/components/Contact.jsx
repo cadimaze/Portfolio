@@ -34,7 +34,7 @@ Sou apaixonado por aprendizado, animais, Super-Heróis, RPG de Mesa e me conside
                 id="form"
             >
             <p className="text-gray-100 font-bold text-xl mb-2">
-              Let´s connect!
+              Fale comigo!
             </p>
             <input
                 type="text"
