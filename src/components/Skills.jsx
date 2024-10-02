@@ -1,10 +1,10 @@
 import {
-  DiJavascript1,
-  DiReact,
   DiAws,
-  DiGithubFull,
-  DiMysql,
   DiPython,
+  DiGithubBadge,
+  DiStreamline,
+  DiDatabase,
+  DiCode,
 } from "react-icons/di"
 import Reveal from "./Reveal"
 
@@ -13,11 +13,11 @@ const skills = [
       category: 'Backend',
       technologies: [
         { name: 'AWS', icon: <DiAws className='text-orange-600' /> },
-        { name: 'GitHub', icon: <DiGithubFull className='text-blue-600' /> },
-        { name: 'MySQl', icon: <DiMysql className='text-blue-600' /> },
+        { name: 'Git', icon: <DiGithubBadge className='text-blue-600' /> },
+        { name: 'SQl', icon: <DiDatabase className='text-blue-600' /> },
         { name: 'Python', icon: <DiPython className='text-orange-600' /> },
-        { name: 'JavaScript', icon: <DiJavascript1 className='text-yellow-500' /> },
-        { name: 'React', icon: <DiReact className='text-blue-500' /> },
+        { name: 'Service Now', icon: <DiStreamline className='text-yellow-500' /> },
+        { name: 'Web', icon: <DiCode className='text-blue-500' /> },
       ],
     },
   ]

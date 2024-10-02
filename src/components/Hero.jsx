@@ -4,12 +4,11 @@ import ShinyEffect from "./ShinyEffect";
 import {
   AiOutlineGithub,
   AiOutlineInstagram,
-  AiOutlineLink,
   AiOutlineLinkedin,
 } from "react-icons/ai";
 import {
-    DiAws,
-  DiGithubAlt,
+  DiAws,
+  DiGithubBadge,
   DiNodejsSmall,
   DiPython,
   DiReact,
@@ -110,7 +109,7 @@ const Hero = () => {
         >
             <p className="text-gray-200 mr-6">Meu Conjunto de Soluções</p>
             <DiPython className="text-orange-600 mx-2" />
-            <DiGithubAlt className="text-white mx-2" />
+            <DiGithubBadge className="text-white mx-2" />
             <DiAws className="text-orange-500 mx-2" />
             <DiReact className="text-blue-500 mx-2" />
             <DiNodejsSmall className="text-green-500 mx-2" />
