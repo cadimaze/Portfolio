@@ -13,11 +13,11 @@ const skills = [
       category: 'Backend',
       technologies: [
         { name: 'AWS', icon: <DiAws className='text-orange-600' /> },
-        { name: 'Git', icon: <DiGithubBadge className='text-blue-600' /> },
+        { name: 'Git', icon: <DiGithubBadge className='text-white' /> },
         { name: 'SQL', icon: <DiDatabase className='text-yellow-600' /> },
         { name: 'Python', icon: <DiPython className='text-orange-600' /> },
         { name: 'ServiceNow', icon: <DiSublime className='text-blue-500' /> },
-        { name: 'Web', icon: <DiCode className='text-blue-500' /> },
+        { name: 'Web', icon: <DiCode className='text-green-500' /> },
       ],
     },
   ]

@@ -15,7 +15,7 @@ const experiences = [
       {
         company: 'DigiSystem (FrontEnd)',
         period: 'Set 2023 - Dez 2023',
-        description: 'Fui convidado a participar de um projeto interno e novo na empresa, mudando de área, assim tive uma participação ativa no desenvolvimento do DORA, um prontuário eletrônico altamente eficaz e inovador. Com a minha experiência em backend auxiliei com ideias de Integração de dados, performance e otimização da segurança, sempre pensando na usabilidade e experiência do usuário.',
+        description: 'Devido a minhas habilidades de comunicação, fui convidado a participar de um projeto interno e novo na empresa, mudando de área, assim tive uma participação ativa no desenvolvimento do DORA, um prontuário eletrônico altamente eficaz e inovador. Com a minha experiência em backend auxiliei com ideias de Integração de dados, performance e otimização da segurança, sempre pensando na usabilidade e experiência do usuário.',
       },
       {
         company: 'Itaú Unibanco',
