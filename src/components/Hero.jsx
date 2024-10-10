@@ -1,10 +1,11 @@
-import profilepic from "../assets/ICONE.png";
+import profilepic from "../assets/IconeHerooo.png";
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect";
 import {
   AiOutlineGithub,
   AiOutlineInstagram,
   AiOutlineLinkedin,
+  AiOutlineTikTok,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 import {
@@ -32,7 +33,7 @@ const Hero = () => {
                         "Backend Dev",
                         1000,
                         "Tech Enthusiast",
-                        1000
+                        1000,
                     ]}
                     speed={50}
                     repeat={Infinity}
@@ -74,7 +75,7 @@ const Hero = () => {
                         Download CV
                     </motion.button> */}
 
-                    <div className="flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-20">
+                    <div className="flex gap-6 flex-row text-4xl md:text-6xl text-purple-600 z-20">
                         <motion.a whileHover={{ scale: 1.2 }} href="https://github.com/cadimaze">
                             <AiOutlineGithub/>
                         </motion.a>
@@ -90,6 +91,10 @@ const Hero = () => {
                         <motion.a whileHover={{ scale: 1.2 }} href="https://wa.me/5511947436291?text=Olá%20Guilherme">
                             <AiOutlineWhatsApp/>
                         </motion.a>
+
+                        <motion.a whileHover={{ scale: 1.2 }} href="https://www.tiktok.com/@cadimaze">
+                            <AiOutlineTikTok/>
+                        </motion.a>
                     </div>
                 </motion.div>
             </motion.div>
@@ -97,9 +102,9 @@ const Hero = () => {
 
             <motion.img 
                 src={profilepic}
-                className="w-[300px] md:w-[450px]"
+                className="w-[300px] md:w-[399px]"
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 2 }}
+                whileInView={{ opacity: 1, scale: 2}}
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
             />

@@ -14,7 +14,6 @@ const projects = [
       },
     },
   ]
-
 const Portfolio = () => {
   return (
     <div className='max-w-[1000px] mx-auto p-6 md:my-20' id="portfolio">
