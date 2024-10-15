@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div className="mt-24 max-w-[1200px] mx-auto relative">
-        <div className="grid md:grid-cols-2 place-items-center gap-8">
+        <div className="grid md:grid-cols-2 place-items-center gap-8" id="hero">
             <motion.div
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -78,23 +78,30 @@ const Hero = () => {
 
 
                     <div className="flex gap-6 flex-row text-4xl md:text-6xl text-purple-600 z-20">
-                        <motion.a whileHover={{ scale: 1.2 }} href="https://github.com/cadimaze">
+                        <motion.a whileHover={{ scale: 1.2 }} 
+                        onClick={() => window.open("https://github.com/cadimaze")}>
                             <AiOutlineGithub/>
                         </motion.a>
 
-                        <motion.a whileHover={{ scale: 1.2 }} href="https://www.linkedin.com/in/guilherme-cadima-b140871b5/">
-                            <AiOutlineLinkedin/>
+                        <motion.a 
+                        whileHover={{ scale: 1.2 }} 
+                        onClick={() => window.open("https://www.linkedin.com/in/guilherme-cadima-b140871b5/", "_blank", "noopener noreferrer")}>
+                        <AiOutlineLinkedin />
                         </motion.a>
 
-                        <motion.a whileHover={{ scale: 1.2 }} href="https://www.instagram.com/cadimaz/">
+
+                        <motion.a whileHover={{ scale: 1.2 }}
+                         onClick={() => window.open("https://www.instagram.com/cadimaz/")}>
                             <AiOutlineInstagram/>
                         </motion.a>
 
-                        <motion.a whileHover={{ scale: 1.2 }} href="https://wa.me/5511947436291?text=Olá%20Guilherme">
+                        <motion.a whileHover={{ scale: 1.2 }} 
+                        onClick={() => window.open("https://wa.me/5511947436291?text=Olá%20Guilherme")}>
                             <AiOutlineWhatsApp/>
                         </motion.a>
 
-                        <motion.a whileHover={{ scale: 1.2 }} href="https://www.tiktok.com/@cadimaze">
+                        <motion.a whileHover={{ scale: 1.2 }} 
+                        onClick={() => window.open("https://www.tiktok.com/@cadimaze")}>
                             <AiOutlineTikTok/>
                         </motion.a>
                     </div>
