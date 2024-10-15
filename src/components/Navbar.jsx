@@ -39,7 +39,7 @@ const Navbar = () => {
             <a href="#">G.Cadima</a>
 
             <ul className='hidden md:flex gap-12 z-10 cursor-pointer'>
-                <li><Link to="skills" smooth={true} offset={50} duration={500}>Sobre mim</Link></li>
+                <li><Link to="skills" smooth={true} offset={50} duration={500}>Habilidades</Link></li>
                 <li><Link to="portfolio" smooth={true} offset={50} duration={500}>Portfólio</Link></li>
                 <li><Link to="contact" smooth={true} offset={50} duration={500}>Contato</Link></li>
             </ul>
@@ -55,7 +55,7 @@ const Navbar = () => {
             className='fixed left-0 top-0 w-full min-h-screen bg-gray-900 z-40'
             >
                 <ul className='font-semibold text-4xl space-y-8 mt-24 text-center'>
-                    <li><Link to="skills" onClick={closeNav} smooth={true} offset={50} duration={500}>Sobre mim</Link></li>
+                    <li><Link to="skills" onClick={closeNav} smooth={true} offset={50} duration={500}>Habilidades</Link></li>
                     <li><Link to="portfolio" onClick={closeNav} smooth={true} offset={50} duration={500}>Portfólio</Link></li>
                     <li><Link to="contact" onClick={closeNav} smooth={true} offset={50} duration={500}>Contato</Link></li>
                 </ul>

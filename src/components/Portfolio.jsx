@@ -1,7 +1,9 @@
 /* eslint-disable react/jsx-key */
 import project1 from "../assets/CRUD.jpeg"
+// import project2 from "../assets/TikTok.jpg"
 import { AiOutlineGithub } from 'react-icons/ai'
 import Reveal from './Reveal';
+// import { SiTiktok } from "react-icons/si";
 
 const projects = [
     {
@@ -13,6 +15,15 @@ const projects = [
         github: "https://github.com/cadimaze/Case-Tech-Lab",
       },
     },
+    // {
+    //   img: project2,
+    //   title: "TikTok",
+    //   description: "Um pouco fora do mundo tech, tento fazer conteúdo sobre o dia a dia de um desenvolvedor na plataforma TikTok",
+    //   links: {
+    //     site: "#",
+    //     tiktok: "https://www.tiktok.com/@cadimaze/video/7390775879015714053?is_from_webapp=1&sender_device=pc&web_id=7359676320974865926",
+    //   },
+    // },
   ]
 const Portfolio = () => {
   return (

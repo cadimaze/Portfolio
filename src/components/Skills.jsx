@@ -1,23 +1,32 @@
 import {
-  DiAws,
-  DiPython,
-  DiGithubBadge,
-  DiDatabase,
-  DiCode,
   DiSublime,
+  DiMysql,
+  DiAngularSimple,
+  DiReact,
+  DiBootstrap,
+  DiJsBadge,
+  DiPhotoshop,
 } from "react-icons/di"
 import Reveal from "./Reveal"
+import { SiTerraform } from "react-icons/si"
 
 const skills = [
     {
-      category: 'Backend',
+    category: 'Frontend',
+    technologies: [
+      { name: 'React', icon: <DiReact className='text-blue-600' /> },
+      { name: 'JavaScript', icon: <DiJsBadge className='text-yellow-600' /> },
+      { name: 'Angular', icon: <DiAngularSimple className='text-red-600' /> },
+      { name: 'Bootstrap', icon: <DiBootstrap className='text-green-500' /> },
+    ],
+    },
+    {
+      category: 'Outros',
       technologies: [
-        { name: 'AWS', icon: <DiAws className='text-orange-600' /> },
-        { name: 'Git', icon: <DiGithubBadge className='text-white' /> },
-        { name: 'SQL', icon: <DiDatabase className='text-yellow-600' /> },
-        { name: 'Python', icon: <DiPython className='text-orange-600' /> },
-        { name: 'ServiceNow', icon: <DiSublime className='text-blue-500' /> },
-        { name: 'Web', icon: <DiCode className='text-green-500' /> },
+        { name: 'MySql', icon: <DiMysql className='text-blue-600' /> },
+        { name: 'ServiceNow', icon: <DiSublime className='text-white' /> },
+        { name: 'Photoshop', icon: <DiPhotoshop className='text-blue-500' /> },
+        { name: 'Terraform', icon: <SiTerraform className='text-blue-500' /> },
       ],
     },
   ]
@@ -28,7 +37,7 @@ const Skills = () => {
         <Reveal>
         <h2 className="text-3xl font-bold mb-4 text-center">Habilidades</h2>
         <p className="text-center mb-8">
-            Adquiri muito conhecimento em diversas linguagens ao longo da minha carreira.
+            Além do meu conjunto de soluções, possuo habilidades moderadas em outros tipos de linguagens e serviços.
         </p>
 
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8
