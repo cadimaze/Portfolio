@@ -1,4 +1,4 @@
-import profilepic from "../assets/IconeHerooo.png";
+import profilepic from "../assets/ICONE.png";
 import { TypeAnimation } from "react-type-animation";
 import ShinyEffect from "./ShinyEffect";
 import {
