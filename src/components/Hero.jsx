@@ -9,13 +9,13 @@ import {
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 import {
-  DiAws,
-  DiCode,
   DiDatabase,
   DiGithubBadge,
   DiPython,
 } from "react-icons/di";
 import { motion } from "framer-motion";
+import { FaAws, FaReact } from "react-icons/fa";
+import { SiAwslambda } from "react-icons/si";
 
 
 const Hero = () => {
@@ -127,11 +127,12 @@ const Hero = () => {
             className="flex flex-row text-7xl px-12 md:px-0 w-full justify-center items-center py-24"
         >
             <p className="text-gray-200 mr-6">Meu Conjunto de Soluções</p>
-            <DiPython className="text-orange-600 mx-2" />
+            <DiPython className="text-yellow-600 mx-2" />
+            <FaAws className="text-orange-500 mx-2" />
+            <SiAwslambda className="text-orange-500 mx-2" />
             <DiGithubBadge className="text-white mx-2" />
-            <DiAws className="text-orange-500 mx-2" />
             <DiDatabase className="text-blue-500 mx-2" />
-            <DiCode className="text-green-500 mx-2" />
+            <FaReact className="text-blue-500 mx-2" />
 
         </motion.div>
 

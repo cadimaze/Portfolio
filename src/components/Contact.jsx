@@ -10,14 +10,14 @@ const Contact = () => {
                     <h3 className="text-4xl font-semibold mb-5">Sobre <span>Mim</span></h3>
                     <p className="text-justify leading-7 w-11/12 mx-auto">
                     Guilherme Cadima, 24 anos, moro em São Paulo, Capital. Desenvolvedor de Software em formação pela Universidade Paulista.
-Sou apaixonado por aprendizado, animais, Super-Heróis, RPG de Mesa e me considero um amante do Cinema, meu livro preferido é “A Arte da Guerra” de Sun Tzu.
+Sou pai de uma linda menina, São Paulino roxo e apaixonado por academia, animais, Super-Heróis, RPG de Mesa e me considero um amante do Cinema, meu livro preferido é “1984” de George Orwell.
                     </p>
                 </div>
 
                 <div className="flex mt-10 items-center gap-7">
 
                     <div className="bg-gray-800/40 p-5 rounded-lg">
-                        <h3 className="md:text-4xl text-2xl font-semibold text-white">4
+                        <h3 className="md:text-4xl text-2xl font-semibold text-white">5
                             <span>+</span>
                         </h3>
                         <p className="text-xs md:text-base"><span>Anos de experiência.</span></p>

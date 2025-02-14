@@ -1,6 +1,5 @@
 import {
   DiSublime,
-  DiMysql,
   DiAngularSimple,
   DiReact,
   DiBootstrap,
@@ -8,7 +7,7 @@ import {
   DiPhotoshop,
 } from "react-icons/di"
 import Reveal from "./Reveal"
-import { SiTerraform } from "react-icons/si"
+import { SiAmazonapigateway, SiAmazoncloudwatch, SiAmazonsqs, SiTerraform } from "react-icons/si"
 
 const skills = [
     {
@@ -21,12 +20,14 @@ const skills = [
     ],
     },
     {
-      category: 'Outros',
+      category: 'Back-end e Outros',
       technologies: [
-        { name: 'MySql', icon: <DiMysql className='text-blue-600' /> },
+        { name: 'Terraform', icon: <SiTerraform className='text-blue-500' /> },
+        { name: 'ApiGtw', icon: <SiAmazonapigateway className='text-blue-500' /> },
+        { name: 'SQS', icon: <SiAmazonsqs className='text-yellow-500' /> },
+        { name: 'Cloudwatch', icon: <SiAmazoncloudwatch className='text-green-500' /> },
         { name: 'ServiceNow', icon: <DiSublime className='text-white' /> },
         { name: 'Photoshop', icon: <DiPhotoshop className='text-blue-500' /> },
-        { name: 'Terraform', icon: <SiTerraform className='text-blue-500' /> },
       ],
     },
   ]
