@@ -8,8 +8,18 @@ const projects = [
     img: project1,
     title: "CRUD API",
     tags: ["Python", "REST", "Backend"],
-    description: "API RESTful completa demonstrando criação, leitura, atualização e deleção de dados — base sólida de backend com boas práticas de arquitetura.",
+    description: "API RESTful completa demonstrando criação, leitura, atualização e deleção de dados — a base que originou o CRUD Lab.",
     links: { github: "https://github.com/cadimaze/Case-Tech-Lab" },
+  },
+  {
+    gradient: "from-indigo-600 via-blue-700 to-cyan-800",
+    emoji: "🏫",
+    title: "CRUD Lab",
+    tags: ["Educacional", "JavaScript", "Interativo", "Didático"],
+    description: "Plataforma educacional onde alunos aprendem e praticam operações CRUD de forma visual e didática. Execute cenários reais em tempo real, visualize o que acontece em cada etapa e entenda na prática como Create, Read, Update e Delete funcionam — sem precisar configurar nada.",
+    links: {
+      site: "https://crud-lab.vercel.app/",
+    },
   },
   {
     img: project2,
@@ -70,7 +80,7 @@ const Portfolio = () => {
                   className={`w-full min-h-[240px] bg-gradient-to-br ${project.gradient} rounded-xl border border-white/10 flex flex-col items-center justify-center gap-3 shadow-lg`}
                 >
                   <span className="text-8xl">{project.emoji}</span>
-                  <span className="text-white font-bold text-2xl tracking-[0.3em]">HIVE</span>
+                  <span className="text-white font-bold text-2xl tracking-[0.2em]">{project.title.toUpperCase()}</span>
                   <div className="flex gap-2 flex-wrap justify-center mt-1">
                     {project.tags.map((t, i) => (
                       <span key={i} className="text-[10px] bg-black/20 text-white/80 px-2.5 py-1 rounded-full">{t}</span>
