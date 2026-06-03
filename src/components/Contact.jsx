@@ -8,16 +8,25 @@ const Contact = () => {
             <div>
                 <div className="text-gray-300 my-3">
                     <h3 className="text-4xl font-semibold mb-5">Sobre <span className="text-purple-500">Mim</span></h3>
+
                     <p className="text-justify leading-8 w-11/12 mx-auto text-base text-gray-300">
                         Me chamo <strong>Guilherme Cadima</strong>, tenho 24 anos e moro em São Paulo, Capital.
                         Sou Desenvolvedor de Software cursando Análise e Desenvolvimento de Sistemas pela Universidade Paulista,
                         com foco em Engenharia de Dados e desenvolvimento back-end.
                     </p>
+
                     <p className="text-justify leading-8 w-11/12 mx-auto text-base text-gray-300 mt-4">
                         Apaixonado por tecnologia há 6 anos, trabalho diariamente com Python, AWS Cloud e pipelines de dados —
                         transformando dados brutos em soluções escaláveis e confiáveis. Uso IAs como ferramenta de produtividade
                         para acelerar e aprimorar o desenvolvimento.
                     </p>
+
+                    <p className="text-justify leading-8 w-11/12 mx-auto text-base text-gray-300 mt-4">
+                        Tenho uma paixão crescente por <strong className="text-purple-400">Machine Learning</strong> — estudo algoritmos,
+                        modelos preditivos e aplicações práticas com Python, e tenho como objetivo próximo atuar de forma
+                        dedicada nessa área, unindo minha base sólida em Engenharia de Dados com a inteligência dos modelos.
+                    </p>
+
                     <p className="text-justify leading-8 w-11/12 mx-auto text-base text-gray-300 mt-4">
                         Fora do código, sou pai de uma linda menina, torcedor roxo do São Paulo FC,
                         fã de academia, animais, Super-Heróis, RPG de Mesa e Cinema.

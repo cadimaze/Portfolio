@@ -33,6 +33,8 @@ const Hero = () => {
                         1000,
                         "Data Engineer",
                         1000,
+                        "ML Enthusiast",
+                        1000,
                         "Tech Enthusiast",
                         1000,
                     ]}
@@ -95,7 +97,7 @@ const Hero = () => {
                         </motion.a>
 
                         <motion.a whileHover={{ scale: 1.2 }} className="cursor-pointer"
-                        onClick={() => window.open("https://wa.me/5511947436291?text=Olá%20Guilherme")}>
+                        onClick={() => window.open("https://wa.me/5511947436291?text=Ol%C3%A1%20Guilherme")}>
                             <AiOutlineWhatsApp/>
                         </motion.a>
 
