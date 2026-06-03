@@ -4,7 +4,7 @@ import {
 import {
   SiAmazonapigateway, SiAmazoncloudwatch, SiAmazonsqs, SiTerraform, SiAwslambda,
 } from "react-icons/si"
-import { FaAws, FaRobot } from "react-icons/fa"
+import { FaAws } from "react-icons/fa"
 import { GiBrain } from "react-icons/gi"
 import Reveal from "./Reveal"
 
@@ -23,22 +23,22 @@ const skills = [
     category: 'Cloud & Infra',
     label: '02',
     technologies: [
-      { name: 'AWS Glue',    icon: <FaAws               className='text-orange-400' /> },
-      { name: 'Lambda',      icon: <SiAwslambda         className='text-orange-300' /> },
-      { name: 'Terraform',   icon: <SiTerraform         className='text-indigo-400' /> },
-      { name: 'API Gateway', icon: <SiAmazonapigateway  className='text-sky-400' /> },
-      { name: 'SQS',         icon: <SiAmazonsqs         className='text-yellow-400' /> },
-      { name: 'CloudWatch',  icon: <SiAmazoncloudwatch  className='text-green-400' /> },
+      { name: 'AWS Glue',    icon: <FaAws              className='text-orange-400' /> },
+      { name: 'Lambda',      icon: <SiAwslambda        className='text-orange-300' /> },
+      { name: 'Terraform',   icon: <SiTerraform        className='text-indigo-400' /> },
+      { name: 'API Gateway', icon: <SiAmazonapigateway className='text-sky-400' /> },
+      { name: 'SQS',         icon: <SiAmazonsqs        className='text-yellow-400' /> },
+      { name: 'CloudWatch',  icon: <SiAmazoncloudwatch className='text-green-400' /> },
     ],
   },
   {
     category: 'Linguagens & IA',
     label: '03',
     technologies: [
-      { name: 'Python (Avançado)', icon: <DiPython       className='text-yellow-400' /> },
-      { name: 'PySpark',            icon: <FaAws          className='text-red-400' /> },
-      { name: 'GitHub',             icon: <DiGithubBadge  className='text-slate-300' /> },
-      { name: 'IA para Dev',        icon: <GiBrain        className='text-cyan-400' /> },
+      { name: 'Python (Avançado)', icon: <DiPython      className='text-yellow-400' /> },
+      { name: 'PySpark',           icon: <FaAws         className='text-red-400' /> },
+      { name: 'GitHub',            icon: <DiGithubBadge className='text-slate-300' /> },
+      { name: 'IA para Dev',       icon: <GiBrain       className='text-cyan-400' /> },
     ],
   },
 ]
@@ -55,8 +55,9 @@ const Skills = () => {
 
         <div className="flex flex-col md:flex-row gap-5">
           {skills.map((skill, index) => (
-            <motion_div key={index}
-              className="group flex-1 border border-white/[0.07] bg-white/[0.025] hover:bg-white/[0.04] hover:border-cyan-900/60 rounded-xl p-6 transition-all duration-300"
+            <div
+              key={index}
+              className="flex-1 border border-white/[0.07] bg-white/[0.025] hover:bg-white/[0.04] hover:border-cyan-900/60 rounded-xl p-6 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-5">
                 <h3 className="text-slate-200 font-semibold text-base">{skill.category}</h3>
@@ -70,7 +71,7 @@ const Skills = () => {
                   </div>
                 ))}
               </div>
-            </motion_div>
+            </div>
           ))}
         </div>
       </Reveal>
