@@ -24,9 +24,10 @@ const projects = [
     gradient: "from-amber-600 via-yellow-500 to-amber-400",
     emoji: "🐝",
     title: "Hive — Controle Financeiro",
-    description: "PWA de controle financeiro pessoal com sincronização em tempo real via Firebase. Conta com Dashboard, Transações, Histórico, Simulador de juros, Investimentos, Cartões e Assinaturas — com autenticação Google e suporte a modo escuro.",
+    description: "PWA de controle financeiro pessoal com sincronização em tempo real via Firebase. Conta com Dashboard, Transações, Histórico, Simulador de juros, Investimentos, Cartões e Assinaturas — com autenticação via Google.",
     tags: ["Firebase", "PWA", "JavaScript", "Tailwind"],
     links: {
+      site: "https://hive-finapp.vercel.app",
       github: "https://github.com/cadimaze/planilha-de-gastos",
     },
   },
@@ -71,6 +72,16 @@ const Portfolio = () => {
               <h3 className='text-2xl font-semibold text-gray-200 mb-3'>{project.title}</h3>
               <p className='text-gray-300 mb-5 text-base leading-relaxed'>{project.description}</p>
               <div className='flex space-x-3'>
+                {project.links.site && (
+                  <a
+                    href={project.links.site}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className='flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition duration-300 text-sm font-medium'
+                  >
+                    <AiOutlineLink size={18} /> Ver Site
+                  </a>
+                )}
                 {project.links.github && (
                   <a
                     href={project.links.github}
@@ -89,16 +100,6 @@ const Portfolio = () => {
                     className='flex items-center gap-2 px-4 py-2 bg-slate-700 text-gray-200 rounded-lg hover:bg-blue-700 transition duration-300 text-sm font-medium'
                   >
                     <AiOutlineLinkedin size={18} /> LinkedIn
-                  </a>
-                )}
-                {project.links.site && project.links.site !== '#' && (
-                  <a
-                    href={project.links.site}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className='flex items-center gap-2 px-4 py-2 bg-slate-700 text-gray-200 rounded-lg hover:bg-green-700 transition duration-300 text-sm font-medium'
-                  >
-                    <AiOutlineLink size={18} /> Ver Site
                   </a>
                 )}
               </div>
