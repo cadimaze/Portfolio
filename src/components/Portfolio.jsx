@@ -1,16 +1,8 @@
-import project1 from "../assets/CRUD.jpeg";
 import project2 from "../assets/Stackspot.jpg";
 import { AiOutlineGithub, AiOutlineLinkedin, AiOutlineLink } from 'react-icons/ai';
 import Reveal from './Reveal';
 
 const projects = [
-  {
-    img: project1,
-    title: "CRUD API",
-    tags: ["Python", "REST", "Backend"],
-    description: "API RESTful completa demonstrando criação, leitura, atualização e deleção de dados — a base que originou o CRUD Lab.",
-    links: { github: "https://github.com/cadimaze/Case-Tech-Lab" },
-  },
   {
     gradient: "from-indigo-600 via-blue-700 to-cyan-800",
     emoji: "🏫",
@@ -19,6 +11,7 @@ const projects = [
     description: "Plataforma educacional onde alunos aprendem e praticam operações CRUD de forma visual e didática. Execute cenários reais em tempo real, visualize o que acontece em cada etapa e entenda na prática como Create, Read, Update e Delete funcionam — sem precisar configurar nada.",
     links: {
       site: "https://crud-lab.vercel.app/",
+      github: "https://github.com/cadimaze/Case-Tech-Lab",
     },
   },
   {
