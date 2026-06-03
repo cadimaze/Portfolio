@@ -7,123 +7,150 @@ import {
   AiOutlineTikTok,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
-import {
-  DiDatabase,
-  DiGithubBadge,
-  DiPython,
-} from "react-icons/di";
+import { DiDatabase, DiGithubBadge, DiPython } from "react-icons/di";
 import { motion } from "framer-motion";
 import { FaAws, FaReact } from "react-icons/fa";
 import { SiAwslambda } from "react-icons/si";
 
+const socials = [
+  { icon: <AiOutlineGithub />,   url: "https://github.com/cadimaze" },
+  { icon: <AiOutlineLinkedin />, url: "https://www.linkedin.com/in/guilherme-cadima-b140871b5/" },
+  { icon: <AiOutlineInstagram />,url: "https://www.instagram.com/cadimaz/" },
+  { icon: <AiOutlineWhatsApp />, url: "https://wa.me/5511947436291?text=Ol%C3%A1%20Guilherme" },
+  { icon: <AiOutlineTikTok />,   url: "https://www.tiktok.com/@cadimaze" },
+]
+
+const stack = [
+  { icon: <DiPython />,      color: 'text-yellow-400', label: 'Python' },
+  { icon: <FaAws />,         color: 'text-orange-400', label: 'AWS' },
+  { icon: <SiAwslambda />,   color: 'text-orange-300', label: 'Lambda' },
+  { icon: <DiGithubBadge />, color: 'text-slate-300',  label: 'GitHub' },
+  { icon: <DiDatabase />,    color: 'text-sky-400',    label: 'Database' },
+  { icon: <FaReact />,       color: 'text-sky-300',    label: 'React' },
+]
+
 const Hero = () => {
   return (
-    <div className="mt-24 max-w-[900px] mx-auto px-6 relative">
-        <div className="flex flex-col items-center text-center" id="hero">
-            <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="w-full max-w-[680px]"
-            >
-                <TypeAnimation
-                    sequence={[
-                        "Backend Dev",
-                        1000,
-                        "Data Engineer",
-                        1000,
-                        "ML Enthusiast",
-                        1000,
-                        "Tech Enthusiast",
-                        1000,
-                    ]}
-                    speed={50}
-                    repeat={Infinity}
-                    className="font-bold text-gray-400 text-xl md:text-4xl italic- mb-4 block"
-                />
+    <div className="min-h-screen flex flex-col justify-center max-w-[860px] mx-auto px-6 relative">
 
-                <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="text-gray-200 md:text-7xl text-5xl tracking-tight mb-4"
-                >
-                    Olá, eu sou <br/>
-                    <span className="text-purple-500">Guilherme Cadima</span>
-                </motion.p>
-
-                <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 1 }}
-                className="text-gray-300 md:text-xl text-lg mb-8 max-w-[480px] mx-auto"
-                >
-                    Um entusiasta da tecnologia apaixonado pelo ramo há 6 anos.
-                </motion.p>
-
-                <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 1.5 }}
-                className="flex flex-col sm:flex-row justify-center items-center gap-6 my-4"
-                >
-                    <motion.button
-                    whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)" }}
-                    className="z-10 cursor-pointer font-bold text-gray-200 w-full sm:w-auto px-6 py-4 border border-purple-400 rounded-xl"
-                    onClick={() => window.open("https://drive.google.com/file/d/1jQUWnv1oSn1Brzg5rrLNyfSdyJTy-egy/view?usp=sharing", "_blank")}
-                    >
-                    Baixar Currículo
-                    </motion.button>
-
-                    <div className="flex gap-5 flex-row text-4xl md:text-5xl text-purple-600 z-20">
-                        <motion.a whileHover={{ scale: 1.2 }} className="cursor-pointer"
-                        onClick={() => window.open("https://github.com/cadimaze")}>
-                            <AiOutlineGithub/>
-                        </motion.a>
-                        <motion.a whileHover={{ scale: 1.2 }} className="cursor-pointer"
-                        onClick={() => window.open("https://www.linkedin.com/in/guilherme-cadima-b140871b5/", "_blank", "noopener noreferrer")}>
-                            <AiOutlineLinkedin />
-                        </motion.a>
-                        <motion.a whileHover={{ scale: 1.2 }} className="cursor-pointer"
-                         onClick={() => window.open("https://www.instagram.com/cadimaz/")}>
-                            <AiOutlineInstagram/>
-                        </motion.a>
-                        <motion.a whileHover={{ scale: 1.2 }} className="cursor-pointer"
-                        onClick={() => window.open("https://wa.me/5511947436291?text=Ol%C3%A1%20Guilherme")}>
-                            <AiOutlineWhatsApp/>
-                        </motion.a>
-                        <motion.a whileHover={{ scale: 1.2 }} className="cursor-pointer"
-                        onClick={() => window.open("https://www.tiktok.com/@cadimaze")}>
-                            <AiOutlineTikTok/>
-                        </motion.a>
-                    </div>
-                </motion.div>
-            </motion.div>
-        </div>
-
+      <div className="flex flex-col items-center text-center pt-20 pb-6" id="hero">
         <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="w-full"
+        >
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: 2 }}
-            className="flex flex-row flex-wrap text-6xl px-4 md:px-0 w-full justify-center items-center gap-3 py-20"
-        >
-            <p className="text-gray-200 mr-2 text-2xl md:text-3xl font-light w-full text-center mb-2">Meu Conjunto de Soluções</p>
-            <DiPython className="text-yellow-500" />
-            <FaAws className="text-orange-500" />
-            <SiAwslambda className="text-orange-400" />
-            <DiGithubBadge className="text-white" />
-            <DiDatabase className="text-blue-500" />
-            <FaReact className="text-blue-400" />
-        </motion.div>
+            transition={{ duration: 0.6 }}
+            className="font-mono text-cyan-400 text-xs tracking-[0.25em] uppercase mb-8"
+          >
+            — Bem-vindo ao meu portfólio —
+          </motion.p>
 
-        <div className="absolute inset-0 hidden md:block">
-            <ShinyEffect left={0} top={0} size={1400} />
+          <motion.h1
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.15 }}
+            className="text-slate-100 text-5xl md:text-8xl font-bold tracking-tight leading-none mb-3"
+          >
+            Guilherme<br />
+            <span className="text-cyan-400">Cadima</span>
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="my-5"
+          >
+            <TypeAnimation
+              sequence={[
+                "Backend Developer", 1200,
+                "Data Engineer",     1200,
+                "ML Enthusiast",     1200,
+                "Tech Enthusiast",   1200,
+              ]}
+              speed={55}
+              repeat={Infinity}
+              className="font-mono text-slate-400 text-sm md:text-lg tracking-[0.15em]"
+            />
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.45 }}
+            className="text-slate-400 text-sm md:text-base mb-10 max-w-[460px] mx-auto leading-7"
+          >
+            Desenvolvedor de Software & Engenheiro de Dados com 6 anos de experiência,
+            especializado em Python, AWS Cloud e pipelines de dados.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex flex-col sm:flex-row justify-center items-center gap-5 mb-2"
+          >
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => window.open("https://drive.google.com/file/d/1jQUWnv1oSn1Brzg5rrLNyfSdyJTy-egy/view?usp=sharing", "_blank")}
+              className="w-full sm:w-auto cursor-pointer font-semibold text-[#060d1a] bg-cyan-400 hover:bg-cyan-300 transition-colors px-8 py-3 rounded-lg text-sm tracking-wide"
+            >
+              Baixar Currículo
+            </motion.button>
+
+            <div className="flex gap-5 text-2xl text-slate-500">
+              {socials.map(({ icon, url }, i) => (
+                <motion.a
+                  key={i}
+                  whileHover={{ scale: 1.2, y: -2 }}
+                  onClick={() => window.open(url, "_blank")}
+                  className="cursor-pointer hover:text-cyan-400 transition-colors duration-200"
+                >
+                  {icon}
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+        className="border-t border-white/[0.06] pt-10 pb-6"
+      >
+        <p className="text-center font-mono text-slate-600 text-[10px] tracking-[0.3em] uppercase mb-6">Stack principal</p>
+        <div className="flex flex-wrap justify-center gap-8">
+          {stack.map(({ icon, color, label }, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ y: -4 }}
+              className={`flex flex-col items-center gap-1.5 text-4xl ${color} opacity-60 hover:opacity-100 transition-all duration-200 cursor-default`}
+              title={label}
+            >
+              {icon}
+              <span className="text-[10px] font-mono text-slate-500 tracking-widest">{label}</span>
+            </motion.div>
+          ))}
         </div>
+      </motion.div>
+
+      <div className="absolute inset-0 hidden md:block pointer-events-none">
+        <ShinyEffect left={0} top={0} size={1400} />
+      </div>
     </div>
   )
 }
