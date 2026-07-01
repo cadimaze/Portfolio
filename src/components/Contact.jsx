@@ -12,7 +12,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-5">
             <p className="text-slate-300 text-sm leading-8">
-              Me chamo <strong className="text-slate-100">Guilherme Cadima</strong>, tenho 24 anos e moro em São Paulo, Capital.
+              Me chamo <strong className="text-slate-100">Guilherme Cadima</strong>, tenho 25 anos e moro em São Paulo, Capital.
               Sou Desenvolvedor de Software cursando Análise e Desenvolvimento de Sistemas pela Universidade Paulista,
               com foco em Engenharia de Dados e desenvolvimento back-end.
             </p>
