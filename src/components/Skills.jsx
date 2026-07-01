@@ -1,56 +1,62 @@
 import {
-  DiAngularSimple, DiReact, DiBootstrap, DiJsBadge, DiPython, DiGithubBadge, DiGit,
+  DiReact, DiBootstrap, DiJsBadge, DiPython, DiGithubBadge, DiGit, DiHtml5, DiAngularSimple,
 } from "react-icons/di"
 import {
   SiAmazonapigateway, SiAmazoncloudwatch, SiAmazonsqs, SiTerraform, SiAwslambda,
-  SiTailwindcss, SiFirebase,
+  SiTailwindcss, SiFirebase, SiDocker, SiJira, SiGithubactions,
 } from "react-icons/si"
 import { FaAws } from "react-icons/fa"
 import { GiBrain } from "react-icons/gi"
-import { BsDatabase } from "react-icons/bs"
+import { BsDatabase, BsSearch } from "react-icons/bs"
+import { MdCloud } from "react-icons/md"
 import Reveal from "./Reveal"
 
 const skills = [
   {
-    category: 'Frontend & UI',
+    category: 'Linguagens',
     label: '01',
     technologies: [
-      { name: 'React',        icon: <DiReact          className='text-sky-400' /> },
-      { name: 'JavaScript',   icon: <DiJsBadge        className='text-yellow-400' /> },
-      { name: 'Tailwind CSS', icon: <SiTailwindcss    className='text-cyan-400' /> },
-      { name: 'Angular',      icon: <DiAngularSimple  className='text-red-400' /> },
-      { name: 'Bootstrap',    icon: <DiBootstrap      className='text-indigo-400' /> },
+      { name: 'Python (PySpark)',        icon: <DiPython        className='text-yellow-400' /> },
+      { name: 'JavaScript / TypeScript', icon: <DiJsBadge       className='text-yellow-400' /> },
+      { name: 'SQL',                     icon: <BsDatabase      className='text-blue-400' /> },
+      { name: 'React / React Native',    icon: <DiReact         className='text-sky-400' /> },
+      { name: 'HTML / CSS',              icon: <DiHtml5         className='text-orange-400' /> },
     ],
   },
   {
-    category: 'Cloud & Infra',
+    category: 'Cloud & Infra (AWS)',
     label: '02',
     technologies: [
       { name: 'AWS Glue',    icon: <FaAws              className='text-orange-400' /> },
       { name: 'Lambda',      icon: <SiAwslambda        className='text-orange-300' /> },
-      { name: 'Terraform',   icon: <SiTerraform        className='text-indigo-400' /> },
       { name: 'API Gateway', icon: <SiAmazonapigateway className='text-sky-400' /> },
-      { name: 'SQS',         icon: <SiAmazonsqs        className='text-yellow-400' /> },
       { name: 'CloudWatch',  icon: <SiAmazoncloudwatch className='text-green-400' /> },
+      { name: 'SQS',         icon: <SiAmazonsqs        className='text-yellow-400' /> },
+      { name: 'Terraform',   icon: <SiTerraform        className='text-indigo-400' /> },
+      { name: 'Keyspaces',   icon: <BsDatabase         className='text-violet-400' /> },
+      { name: 'Athena',      icon: <BsSearch           className='text-cyan-400' /> },
     ],
   },
   {
-    category: 'Linguagens',
+    category: 'DevOps & Qualidade',
     label: '03',
     technologies: [
-      { name: 'Python (Avançado)', icon: <DiPython    className='text-yellow-400' /> },
-      { name: 'PySpark',           icon: <FaAws       className='text-red-400' /> },
-      { name: 'SQL',               icon: <BsDatabase  className='text-blue-400' /> },
-      { name: 'Firebase',          icon: <SiFirebase  className='text-amber-400' /> },
+      { name: 'CI/CD',          icon: <SiGithubactions className='text-slate-300' /> },
+      { name: 'Docker',         icon: <SiDocker        className='text-sky-400' /> },
+      { name: 'Git (Avançado)', icon: <DiGit           className='text-orange-400' /> },
+      { name: 'Scrum / Kanban', icon: <SiJira          className='text-blue-400' /> },
+      { name: 'ServiceNow',     icon: <MdCloud         className='text-violet-400' /> },
     ],
   },
   {
     category: 'IA & Ferramentas',
     label: '04',
     technologies: [
-      { name: 'IA para Dev', icon: <GiBrain       className='text-cyan-400' /> },
-      { name: 'GitHub',      icon: <DiGithubBadge className='text-slate-300' /> },
-      { name: 'Git',         icon: <DiGit         className='text-orange-400' /> },
+      { name: 'IA para Dev',  icon: <GiBrain         className='text-cyan-400' /> },
+      { name: 'Firebase',     icon: <SiFirebase      className='text-amber-400' /> },
+      { name: 'Tailwind CSS', icon: <SiTailwindcss   className='text-cyan-400' /> },
+      { name: 'Angular',      icon: <DiAngularSimple className='text-red-400' /> },
+      { name: 'Bootstrap',    icon: <DiBootstrap     className='text-indigo-400' /> },
     ],
   },
 ]

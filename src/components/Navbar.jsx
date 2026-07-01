@@ -14,10 +14,11 @@ const Navbar = () => {
     }
 
     const navLinks = [
-        { label: 'Habilidades', to: 'skills' },
-        { label: 'Portfólio',   to: 'portfolio' },
-        { label: 'Experiência', to: 'experience' },
-        { label: 'Sobre Mim',  to: 'contact' },
+        { label: 'Habilidades',    to: 'skills' },
+        { label: 'Certificações',  to: 'certifications' },
+        { label: 'Portfólio',      to: 'portfolio' },
+        { label: 'Experiência',    to: 'experience' },
+        { label: 'Sobre Mim',     to: 'contact' },
     ]
 
     return (

@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
+import Certifications from "./components/Certifications";
 import SiteLinks from "./components/SiteLinks";
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
       <Navbar/>
       <Hero/>
       <Skills/>
+      <Certifications/>
       <Portfolio/>
       <Experience/>
       <Contact/>
