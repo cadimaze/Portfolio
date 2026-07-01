@@ -103,7 +103,7 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              onClick={() => window.open("https://drive.google.com/file/d/1jQUWnv1oSn1Brzg5rrLNyfSdyJTy-egy/view?usp=sharing", "_blank")}
+              onClick={() => window.open("/curriculo.pdf", "_blank")}
               className="w-full sm:w-auto cursor-pointer font-semibold text-[#060d1a] bg-cyan-400 hover:bg-cyan-300 transition-colors px-8 py-3 rounded-lg text-sm tracking-wide"
             >
               Baixar Currículo
