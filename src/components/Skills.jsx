@@ -1,22 +1,25 @@
 import {
-  DiAngularSimple, DiReact, DiBootstrap, DiJsBadge, DiPython, DiGithubBadge,
+  DiAngularSimple, DiReact, DiBootstrap, DiJsBadge, DiPython, DiGithubBadge, DiGit,
 } from "react-icons/di"
 import {
   SiAmazonapigateway, SiAmazoncloudwatch, SiAmazonsqs, SiTerraform, SiAwslambda,
+  SiTailwindcss, SiFirebase,
 } from "react-icons/si"
 import { FaAws } from "react-icons/fa"
 import { GiBrain } from "react-icons/gi"
+import { BsDatabase } from "react-icons/bs"
 import Reveal from "./Reveal"
 
 const skills = [
   {
-    category: 'Frontend',
+    category: 'Frontend & UI',
     label: '01',
     technologies: [
-      { name: 'React',       icon: <DiReact         className='text-sky-400' /> },
-      { name: 'JavaScript',  icon: <DiJsBadge       className='text-yellow-400' /> },
-      { name: 'Angular',     icon: <DiAngularSimple className='text-red-400' /> },
-      { name: 'Bootstrap',   icon: <DiBootstrap     className='text-indigo-400' /> },
+      { name: 'React',        icon: <DiReact          className='text-sky-400' /> },
+      { name: 'JavaScript',   icon: <DiJsBadge        className='text-yellow-400' /> },
+      { name: 'Tailwind CSS', icon: <SiTailwindcss    className='text-cyan-400' /> },
+      { name: 'Angular',      icon: <DiAngularSimple  className='text-red-400' /> },
+      { name: 'Bootstrap',    icon: <DiBootstrap      className='text-indigo-400' /> },
     ],
   },
   {
@@ -32,13 +35,22 @@ const skills = [
     ],
   },
   {
-    category: 'Linguagens & IA',
+    category: 'Linguagens',
     label: '03',
     technologies: [
-      { name: 'Python (Avançado)', icon: <DiPython      className='text-yellow-400' /> },
-      { name: 'PySpark',           icon: <FaAws         className='text-red-400' /> },
-      { name: 'GitHub',            icon: <DiGithubBadge className='text-slate-300' /> },
-      { name: 'IA para Dev',       icon: <GiBrain       className='text-cyan-400' /> },
+      { name: 'Python (Avançado)', icon: <DiPython    className='text-yellow-400' /> },
+      { name: 'PySpark',           icon: <FaAws       className='text-red-400' /> },
+      { name: 'SQL',               icon: <BsDatabase  className='text-blue-400' /> },
+      { name: 'Firebase',          icon: <SiFirebase  className='text-amber-400' /> },
+    ],
+  },
+  {
+    category: 'IA & Ferramentas',
+    label: '04',
+    technologies: [
+      { name: 'IA para Dev', icon: <GiBrain       className='text-cyan-400' /> },
+      { name: 'GitHub',      icon: <DiGithubBadge className='text-slate-300' /> },
+      { name: 'Git',         icon: <DiGit         className='text-orange-400' /> },
     ],
   },
 ]
@@ -53,11 +65,11 @@ const Skills = () => {
           Tecnologias e ferramentas que uso no dia a dia para construir soluções robustas e escaláveis.
         </p>
 
-        <div className="flex flex-col md:flex-row gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex-1 border border-white/[0.07] bg-white/[0.025] hover:bg-white/[0.04] hover:border-cyan-900/60 rounded-xl p-6 transition-all duration-300"
+              className="border border-white/[0.07] bg-white/[0.025] hover:bg-white/[0.04] hover:border-cyan-900/60 rounded-xl p-6 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-5">
                 <h3 className="text-slate-200 font-semibold text-base">{skill.category}</h3>
