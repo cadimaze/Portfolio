@@ -1,5 +1,5 @@
 import {
-  DiReact, DiBootstrap, DiJsBadge, DiPython, DiGithubBadge, DiGit, DiHtml5, DiAngularSimple,
+  DiReact, DiBootstrap, DiJsBadge, DiPython, DiGit, DiHtml5, DiAngularSimple,
 } from "react-icons/di"
 import {
   SiAmazonapigateway, SiAmazoncloudwatch, SiAmazonsqs, SiTerraform, SiAwslambda,
@@ -10,53 +10,54 @@ import { GiBrain } from "react-icons/gi"
 import { BsDatabase, BsSearch } from "react-icons/bs"
 import { MdCloud } from "react-icons/md"
 import Reveal from "./Reveal"
+import { SectionHeader } from "./Terminal"
 
 const skills = [
   {
-    category: 'Linguagens',
+    category: 'linguagens',
     label: '01',
     technologies: [
-      { name: 'Python (PySpark)',        icon: <DiPython        className='text-yellow-400' /> },
-      { name: 'JavaScript / TypeScript', icon: <DiJsBadge       className='text-yellow-400' /> },
-      { name: 'SQL',                     icon: <BsDatabase      className='text-blue-400' /> },
-      { name: 'React / React Native',    icon: <DiReact         className='text-sky-400' /> },
-      { name: 'HTML / CSS',              icon: <DiHtml5         className='text-orange-400' /> },
+      { name: 'Python (PySpark)',        icon: <DiPython /> },
+      { name: 'JavaScript / TypeScript', icon: <DiJsBadge /> },
+      { name: 'SQL',                     icon: <BsDatabase /> },
+      { name: 'React / React Native',    icon: <DiReact /> },
+      { name: 'HTML / CSS',              icon: <DiHtml5 /> },
     ],
   },
   {
-    category: 'Cloud & Infra (AWS)',
+    category: 'cloud & infra (aws)',
     label: '02',
     technologies: [
-      { name: 'AWS Glue',    icon: <FaAws              className='text-orange-400' /> },
-      { name: 'Lambda',      icon: <SiAwslambda        className='text-orange-300' /> },
-      { name: 'API Gateway', icon: <SiAmazonapigateway className='text-sky-400' /> },
-      { name: 'CloudWatch',  icon: <SiAmazoncloudwatch className='text-green-400' /> },
-      { name: 'SQS',         icon: <SiAmazonsqs        className='text-yellow-400' /> },
-      { name: 'Terraform',   icon: <SiTerraform        className='text-indigo-400' /> },
-      { name: 'Keyspaces',   icon: <BsDatabase         className='text-violet-400' /> },
-      { name: 'Athena',      icon: <BsSearch           className='text-cyan-400' /> },
+      { name: 'AWS Glue',    icon: <FaAws /> },
+      { name: 'Lambda',      icon: <SiAwslambda /> },
+      { name: 'API Gateway', icon: <SiAmazonapigateway /> },
+      { name: 'CloudWatch',  icon: <SiAmazoncloudwatch /> },
+      { name: 'SQS',         icon: <SiAmazonsqs /> },
+      { name: 'Terraform',   icon: <SiTerraform /> },
+      { name: 'Keyspaces',   icon: <BsDatabase /> },
+      { name: 'Athena',      icon: <BsSearch /> },
     ],
   },
   {
-    category: 'DevOps & Qualidade',
+    category: 'devops & qualidade',
     label: '03',
     technologies: [
-      { name: 'CI/CD',          icon: <SiGithubactions className='text-slate-300' /> },
-      { name: 'Docker',         icon: <SiDocker        className='text-sky-400' /> },
-      { name: 'Git (Avançado)', icon: <DiGit           className='text-orange-400' /> },
-      { name: 'Scrum / Kanban', icon: <SiJira          className='text-blue-400' /> },
-      { name: 'ServiceNow',     icon: <MdCloud         className='text-violet-400' /> },
+      { name: 'CI/CD',          icon: <SiGithubactions /> },
+      { name: 'Docker',         icon: <SiDocker /> },
+      { name: 'Git (Avançado)', icon: <DiGit /> },
+      { name: 'Scrum / Kanban', icon: <SiJira /> },
+      { name: 'ServiceNow',     icon: <MdCloud /> },
     ],
   },
   {
-    category: 'IA & Ferramentas',
+    category: 'ia & ferramentas',
     label: '04',
     technologies: [
-      { name: 'IA para Dev',  icon: <GiBrain         className='text-cyan-400' /> },
-      { name: 'Firebase',     icon: <SiFirebase      className='text-amber-400' /> },
-      { name: 'Tailwind CSS', icon: <SiTailwindcss   className='text-cyan-400' /> },
-      { name: 'Angular',      icon: <DiAngularSimple className='text-red-400' /> },
-      { name: 'Bootstrap',    icon: <DiBootstrap     className='text-indigo-400' /> },
+      { name: 'IA para Dev',  icon: <GiBrain /> },
+      { name: 'Firebase',     icon: <SiFirebase /> },
+      { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
+      { name: 'Angular',      icon: <DiAngularSimple /> },
+      { name: 'Bootstrap',    icon: <DiBootstrap /> },
     ],
   },
 ]
@@ -65,34 +66,36 @@ const Skills = () => {
   return (
     <div className="max-w-[960px] mx-auto px-6 py-24" id="skills">
       <Reveal>
-        <p className="font-mono text-cyan-400 text-xs tracking-[0.25em] uppercase mb-3">Habilidades</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">O que eu sei fazer</h2>
-        <p className="text-slate-400 text-sm md:text-base mb-14 max-w-[520px] leading-7">
-          Tecnologias e ferramentas que uso no dia a dia para construir soluções robustas e escaláveis.
-        </p>
+        <SectionHeader
+          path="~/habilidades"
+          cmd="ls --skills"
+          title="o que eu sei fazer"
+          subtitle="Tecnologias e ferramentas que uso no dia a dia para construir soluções robustas e escaláveis."
+        />
+      </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="border border-white/[0.07] bg-white/[0.025] hover:bg-white/[0.04] hover:border-cyan-900/60 rounded-xl p-6 transition-all duration-300"
-            >
-              <div className="flex items-start justify-between mb-5">
-                <h3 className="text-slate-200 font-semibold text-base">{skill.category}</h3>
-                <span className="font-mono text-cyan-400/40 text-xs">{skill.label}</span>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {skills.map((skill, index) => (
+          <Reveal key={index} width="100%">
+            <div className="h-full border border-stone-800 bg-[#100c07]/70 hover:border-amber-900/60 rounded-lg overflow-hidden transition-all duration-300">
+              <div className="flex items-center justify-between px-5 py-3 border-b border-stone-800 bg-[#0c0906]">
+                <span className="font-mono text-sm text-amber-400">
+                  <span className="text-stone-600">▸ </span>{skill.category}
+                </span>
+                <span className="font-mono text-xs text-stone-600">[{skill.label}]</span>
               </div>
-              <div className="grid grid-cols-2 gap-y-4 gap-x-2">
+              <div className="grid grid-cols-2 gap-y-3.5 gap-x-3 p-5">
                 {skill.technologies.map((tech, idx) => (
                   <div key={idx} className="flex items-center gap-2.5">
-                    <span className="text-xl flex-shrink-0">{tech.icon}</span>
-                    <span className="text-xs text-slate-400 font-medium">{tech.name}</span>
+                    <span className="text-base flex-shrink-0 text-amber-400/70">{tech.icon}</span>
+                    <span className="text-xs text-stone-400 font-mono">{tech.name}</span>
                   </div>
                 ))}
               </div>
             </div>
-          ))}
-        </div>
-      </Reveal>
+          </Reveal>
+        ))}
+      </div>
     </div>
   )
 }

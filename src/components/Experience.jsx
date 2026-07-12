@@ -1,23 +1,12 @@
 import { motion } from 'framer-motion'
 import Reveal from './Reveal'
+import { SectionHeader } from './Terminal'
 
+// git log --career  (mais recente primeiro)
 const experiences = [
   {
-    company: 'Comando G8',
-    period: 'Set 2021 — Dez 2021',
-    description: 'Colaboração no departamento de compras, adquirindo conhecimento em processos de aquisição e gestão de suprimentos.',
-  },
-  {
-    company: 'DigiSystem — Back-end',
-    period: 'Dez 2021 — Set 2023',
-    description: 'Gestão de projetos utilizando eSQL (IBM Toolkit), estudos intensificados de AWS com acesso a ferramentas para treinamento. Conquista de diversos Badges IBM. Projeto FGC-SPG destinado à segmentação eficiente de tipos de clientes.',
-  },
-  {
-    company: 'DigiSystem — Front-end',
-    period: 'Set 2023 — Dez 2023',
-    description: 'Participação ativa no desenvolvimento do DORA, prontuário eletrônico inovador. Contribuições em integração de dados, performance e segurança, sempre com foco em usabilidade.',
-  },
-  {
+    hash: 'e5d7a0f',
+    head: true,
     company: 'Itaú Unibanco',
     period: 'Abril 2024 — Presente',
     description: 'Desenvolvimento de soluções com Python e Terraform para gerenciamento de recursos na AWS, integração de serviços cloud e adoção da filosofia DevOps com metodologias ágeis.',
@@ -34,44 +23,74 @@ const experiences = [
       'Utilização de dados reais de negócio para soluções analíticas e ingestão de grandes volumes.',
     ],
   },
+  {
+    hash: '3f8c112',
+    company: 'DigiSystem — Front-end',
+    period: 'Set 2023 — Dez 2023',
+    description: 'Participação ativa no desenvolvimento do DORA, prontuário eletrônico inovador. Contribuições em integração de dados, performance e segurança, sempre com foco em usabilidade.',
+  },
+  {
+    hash: 'b7e42dc',
+    company: 'DigiSystem — Back-end',
+    period: 'Dez 2021 — Set 2023',
+    description: 'Gestão de projetos utilizando eSQL (IBM Toolkit), estudos intensificados de AWS com acesso a ferramentas para treinamento. Conquista de diversos Badges IBM. Projeto FGC-SPG destinado à segmentação eficiente de tipos de clientes.',
+  },
+  {
+    hash: 'a1c09f4',
+    company: 'Comando G8',
+    period: 'Set 2021 — Dez 2021',
+    description: 'Colaboração no departamento de compras, adquirindo conhecimento em processos de aquisição e gestão de suprimentos.',
+  },
 ]
 
 const Experience = () => {
   return (
-    <div className='max-w-[760px] mx-auto px-6 py-24' id="experience">
+    <div className='max-w-[780px] mx-auto px-6 py-24' id="experience">
       <Reveal>
-        <p className="font-mono text-cyan-400 text-xs tracking-[0.25em] uppercase mb-3">Experiência</p>
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-100 mb-4">Trajetória profissional</h2>
-        <p className='text-slate-400 text-sm md:text-base mb-14 max-w-[520px] leading-7'>
-          Minha evolução ao longo dos anos e as principais contribuições em cada etapa.
-        </p>
+        <SectionHeader
+          path="~/experiência"
+          cmd="git log --career"
+          title="trajetória profissional"
+          subtitle="Minha evolução ao longo dos anos e as principais contribuições em cada etapa."
+        />
       </Reveal>
 
       <div className='relative'>
-        <div className='absolute left-0 top-2 bottom-0 w-px bg-gradient-to-b from-cyan-500/60 via-cyan-800/30 to-transparent' />
+        <div className='absolute left-[5px] top-3 bottom-2 w-px bg-gradient-to-b from-amber-500/60 via-amber-800/30 to-transparent' />
 
-        {experiences.map((experience, index) => (
-          <Reveal key={index}>
+        {experiences.map((exp, index) => (
+          <Reveal key={index} width="100%">
             <motion.div
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }}
-              className='relative pl-8 pb-12'
+              className='relative pl-8 pb-10'
             >
-              <div className='absolute left-[-4px] top-5 w-[8px] h-[8px] rounded-full bg-cyan-400 border-2 border-[#060d1a]' />
+              <div className='absolute left-0 top-2 w-[11px] h-[11px] rounded-full bg-amber-400 border-2 border-[#0b0906] shadow-[0_0_10px_rgba(245,165,36,0.5)]' />
 
-              <div className='border border-white/[0.07] bg-white/[0.025] hover:bg-white/[0.04] hover:border-cyan-900/40 rounded-xl p-6 transition-all duration-300'>
-                <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3'>
-                  <h2 className='text-slate-100 text-base font-semibold'>{experience.company}</h2>
-                  <span className='font-mono text-cyan-400/70 text-xs'>{experience.period}</span>
+              <div className='border border-stone-800 bg-[#100c07]/60 hover:border-amber-900/50 rounded-lg p-5 sm:p-6 transition-all duration-300'>
+                <div className='font-mono text-xs text-stone-500 mb-3 flex flex-wrap items-center gap-x-2 gap-y-1'>
+                  <span className="text-amber-500">commit {exp.hash}</span>
+                  {exp.head && (
+                    <span className="text-amber-400 border border-amber-800/60 bg-amber-950/30 rounded px-1.5 py-0.5">
+                      HEAD → main
+                    </span>
+                  )}
                 </div>
-                <p className='text-slate-400 text-sm leading-7'>{experience.description}</p>
-                {experience.bullets && (
-                  <ul className='mt-4 space-y-2.5'>
-                    {experience.bullets.map((bullet, i) => (
-                      <li key={i} className='flex gap-3 text-slate-400 text-xs leading-6'>
-                        <span className='text-cyan-500 mt-1 flex-shrink-0 text-base leading-none'>›</span>
+
+                <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-2'>
+                  <h3 className='text-stone-100 text-base font-bold'>{exp.company}</h3>
+                  <span className='font-mono text-amber-400/70 text-xs'>Date: {exp.period}</span>
+                </div>
+
+                <p className='text-stone-400 text-sm leading-7'>{exp.description}</p>
+
+                {exp.bullets && (
+                  <ul className='mt-4 space-y-2 font-mono'>
+                    {exp.bullets.map((bullet, i) => (
+                      <li key={i} className='flex gap-2.5 text-stone-400 text-xs leading-6'>
+                        <span className='text-amber-500 flex-shrink-0'>+</span>
                         <span>{bullet}</span>
                       </li>
                     ))}
