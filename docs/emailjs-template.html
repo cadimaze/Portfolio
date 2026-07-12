@@ -1,0 +1,132 @@
+<!--
+  Template de e-mail — "warm terminal" (Guilherme Cadima)
+  Cole este HTML no editor de código do template do EmailJS (template_jmrzaq7).
+  Variáveis usadas: {{from_name}}, {{reply_to}}, {{message}}, {{time}}
+  Sugestão de assunto do template: Nova mensagem de {{from_name}} — portfólio
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova mensagem — Portfólio</title>
+</head>
+<body style="margin:0; padding:0; background-color:#0b0906; -webkit-text-size-adjust:100%;">
+  <!-- preheader oculto -->
+  <div style="display:none; max-height:0; overflow:hidden; opacity:0; color:#0b0906;">
+    Nova mensagem de {{from_name}} através do seu portfólio.
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+         style="background-color:#0b0906; background-image:radial-gradient(circle at 50% 0%, rgba(245,165,36,0.08), transparent 60%);">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+
+        <!-- container / janela de terminal -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
+               style="width:600px; max-width:600px; background-color:#100c07; border:1px solid #292524; border-radius:10px; overflow:hidden;">
+
+          <!-- barra de título -->
+          <tr>
+            <td style="background-color:#0c0906; border-bottom:1px solid #292524; padding:12px 18px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="60" style="vertical-align:middle;">
+                    <span style="display:inline-block; width:11px; height:11px; border-radius:50%; background-color:#44403c;"></span>
+                    <span style="display:inline-block; width:11px; height:11px; border-radius:50%; background-color:#44403c; margin-left:6px;"></span>
+                    <span style="display:inline-block; width:11px; height:11px; border-radius:50%; background-color:#f5a524; margin-left:6px;"></span>
+                  </td>
+                  <td align="right" style="font-family:'Courier New', Courier, monospace; font-size:12px; color:#78716c; vertical-align:middle;">
+                    nova-mensagem@guilherme-cadima
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- corpo -->
+          <tr>
+            <td style="padding:32px 30px 12px 30px; font-family:'Courier New', Courier, monospace;">
+
+              <!-- prompt -->
+              <p style="margin:0 0 22px 0; font-size:13px; color:#78716c;">
+                <span style="color:#f5a524;">guilherme@cadima</span><span style="color:#57534e;">:</span><span style="color:#a8a29e;">~/inbox</span><span style="color:#57534e;">$</span>
+                <span style="color:#e7ddca;">cat nova-mensagem.txt</span>
+              </p>
+
+              <!-- título -->
+              <h1 style="margin:0 0 6px 0; font-size:26px; line-height:1.2; color:#f5f5f4; font-weight:bold;">
+                Nova mensagem <span style="color:#f5a524;">recebida</span>
+              </h1>
+              <p style="margin:0 0 28px 0; font-size:13px; color:#78716c;">
+                # alguém entrou em contato pelo seu portfólio
+              </p>
+
+              <!-- campo: de -->
+              <p style="margin:0 0 6px 0; font-size:12px; color:#b08428;">&gt; de</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 20px 0;">
+                <tr>
+                  <td style="background-color:#0c0906; border:1px solid #292524; border-radius:6px; padding:12px 14px; font-size:14px; color:#e7ddca;">
+                    {{from_name}}
+                  </td>
+                </tr>
+              </table>
+
+              <!-- campo: email -->
+              <p style="margin:0 0 6px 0; font-size:12px; color:#b08428;">&gt; email</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 20px 0;">
+                <tr>
+                  <td style="background-color:#0c0906; border:1px solid #292524; border-radius:6px; padding:12px 14px; font-size:14px;">
+                    <a href="mailto:{{reply_to}}" style="color:#f5a524; text-decoration:none;">{{reply_to}}</a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- campo: mensagem -->
+              <p style="margin:0 0 6px 0; font-size:12px; color:#b08428;">&gt; mensagem</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 26px 0;">
+                <tr>
+                  <td style="background-color:#0c0906; border:1px solid #292524; border-radius:6px; padding:16px; font-size:14px; line-height:1.7; color:#d6d3d1; white-space:pre-wrap;">{{message}}</td>
+                </tr>
+              </table>
+
+              <!-- botão responder -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 8px 0;">
+                <tr>
+                  <td style="border-radius:6px; background-color:#f5a524;">
+                    <a href="mailto:{{reply_to}}"
+                       style="display:inline-block; padding:12px 26px; font-family:'Courier New', Courier, monospace; font-size:14px; font-weight:bold; color:#0b0906; text-decoration:none;">
+                      [ responder ]
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- rodapé -->
+          <tr>
+            <td style="border-top:1px solid #292524; padding:18px 30px; font-family:'Courier New', Courier, monospace; font-size:11px; color:#57534e;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="color:#57534e;">recebido em {{time}}</td>
+                  <td align="right" style="color:#57534e;">
+                    <span style="color:#b08428;">~/</span>guilherme-cadima<span style="color:#f5a524;">&#9646;</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+
+        <p style="margin:18px 0 0 0; font-family:'Courier New', Courier, monospace; font-size:11px; color:#44403c;">
+          // enviado automaticamente pelo formulário de contato do portfólio
+        </p>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

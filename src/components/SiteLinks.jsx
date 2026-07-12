@@ -1,33 +1,26 @@
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import Reveal from './Reveal'
 import { SectionHeader } from './Terminal'
+import { useLang } from '../i18n/LanguageContext'
 
-const sites = [
-  {
-    name: 'CRUD Lab',
-    tagline: 'Plataforma educacional para aprender CRUD na prática, em tempo real.',
-    url: 'https://crud-lab.vercel.app',
-    display: 'crud-lab.vercel.app',
-    emoji: '🏫',
-  },
-  {
-    name: 'Hive',
-    tagline: 'Controle financeiro pessoal com dashboard, investimentos e sincronização em tempo real.',
-    url: 'https://hive-finapp.vercel.app',
-    display: 'hive-finapp.vercel.app',
-    emoji: '🐝',
-  },
+// Metadados fixos (não traduzidos) — na mesma ordem do dicionário
+const siteMeta = [
+  { name: 'CRUD Lab', url: 'https://crud-lab.vercel.app', display: 'crud-lab.vercel.app', emoji: '🏫' },
+  { name: 'Hive', url: 'https://hive-finapp.vercel.app', display: 'hive-finapp.vercel.app', emoji: '🐝' },
 ]
 
 const SiteLinks = () => {
+  const { t } = useLang()
+  const sites = siteMeta.map((m, i) => ({ ...m, ...t.sites.items[i] }))
+
   return (
     <div className='max-w-[960px] mx-auto px-6 py-24' id='site-links'>
       <Reveal>
         <SectionHeader
           path="~/sites-no-ar"
-          cmd="ls -la"
-          title="acesse ao vivo"
-          subtitle="Projetos publicados e disponíveis — experimente agora mesmo."
+          cmd={t.sites.cmd}
+          title={t.sites.title}
+          subtitle={t.sites.subtitle}
         />
       </Reveal>
 

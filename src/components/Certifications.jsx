@@ -1,30 +1,23 @@
 import Reveal from "./Reveal"
 import { SectionHeader } from "./Terminal"
-
-const certifications = [
-  { name: 'Machine Learning Associate', issuer: 'IOX — Itaú',    tag: 'machine-learning' },
-  { name: 'Associate — Generative AI',  issuer: 'IOX — Itaú',    tag: 'inteligência-artificial' },
-  { name: 'DEVA — AI Coding Agents',    issuer: 'Cognition',     tag: 'ia-para-codificação' },
-  { name: 'Certificações em MySQL',     issuer: 'MySQL / Oracle', tag: 'banco-de-dados' },
-  { name: 'IBM Integration Bus / API',  issuer: 'IBM',           tag: 'integração' },
-  { name: 'Cloud Pak for Integration',  issuer: 'IBM',           tag: 'cloud · tech-sales' },
-  { name: 'QRadar XDR — SIEM',          issuer: 'IBM',           tag: 'segurança · tech-sales' },
-]
+import { useLang } from "../i18n/LanguageContext"
 
 const Certifications = () => {
+  const { t } = useLang()
+
   return (
     <div className="max-w-[960px] mx-auto px-6 py-24" id="certifications">
       <Reveal>
         <SectionHeader
           path="~/certificações"
-          cmd="cat certificados.log"
-          title="formação complementar"
-          subtitle="Certificações conquistadas ao longo da carreira em plataformas de tecnologia, IA e cloud."
+          cmd={t.certifications.cmd}
+          title={t.certifications.title}
+          subtitle={t.certifications.subtitle}
         />
       </Reveal>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        {certifications.map((cert, index) => (
+        {t.certifications.items.map((cert, index) => (
           <Reveal key={index} width="100%">
             <div className="h-full border border-stone-800 bg-[#100c07]/70 hover:border-amber-900/60 rounded-lg p-5 transition-all duration-300 flex flex-col gap-3">
               <div className="flex items-start gap-2.5">
