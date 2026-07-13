@@ -12,11 +12,12 @@ import {
 import { DiDatabase, DiGithubBadge, DiPython } from "react-icons/di";
 import { motion } from "framer-motion";
 import { FaAws, FaReact } from "react-icons/fa";
-import { SiAwslambda } from "react-icons/si";
+import { SiAwslambda, SiCredly } from "react-icons/si";
 
 const socials = [
   { icon: <AiOutlineGithub />,    url: "https://github.com/cadimaze",                                    label: "github" },
   { icon: <AiOutlineLinkedin />,  url: "https://www.linkedin.com/in/guilherme-cadima-b140871b5/",         label: "linkedin" },
+  { icon: <SiCredly />,           url: "https://www.credly.com/users/guilherme-cadima.981ed08a",          label: "credly" },
   { icon: <AiOutlineInstagram />, url: "https://www.instagram.com/cadimaz/",                              label: "instagram" },
   { icon: <AiOutlineWhatsApp />,  url: "https://wa.me/5511947436291?text=Ol%C3%A1%20Guilherme",           label: "whatsapp" },
   { icon: <AiOutlineTikTok />,    url: "https://www.tiktok.com/@cadimaze",                                label: "tiktok" },

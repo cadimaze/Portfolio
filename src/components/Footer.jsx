@@ -1,4 +1,5 @@
 import { FaGithubSquare, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { SiCredly } from 'react-icons/si'
 import { useLang } from '../i18n/LanguageContext'
 
 const Footer = () => {
@@ -18,10 +19,12 @@ const Footer = () => {
           <div className='flex gap-4 text-stone-600 text-xl'>
             <a href="https://github.com/cadimaze" target="_blank" rel="noopener noreferrer"
               className='hover:text-amber-400 transition-colors duration-200'><FaGithubSquare /></a>
-            <a href="https://www.instagram.com/cadimaz/" target="_blank" rel="noopener noreferrer"
-              className='hover:text-amber-400 transition-colors duration-200'><FaInstagram /></a>
             <a href="https://www.linkedin.com/in/guilherme-cadima-b140871b5/" target="_blank" rel="noopener noreferrer"
               className='hover:text-amber-400 transition-colors duration-200'><FaLinkedin /></a>
+            <a href="https://www.credly.com/users/guilherme-cadima.981ed08a" target="_blank" rel="noopener noreferrer"
+              className='hover:text-amber-400 transition-colors duration-200'><SiCredly /></a>
+            <a href="https://www.instagram.com/cadimaz/" target="_blank" rel="noopener noreferrer"
+              className='hover:text-amber-400 transition-colors duration-200'><FaInstagram /></a>
           </div>
         </div>
         <p className='text-stone-700 text-xs font-mono'>{t.footer.copyright}</p>
