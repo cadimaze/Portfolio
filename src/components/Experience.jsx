@@ -6,6 +6,7 @@ import { useLang } from '../i18n/LanguageContext'
 // Metadados fixos (não traduzidos) — na mesma ordem do dicionário
 const experienceMeta = [
   { hash: 'e5d7a0f', head: true, company: 'Itaú Unibanco' },
+  { hash: 'd2b56a1', company: 'Itaú Unibanco' },
   { hash: '3f8c112', company: 'DigiSystem — Front-end' },
   { hash: 'b7e42dc', company: 'DigiSystem — Back-end' },
   { hash: 'a1c09f4', company: 'Comando G8' },
