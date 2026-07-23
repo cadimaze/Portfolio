@@ -83,9 +83,9 @@ export const translations = {
       dateLabel: 'Date',
       items: [
         {
-          period: 'Abril 2024 — Presente',
+          period: 'Abril 2025 — Presente',
           description:
-            'Desenvolvimento de soluções com Python e Terraform para gerenciamento de recursos na AWS, integração de serviços cloud e adoção da filosofia DevOps com metodologias ágeis.',
+            'Atuação como Desenvolvedor Back-End Jr. (Engenheiro de Dados), desenvolvendo soluções com Python e Terraform para gerenciamento de recursos na AWS, integração de serviços cloud e adoção da filosofia DevOps com metodologias ágeis.',
           bullets: [
             'Desenvolvimento aprofundado de pipelines de dados com AWS Glue, utilizando Python (PySpark) e Terraform para provisionamento e automação de recursos.',
             'Integração de serviços AWS: Keyspaces, Athena, IAM, CloudWatch, Lambda e Aurora RDS no processamento e orquestração de dados.',
@@ -97,6 +97,20 @@ export const translations = {
             'Testes unitários e validações automatizadas com o framework TAAC.',
             'Experiência prática com pipelines de CI/CD, otimizando deploys em ambientes produtivos.',
             'Utilização de dados reais de negócio para soluções analíticas e ingestão de grandes volumes.',
+          ],
+        },
+        {
+          period: 'Abril 2024 — Abril 2025',
+          description:
+            'Estágio com foco em desenvolvimento Python e Terraform para gerenciamento de recursos na AWS Lambda, integração de serviços cloud e adoção da filosofia DevOps.',
+          bullets: [
+            'Desenvolvimento em Python e Terraform para o gerenciamento de recursos na AWS Lambda.',
+            'Utilização de serviços como API Gateway, SQS, Lambda e ServiceNow.',
+            'Uso de metodologias ágeis no desenvolvimento e organização de projetos.',
+            'Mentalidade e filosofia DevOps aplicada à infraestrutura AWS Cloud.',
+            'Tratativa de eventos, incidentes e fluxos com a ServiceNow.',
+            'Experiência em Integração e Entrega Contínuas (CI/CD) e troubleshooting nos produtos desenvolvidos.',
+            'Estudo do desenvolvimento de APIs utilizando a especificação OpenAPI 3.0.',
           ],
         },
         {
@@ -122,7 +136,7 @@ export const translations = {
       aboutFile: 'sobre-mim.md',
       formFile: 'enviar-mensagem.sh',
       paragraphs: [
-        'Me chamo **Guilherme Cadima**, tenho 25 anos e moro em São Paulo, Capital. Sou Desenvolvedor de Software graduado em Ciência de Dados pela Universidade Paulista, com foco em Engenharia de Dados e desenvolvimento back-end.',
+        'Me chamo **Guilherme Cadima**, tenho 25 anos e moro em São Paulo, Capital. Sou Desenvolvedor de Software graduado em Ciência da Computação pela Universidade Paulista, com foco em Engenharia de Dados e desenvolvimento back-end.',
         'Apaixonado por tecnologia há 6 anos, trabalho diariamente com Python, AWS Cloud e pipelines de dados — transformando dados brutos em soluções escaláveis e confiáveis. Uso IAs como ferramenta de produtividade para acelerar e aprimorar o desenvolvimento.',
         'Tenho uma paixão crescente por **Machine Learning** — estudo algoritmos, modelos preditivos e aplicações práticas com Python. Meu próximo objetivo é atuar de forma dedicada nessa área, unindo minha base sólida em Engenharia de Dados com a inteligência dos modelos.',
         'Fora do código, sou pai de uma linda menina, torcedor roxo do São Paulo FC, fã de academia, animais, Super-Heróis, RPG de Mesa e Cinema. Meu livro favorito é **“1984”** de George Orwell.',
@@ -230,9 +244,9 @@ export const translations = {
       dateLabel: 'Date',
       items: [
         {
-          period: 'April 2024 — Present',
+          period: 'April 2025 — Present',
           description:
-            'Building solutions with Python and Terraform to manage AWS resources, integrating cloud services and adopting a DevOps philosophy with agile methodologies.',
+            'Working as a Back-End Jr. Developer (Data Engineer), building solutions with Python and Terraform to manage AWS resources, integrating cloud services and adopting a DevOps philosophy with agile methodologies.',
           bullets: [
             'In-depth development of data pipelines with AWS Glue, using Python (PySpark) and Terraform for resource provisioning and automation.',
             'Integration of AWS services: Keyspaces, Athena, IAM, CloudWatch, Lambda and Aurora RDS for data processing and orchestration.',
@@ -244,6 +258,20 @@ export const translations = {
             'Unit tests and automated validations with the TAAC framework.',
             'Hands-on experience with CI/CD pipelines, optimizing deploys in production environments.',
             'Use of real business data for analytical solutions and large-volume ingestion.',
+          ],
+        },
+        {
+          period: 'April 2024 — April 2025',
+          description:
+            'Internship focused on Python and Terraform development to manage AWS Lambda resources, integrate cloud services and adopt a DevOps philosophy.',
+          bullets: [
+            'Development in Python and Terraform to manage AWS Lambda resources.',
+            'Use of services such as API Gateway, SQS, Lambda and ServiceNow.',
+            'Use of agile methodologies in project development and organization.',
+            'DevOps mindset and philosophy applied to AWS Cloud infrastructure.',
+            'Handling events, incidents and workflows with ServiceNow.',
+            'Experience with Continuous Integration and Continuous Delivery (CI/CD) and troubleshooting in developed products.',
+            'Study of API development using the OpenAPI 3.0 specification.',
           ],
         },
         {
@@ -269,7 +297,7 @@ export const translations = {
       aboutFile: 'about-me.md',
       formFile: 'send-message.sh',
       paragraphs: [
-        'My name is **Guilherme Cadima**, I am 25 years old and live in São Paulo, Brazil. I am a Software Developer with a degree in Data Science from Universidade Paulista, focused on Data Engineering and back-end development.',
+        'My name is **Guilherme Cadima**, I am 25 years old and live in São Paulo, Brazil. I am a Software Developer with a degree in Computer Science from Universidade Paulista, focused on Data Engineering and back-end development.',
         'Passionate about technology for 6 years, I work daily with Python, AWS Cloud and data pipelines — turning raw data into scalable and reliable solutions. I use AI as a productivity tool to accelerate and improve development.',
         'I have a growing passion for **Machine Learning** — I study algorithms, predictive models and practical applications with Python. My next goal is to work dedicatedly in this field, combining my solid Data Engineering foundation with the intelligence of models.',
         'Beyond code, I am the father of a lovely girl, a passionate São Paulo FC fan, and a fan of the gym, animals, Super-Heroes, tabletop RPG and Cinema. My favorite book is **“1984”** by George Orwell.',
@@ -377,9 +405,9 @@ export const translations = {
       dateLabel: 'Date',
       items: [
         {
-          period: 'Abril 2024 — Presente',
+          period: 'Abril 2025 — Presente',
           description:
-            'Desarrollo de soluciones con Python y Terraform para la gestión de recursos en AWS, integración de servicios cloud y adopción de la filosofía DevOps con metodologías ágiles.',
+            'Actuación como Desarrollador Back-End Jr. (Ingeniero de Datos), desarrollando soluciones con Python y Terraform para la gestión de recursos en AWS, integración de servicios cloud y adopción de la filosofía DevOps con metodologías ágiles.',
           bullets: [
             'Desarrollo avanzado de pipelines de datos con AWS Glue, utilizando Python (PySpark) y Terraform para el aprovisionamiento y la automatización de recursos.',
             'Integración de servicios AWS: Keyspaces, Athena, IAM, CloudWatch, Lambda y Aurora RDS en el procesamiento y la orquestación de datos.',
@@ -391,6 +419,20 @@ export const translations = {
             'Pruebas unitarias y validaciones automatizadas con el framework TAAC.',
             'Experiencia práctica con pipelines de CI/CD, optimizando despliegues en entornos productivos.',
             'Uso de datos reales de negocio para soluciones analíticas e ingesta de grandes volúmenes.',
+          ],
+        },
+        {
+          period: 'Abril 2024 — Abril 2025',
+          description:
+            'Pasantía enfocada en el desarrollo con Python y Terraform para la gestión de recursos en AWS Lambda, integración de servicios cloud y adopción de la filosofía DevOps.',
+          bullets: [
+            'Desarrollo en Python y Terraform para la gestión de recursos en AWS Lambda.',
+            'Uso de servicios como API Gateway, SQS, Lambda y ServiceNow.',
+            'Uso de metodologías ágiles en el desarrollo y organización de proyectos.',
+            'Mentalidad y filosofía DevOps aplicada a la infraestructura AWS Cloud.',
+            'Gestión de eventos, incidentes y flujos con ServiceNow.',
+            'Experiencia con Integración y Entrega Continuas (CI/CD) y troubleshooting en los productos desarrollados.',
+            'Estudio del desarrollo de APIs utilizando la especificación OpenAPI 3.0.',
           ],
         },
         {
@@ -416,7 +458,7 @@ export const translations = {
       aboutFile: 'sobre-mi.md',
       formFile: 'enviar-mensaje.sh',
       paragraphs: [
-        'Me llamo **Guilherme Cadima**, tengo 25 años y vivo en São Paulo, Brasil. Soy Desarrollador de Software graduado en Ciencia de Datos por la Universidade Paulista, con foco en Ingeniería de Datos y desarrollo back-end.',
+        'Me llamo **Guilherme Cadima**, tengo 25 años y vivo en São Paulo, Brasil. Soy Desarrollador de Software graduado en Ciencia de la Computación por la Universidade Paulista, con foco en Ingeniería de Datos y desarrollo back-end.',
         'Apasionado por la tecnología desde hace 6 años, trabajo a diario con Python, AWS Cloud y pipelines de datos — transformando datos en bruto en soluciones escalables y confiables. Uso IAs como herramienta de productividad para acelerar y mejorar el desarrollo.',
         'Tengo una pasión creciente por el **Machine Learning** — estudio algoritmos, modelos predictivos y aplicaciones prácticas con Python. Mi próximo objetivo es dedicarme de lleno a esta área, uniendo mi sólida base en Ingeniería de Datos con la inteligencia de los modelos.',
         'Fuera del código, soy padre de una hermosa niña, hincha del São Paulo FC, fan del gimnasio, los animales, los Superhéroes, el RPG de mesa y el Cine. Mi libro favorito es **“1984”** de George Orwell.',
