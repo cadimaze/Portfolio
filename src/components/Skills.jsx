@@ -1,24 +1,30 @@
 import {
-  DiReact, DiBootstrap, DiJsBadge, DiPython, DiGit, DiHtml5, DiAngularSimple,
+  DiReact, DiJava, DiJsBadge, DiPython, DiGit, DiHtml5,
 } from "react-icons/di"
 import {
   SiAmazonapigateway, SiAmazoncloudwatch, SiAmazonsqs, SiTerraform, SiAwslambda,
-  SiTailwindcss, SiFirebase, SiDocker, SiJira, SiGithubactions,
+  SiDocker, SiJira, SiGithubactions, SiNodedotjs, SiOpenapiinitiative,
+  SiApachecassandra, SiAmazonrds, SiAmazons3, SiAmazonec2, SiKubernetes, SiAmazonecs,
 } from "react-icons/si"
-import { FaAws } from "react-icons/fa"
+import { FaAws, FaUserShield } from "react-icons/fa"
 import { GiBrain } from "react-icons/gi"
-import { BsDatabase, BsSearch } from "react-icons/bs"
-import { MdCloud } from "react-icons/md"
+import { BsDatabase, BsSearch, BsBraces, BsEyeglasses, BsBug, BsClipboardCheck, BsStars, BsRobot } from "react-icons/bs"
+import { MdArchitecture, MdCloud, MdOutlineModelTraining } from "react-icons/md"
+import { TbApi } from "react-icons/tb"
 import Reveal from "./Reveal"
 import { SectionHeader } from "./Terminal"
 import { useLang } from "../i18n/LanguageContext"
 
 // Ícones por categoria (referências de componentes, na mesma ordem do dicionário)
 const categoryIcons = [
-  [DiPython, DiJsBadge, BsDatabase, DiReact, DiHtml5],
-  [FaAws, SiAwslambda, SiAmazonapigateway, SiAmazoncloudwatch, SiAmazonsqs, SiTerraform, BsDatabase, BsSearch],
-  [SiGithubactions, SiDocker, DiGit, SiJira, MdCloud],
-  [GiBrain, SiFirebase, SiTailwindcss, DiAngularSimple, DiBootstrap],
+  [MdArchitecture, BsBraces, BsEyeglasses, BsBug, DiGit],
+  [DiJava, DiPython, DiJsBadge, SiNodedotjs, DiReact, BsDatabase, DiHtml5],
+  [TbApi, SiOpenapiinitiative, SiAmazonapigateway, SiAmazonsqs],
+  [FaAws, BsSearch, SiApachecassandra, SiAmazonrds, SiAmazons3],
+  [SiAwslambda, SiAmazonec2, SiAmazoncloudwatch, FaUserShield, SiTerraform],
+  [SiDocker, SiKubernetes, SiAmazonecs],
+  [SiGithubactions, MdCloud, BsClipboardCheck, SiJira],
+  [GiBrain, BsStars, MdOutlineModelTraining, BsRobot],
 ]
 
 const Skills = () => {

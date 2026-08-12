@@ -23,7 +23,7 @@ export const translations = {
       cmd: 'whoami',
       roles: ['backend developer', 'data engineer', 'ml enthusiast', 'tech enthusiast'],
       description:
-        'Desenvolvedor de Software & Engenheiro de Dados com 6 anos de experiência, especializado em Python, AWS Cloud e pipelines de dados.',
+        'Desenvolvedor de Software & Engenheiro de Dados com 6 anos de experiência, especializado em Python, Java, AWS Cloud e APIs REST.',
       cta: './baixar-curriculo.pdf',
       stackCmd: 'ls ./stack',
     },
@@ -33,10 +33,14 @@ export const translations = {
       subtitle:
         'Tecnologias e ferramentas que uso no dia a dia para construir soluções robustas e escaláveis.',
       categories: [
-        { name: 'linguagens', techs: ['Python (PySpark)', 'JavaScript / TypeScript', 'SQL', 'React / React Native', 'HTML / CSS'] },
-        { name: 'cloud & infra (aws)', techs: ['AWS Glue', 'Lambda', 'API Gateway', 'CloudWatch', 'SQS', 'Terraform', 'Keyspaces', 'Athena'] },
-        { name: 'devops & qualidade', techs: ['CI/CD', 'Docker', 'Git (Avançado)', 'Scrum / Kanban', 'ServiceNow'] },
-        { name: 'ia & ferramentas', techs: ['IA para Dev', 'Firebase', 'Tailwind CSS', 'Angular', 'Bootstrap'] },
+        { name: 'engenharia de software', techs: ['Design de Software', 'Clean Code', 'Code Review', 'Debugging', 'Git (Avançado)'] },
+        { name: 'linguagens & frameworks', techs: ['Java', 'Python (PySpark)', 'JavaScript / TypeScript', 'Node.js', 'React / React Native', 'SQL', 'HTML / CSS'] },
+        { name: 'apis & integração', techs: ['APIs REST', 'OpenAPI 3.0', 'API Gateway', 'SQS (Mensageria)'] },
+        { name: 'cloud & dados (aws)', techs: ['AWS Glue', 'Athena', 'Keyspaces', 'RDS / Aurora', 'S3'] },
+        { name: 'compute & infra (aws)', techs: ['Lambda', 'EC2', 'CloudWatch', 'IAM', 'Terraform'] },
+        { name: 'contêineres & orquestração', techs: ['Docker', 'Kubernetes (K8s)', 'Amazon ECS'] },
+        { name: 'devops & qualidade', techs: ['CI/CD', 'ServiceNow', 'Testes Automatizados', 'Scrum / Kanban'] },
+        { name: 'machine learning & ia', techs: ['Machine Learning', 'IA Generativa', 'MLOps', 'Claude Code'] },
       ],
     },
     certifications: {
@@ -83,20 +87,22 @@ export const translations = {
       dateLabel: 'Date',
       items: [
         {
-          period: 'Abril 2025 — Presente',
+          period: 'Abril 2025 — Agosto 2026',
           description:
-            'Atuação como Desenvolvedor Back-End Jr. (Engenheiro de Dados), desenvolvendo soluções com Python e Terraform para gerenciamento de recursos na AWS, integração de serviços cloud e adoção da filosofia DevOps com metodologias ágeis.',
+            'Atuação como Desenvolvedor Back-End Jr. (Engenheiro de Dados), desenvolvendo e sustentando APIs REST em Java e Node.js e pipelines de dados com Python e Terraform na AWS, com deploy de aplicações containerizadas e adoção da filosofia DevOps.',
           bullets: [
             'Desenvolvimento aprofundado de pipelines de dados com AWS Glue, utilizando Python (PySpark) e Terraform para provisionamento e automação de recursos.',
-            'Integração de serviços AWS: Keyspaces, Athena, IAM, CloudWatch, Lambda e Aurora RDS no processamento e orquestração de dados.',
+            'Desenvolvimento, evolução e sustentação de APIs REST em Java e Node.js, seguindo a especificação OpenAPI 3.0, com contratos versionados e tratamento de erros padronizado.',
+            'Atuação ampla com serviços AWS no processamento, orquestração e disponibilização de dados: Athena, Keyspaces, RDS, Aurora, S3, ECS, EC2, SQS, Lambda, Glue, IAM, API Gateway e CloudWatch.',
+            'Deploy e sustentação de aplicações containerizadas em ECS e EC2, com monitoramento, métricas e alarmes via CloudWatch.',
+            'Integração assíncrona entre serviços com SQS, garantindo desacoplamento, resiliência e reprocessamento seguro de mensagens.',
+            'Participação ativa em code reviews e aplicação de princípios de clean code e design de software, com foco em legibilidade e debugging eficiente em produção.',
             'Engenharia dos dados trabalhados, garantindo qualidade, consistência e eficiência nas transformações e ingestões.',
             'Estruturação de projetos com metodologias ágeis (Scrum/Kanban), garantindo entregas iterativas e bem documentadas.',
             'Mentalidade DevOps com foco em automação, observabilidade e melhoria contínua dos fluxos de dados.',
-            'Configuração de ambientes para deploys estáveis e replicáveis em diferentes estágios.',
             'Implementação de estratégias robustas de tratamento de erros e falhas nos processos de ETL.',
             'Testes unitários e validações automatizadas com o framework TAAC.',
-            'Experiência prática com pipelines de CI/CD, otimizando deploys em ambientes produtivos.',
-            'Utilização de dados reais de negócio para soluções analíticas e ingestão de grandes volumes.',
+            'Experiência prática com pipelines de CI/CD, otimizando deploys e validações em ambientes produtivos.',
           ],
         },
         {
@@ -105,12 +111,12 @@ export const translations = {
             'Estágio com foco em desenvolvimento Python e Terraform para gerenciamento de recursos na AWS Lambda, integração de serviços cloud e adoção da filosofia DevOps.',
           bullets: [
             'Desenvolvimento em Python e Terraform para o gerenciamento de recursos na AWS Lambda.',
-            'Utilização de serviços como API Gateway, SQS, Lambda e ServiceNow.',
+            'Utilização de serviços como API Gateway, SQS, Lambda, S3 e ServiceNow.',
             'Uso de metodologias ágeis no desenvolvimento e organização de projetos.',
             'Mentalidade e filosofia DevOps aplicada à infraestrutura AWS Cloud.',
             'Tratativa de eventos, incidentes e fluxos com a ServiceNow.',
             'Experiência em Integração e Entrega Contínuas (CI/CD) e troubleshooting nos produtos desenvolvidos.',
-            'Estudo do desenvolvimento de APIs utilizando a especificação OpenAPI 3.0.',
+            'Desenvolvimento de APIs seguindo a especificação OpenAPI 3.0, com foco em padronização de contratos e integração entre sistemas.',
           ],
         },
         {
@@ -137,7 +143,7 @@ export const translations = {
       formFile: 'enviar-mensagem.sh',
       paragraphs: [
         'Me chamo **Guilherme Cadima**, tenho 25 anos e moro em São Paulo, Capital. Sou Desenvolvedor de Software graduado em Ciência da Computação pela Universidade Paulista, com foco em Engenharia de Dados e desenvolvimento back-end.',
-        'Apaixonado por tecnologia há 6 anos, trabalho diariamente com Python, AWS Cloud e pipelines de dados — transformando dados brutos em soluções escaláveis e confiáveis. Uso IAs como ferramenta de produtividade para acelerar e aprimorar o desenvolvimento.',
+        'Apaixonado por tecnologia há 6 anos, trabalho diariamente com Python, Java, AWS Cloud e pipelines de dados — transformando dados brutos em soluções escaláveis e confiáveis. Uso IAs como ferramenta de produtividade para acelerar e aprimorar o desenvolvimento.',
         'Tenho uma paixão crescente por **Machine Learning** — estudo algoritmos, modelos preditivos e aplicações práticas com Python. Meu próximo objetivo é atuar de forma dedicada nessa área, unindo minha base sólida em Engenharia de Dados com a inteligência dos modelos.',
         'Fora do código, sou pai de uma linda menina, torcedor roxo do São Paulo FC, fã de academia, animais, Super-Heróis, RPG de Mesa e Cinema. Meu livro favorito é **“1984”** de George Orwell.',
       ],
@@ -185,7 +191,7 @@ export const translations = {
       cmd: 'whoami',
       roles: ['backend developer', 'data engineer', 'ml enthusiast', 'tech enthusiast'],
       description:
-        'Software Developer & Data Engineer with 6 years of experience, specialized in Python, AWS Cloud and data pipelines.',
+        'Software Developer & Data Engineer with 6 years of experience, specialized in Python, Java, AWS Cloud and REST APIs.',
       cta: './download-resume.pdf',
       stackCmd: 'ls ./stack',
     },
@@ -194,10 +200,14 @@ export const translations = {
       title: 'what i can do',
       subtitle: 'Technologies and tools I use daily to build robust and scalable solutions.',
       categories: [
-        { name: 'languages', techs: ['Python (PySpark)', 'JavaScript / TypeScript', 'SQL', 'React / React Native', 'HTML / CSS'] },
-        { name: 'cloud & infra (aws)', techs: ['AWS Glue', 'Lambda', 'API Gateway', 'CloudWatch', 'SQS', 'Terraform', 'Keyspaces', 'Athena'] },
-        { name: 'devops & quality', techs: ['CI/CD', 'Docker', 'Git (Advanced)', 'Scrum / Kanban', 'ServiceNow'] },
-        { name: 'ai & tools', techs: ['AI for Dev', 'Firebase', 'Tailwind CSS', 'Angular', 'Bootstrap'] },
+        { name: 'software engineering', techs: ['Software Design', 'Clean Code', 'Code Review', 'Debugging', 'Git (Advanced)'] },
+        { name: 'languages & frameworks', techs: ['Java', 'Python (PySpark)', 'JavaScript / TypeScript', 'Node.js', 'React / React Native', 'SQL', 'HTML / CSS'] },
+        { name: 'apis & integration', techs: ['REST APIs', 'OpenAPI 3.0', 'API Gateway', 'SQS (Messaging)'] },
+        { name: 'cloud & data (aws)', techs: ['AWS Glue', 'Athena', 'Keyspaces', 'RDS / Aurora', 'S3'] },
+        { name: 'compute & infra (aws)', techs: ['Lambda', 'EC2', 'CloudWatch', 'IAM', 'Terraform'] },
+        { name: 'containers & orchestration', techs: ['Docker', 'Kubernetes (K8s)', 'Amazon ECS'] },
+        { name: 'devops & quality', techs: ['CI/CD', 'ServiceNow', 'Automated Testing', 'Scrum / Kanban'] },
+        { name: 'machine learning & ai', techs: ['Machine Learning', 'Generative AI', 'MLOps', 'Claude Code'] },
       ],
     },
     certifications: {
@@ -244,20 +254,22 @@ export const translations = {
       dateLabel: 'Date',
       items: [
         {
-          period: 'April 2025 — Present',
+          period: 'April 2025 — August 2026',
           description:
-            'Working as a Back-End Jr. Developer (Data Engineer), building solutions with Python and Terraform to manage AWS resources, integrating cloud services and adopting a DevOps philosophy with agile methodologies.',
+            'Working as a Back-End Jr. Developer (Data Engineer), building and maintaining REST APIs in Java and Node.js and data pipelines with Python and Terraform on AWS, deploying containerized applications and adopting a DevOps philosophy.',
           bullets: [
             'In-depth development of data pipelines with AWS Glue, using Python (PySpark) and Terraform for resource provisioning and automation.',
-            'Integration of AWS services: Keyspaces, Athena, IAM, CloudWatch, Lambda and Aurora RDS for data processing and orchestration.',
+            'Development, evolution and maintenance of REST APIs in Java and Node.js, following the OpenAPI 3.0 specification, with versioned contracts and standardized error handling.',
+            'Broad work with AWS services for data processing, orchestration and availability: Athena, Keyspaces, RDS, Aurora, S3, ECS, EC2, SQS, Lambda, Glue, IAM, API Gateway and CloudWatch.',
+            'Deploy and maintenance of containerized applications on ECS and EC2, with monitoring, metrics and alarms via CloudWatch.',
+            'Asynchronous integration between services with SQS, ensuring decoupling, resilience and safe message reprocessing.',
+            'Active participation in code reviews and application of clean code and software design principles, focused on readability and efficient debugging in production.',
             'Data engineering of the processed data, ensuring quality, consistency and efficiency in transformations and ingestions.',
             'Project structuring with agile methodologies (Scrum/Kanban), ensuring iterative and well-documented deliveries.',
             'DevOps mindset focused on automation, observability and continuous improvement of data flows.',
-            'Environment setup for stable and reproducible deploys across different stages.',
             'Implementation of robust error and failure handling strategies in ETL processes.',
             'Unit tests and automated validations with the TAAC framework.',
-            'Hands-on experience with CI/CD pipelines, optimizing deploys in production environments.',
-            'Use of real business data for analytical solutions and large-volume ingestion.',
+            'Hands-on experience with CI/CD pipelines, optimizing deploys and validations in production environments.',
           ],
         },
         {
@@ -266,12 +278,12 @@ export const translations = {
             'Internship focused on Python and Terraform development to manage AWS Lambda resources, integrate cloud services and adopt a DevOps philosophy.',
           bullets: [
             'Development in Python and Terraform to manage AWS Lambda resources.',
-            'Use of services such as API Gateway, SQS, Lambda and ServiceNow.',
+            'Use of services such as API Gateway, SQS, Lambda, S3 and ServiceNow.',
             'Use of agile methodologies in project development and organization.',
             'DevOps mindset and philosophy applied to AWS Cloud infrastructure.',
             'Handling events, incidents and workflows with ServiceNow.',
             'Experience with Continuous Integration and Continuous Delivery (CI/CD) and troubleshooting in developed products.',
-            'Study of API development using the OpenAPI 3.0 specification.',
+            'API development following the OpenAPI 3.0 specification, focused on contract standardization and system integration.',
           ],
         },
         {
@@ -298,7 +310,7 @@ export const translations = {
       formFile: 'send-message.sh',
       paragraphs: [
         'My name is **Guilherme Cadima**, I am 25 years old and live in São Paulo, Brazil. I am a Software Developer with a degree in Computer Science from Universidade Paulista, focused on Data Engineering and back-end development.',
-        'Passionate about technology for 6 years, I work daily with Python, AWS Cloud and data pipelines — turning raw data into scalable and reliable solutions. I use AI as a productivity tool to accelerate and improve development.',
+        'Passionate about technology for 6 years, I work daily with Python, Java, AWS Cloud and data pipelines — turning raw data into scalable and reliable solutions. I use AI as a productivity tool to accelerate and improve development.',
         'I have a growing passion for **Machine Learning** — I study algorithms, predictive models and practical applications with Python. My next goal is to work dedicatedly in this field, combining my solid Data Engineering foundation with the intelligence of models.',
         'Beyond code, I am the father of a lovely girl, a passionate São Paulo FC fan, and a fan of the gym, animals, Super-Heroes, tabletop RPG and Cinema. My favorite book is **“1984”** by George Orwell.',
       ],
@@ -346,7 +358,7 @@ export const translations = {
       cmd: 'whoami',
       roles: ['backend developer', 'data engineer', 'ml enthusiast', 'tech enthusiast'],
       description:
-        'Desarrollador de Software e Ingeniero de Datos con 6 años de experiencia, especializado en Python, AWS Cloud y pipelines de datos.',
+        'Desarrollador de Software e Ingeniero de Datos con 6 años de experiencia, especializado en Python, Java, AWS Cloud y APIs REST.',
       cta: './descargar-cv.pdf',
       stackCmd: 'ls ./stack',
     },
@@ -355,10 +367,14 @@ export const translations = {
       title: 'lo que sé hacer',
       subtitle: 'Tecnologías y herramientas que uso a diario para construir soluciones robustas y escalables.',
       categories: [
-        { name: 'lenguajes', techs: ['Python (PySpark)', 'JavaScript / TypeScript', 'SQL', 'React / React Native', 'HTML / CSS'] },
-        { name: 'cloud & infra (aws)', techs: ['AWS Glue', 'Lambda', 'API Gateway', 'CloudWatch', 'SQS', 'Terraform', 'Keyspaces', 'Athena'] },
-        { name: 'devops & calidad', techs: ['CI/CD', 'Docker', 'Git (Avanzado)', 'Scrum / Kanban', 'ServiceNow'] },
-        { name: 'ia & herramientas', techs: ['IA para Dev', 'Firebase', 'Tailwind CSS', 'Angular', 'Bootstrap'] },
+        { name: 'ingeniería de software', techs: ['Diseño de Software', 'Clean Code', 'Code Review', 'Debugging', 'Git (Avanzado)'] },
+        { name: 'lenguajes & frameworks', techs: ['Java', 'Python (PySpark)', 'JavaScript / TypeScript', 'Node.js', 'React / React Native', 'SQL', 'HTML / CSS'] },
+        { name: 'apis & integración', techs: ['APIs REST', 'OpenAPI 3.0', 'API Gateway', 'SQS (Mensajería)'] },
+        { name: 'cloud & datos (aws)', techs: ['AWS Glue', 'Athena', 'Keyspaces', 'RDS / Aurora', 'S3'] },
+        { name: 'compute & infra (aws)', techs: ['Lambda', 'EC2', 'CloudWatch', 'IAM', 'Terraform'] },
+        { name: 'contenedores & orquestación', techs: ['Docker', 'Kubernetes (K8s)', 'Amazon ECS'] },
+        { name: 'devops & calidad', techs: ['CI/CD', 'ServiceNow', 'Pruebas Automatizadas', 'Scrum / Kanban'] },
+        { name: 'machine learning & ia', techs: ['Machine Learning', 'IA Generativa', 'MLOps', 'Claude Code'] },
       ],
     },
     certifications: {
@@ -405,20 +421,22 @@ export const translations = {
       dateLabel: 'Date',
       items: [
         {
-          period: 'Abril 2025 — Presente',
+          period: 'Abril 2025 — Agosto 2026',
           description:
-            'Actuación como Desarrollador Back-End Jr. (Ingeniero de Datos), desarrollando soluciones con Python y Terraform para la gestión de recursos en AWS, integración de servicios cloud y adopción de la filosofía DevOps con metodologías ágiles.',
+            'Actuación como Desarrollador Back-End Jr. (Ingeniero de Datos), desarrollando y manteniendo APIs REST en Java y Node.js y pipelines de datos con Python y Terraform en AWS, con despliegue de aplicaciones containerizadas y adopción de la filosofía DevOps.',
           bullets: [
             'Desarrollo avanzado de pipelines de datos con AWS Glue, utilizando Python (PySpark) y Terraform para el aprovisionamiento y la automatización de recursos.',
-            'Integración de servicios AWS: Keyspaces, Athena, IAM, CloudWatch, Lambda y Aurora RDS en el procesamiento y la orquestación de datos.',
+            'Desarrollo, evolución y mantenimiento de APIs REST en Java y Node.js, siguiendo la especificación OpenAPI 3.0, con contratos versionados y manejo estandarizado de errores.',
+            'Actuación amplia con servicios AWS en el procesamiento, la orquestación y la disponibilización de datos: Athena, Keyspaces, RDS, Aurora, S3, ECS, EC2, SQS, Lambda, Glue, IAM, API Gateway y CloudWatch.',
+            'Despliegue y mantenimiento de aplicaciones containerizadas en ECS y EC2, con monitoreo, métricas y alarmas vía CloudWatch.',
+            'Integración asíncrona entre servicios con SQS, garantizando desacoplamiento, resiliencia y reprocesamiento seguro de mensajes.',
+            'Participación activa en code reviews y aplicación de principios de clean code y diseño de software, con foco en legibilidad y depuración eficiente en producción.',
             'Ingeniería de los datos trabajados, garantizando calidad, consistencia y eficiencia en las transformaciones e ingestas.',
             'Estructuración de proyectos con metodologías ágiles (Scrum/Kanban), garantizando entregas iterativas y bien documentadas.',
             'Mentalidad DevOps enfocada en automatización, observabilidad y mejora continua de los flujos de datos.',
-            'Configuración de entornos para despliegues estables y reproducibles en diferentes etapas.',
             'Implementación de estrategias robustas de manejo de errores y fallos en los procesos de ETL.',
             'Pruebas unitarias y validaciones automatizadas con el framework TAAC.',
-            'Experiencia práctica con pipelines de CI/CD, optimizando despliegues en entornos productivos.',
-            'Uso de datos reales de negocio para soluciones analíticas e ingesta de grandes volúmenes.',
+            'Experiencia práctica con pipelines de CI/CD, optimizando despliegues y validaciones en entornos productivos.',
           ],
         },
         {
@@ -427,12 +445,12 @@ export const translations = {
             'Pasantía enfocada en el desarrollo con Python y Terraform para la gestión de recursos en AWS Lambda, integración de servicios cloud y adopción de la filosofía DevOps.',
           bullets: [
             'Desarrollo en Python y Terraform para la gestión de recursos en AWS Lambda.',
-            'Uso de servicios como API Gateway, SQS, Lambda y ServiceNow.',
+            'Uso de servicios como API Gateway, SQS, Lambda, S3 y ServiceNow.',
             'Uso de metodologías ágiles en el desarrollo y organización de proyectos.',
             'Mentalidad y filosofía DevOps aplicada a la infraestructura AWS Cloud.',
             'Gestión de eventos, incidentes y flujos con ServiceNow.',
             'Experiencia con Integración y Entrega Continuas (CI/CD) y troubleshooting en los productos desarrollados.',
-            'Estudio del desarrollo de APIs utilizando la especificación OpenAPI 3.0.',
+            'Desarrollo de APIs siguiendo la especificación OpenAPI 3.0, con foco en la estandarización de contratos e integración entre sistemas.',
           ],
         },
         {
@@ -459,7 +477,7 @@ export const translations = {
       formFile: 'enviar-mensaje.sh',
       paragraphs: [
         'Me llamo **Guilherme Cadima**, tengo 25 años y vivo en São Paulo, Brasil. Soy Desarrollador de Software graduado en Ciencia de la Computación por la Universidade Paulista, con foco en Ingeniería de Datos y desarrollo back-end.',
-        'Apasionado por la tecnología desde hace 6 años, trabajo a diario con Python, AWS Cloud y pipelines de datos — transformando datos en bruto en soluciones escalables y confiables. Uso IAs como herramienta de productividad para acelerar y mejorar el desarrollo.',
+        'Apasionado por la tecnología desde hace 6 años, trabajo a diario con Python, Java, AWS Cloud y pipelines de datos — transformando datos en bruto en soluciones escalables y confiables. Uso IAs como herramienta de productividad para acelerar y mejorar el desarrollo.',
         'Tengo una pasión creciente por el **Machine Learning** — estudio algoritmos, modelos predictivos y aplicaciones prácticas con Python. Mi próximo objetivo es dedicarme de lleno a esta área, uniendo mi sólida base en Ingeniería de Datos con la inteligencia de los modelos.',
         'Fuera del código, soy padre de una hermosa niña, hincha del São Paulo FC, fan del gimnasio, los animales, los Superhéroes, el RPG de mesa y el Cine. Mi libro favorito es **“1984”** de George Orwell.',
       ],

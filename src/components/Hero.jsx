@@ -9,10 +9,10 @@ import {
   AiOutlineTikTok,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
-import { DiDatabase, DiGithubBadge, DiPython } from "react-icons/di";
+import { DiDatabase, DiJava, DiPython } from "react-icons/di";
 import { motion } from "framer-motion";
 import { FaAws, FaReact } from "react-icons/fa";
-import { SiAwslambda, SiCredly } from "react-icons/si";
+import { SiAwslambda, SiCredly, SiDocker } from "react-icons/si";
 
 const socials = [
   { icon: <AiOutlineGithub />,    url: "https://github.com/cadimaze",                                    label: "github" },
@@ -24,12 +24,13 @@ const socials = [
 ]
 
 const stack = [
-  { icon: <DiPython />,      label: 'python' },
-  { icon: <FaAws />,         label: 'aws' },
-  { icon: <SiAwslambda />,   label: 'lambda' },
-  { icon: <DiGithubBadge />, label: 'github' },
-  { icon: <DiDatabase />,    label: 'sql' },
-  { icon: <FaReact />,       label: 'react' },
+  { icon: <DiPython />,    label: 'python' },
+  { icon: <DiJava />,      label: 'java' },
+  { icon: <FaAws />,       label: 'aws' },
+  { icon: <SiAwslambda />, label: 'lambda' },
+  { icon: <SiDocker />,    label: 'docker' },
+  { icon: <DiDatabase />,  label: 'sql' },
+  { icon: <FaReact />,     label: 'react' },
 ]
 
 const Hero = () => {
