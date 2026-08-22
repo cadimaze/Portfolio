@@ -7,7 +7,6 @@ import {
   AiOutlineTikTok,
   AiOutlineWhatsApp,
   AiOutlineArrowRight,
-  AiOutlineDownload,
 } from 'react-icons/ai'
 import { DiDatabase, DiJava, DiPython, DiReact, DiGit } from 'react-icons/di'
 import { FaAws } from 'react-icons/fa'
@@ -17,6 +16,7 @@ import { Button, Dot } from './ui'
 import SplitText from './fx/SplitText'
 import RotatingText from './fx/RotatingText'
 import Magnetic from './fx/Magnetic'
+import ResumeMenu from './ResumeMenu'
 import Marquee from './fx/Marquee'
 import CountUp from './fx/CountUp'
 
@@ -57,14 +57,16 @@ const Hero = () => {
           initial={{ opacity: 0, y: 26 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease }}
-          className="raised relative overflow-hidden rounded-xl3 px-6 py-10 sm:px-10 sm:py-12 md:px-12"
+          className="raised relative rounded-xl3 px-6 py-10 sm:px-10 sm:py-12 md:px-12"
         >
-          {/* marca d'água gravada: número da edição, no canto */}
+          {/* marca d'água gravada: número da edição, recortada pelo painel */}
           <span
             aria-hidden
-            className="pointer-events-none absolute -right-2 -top-6 select-none font-mono text-[132px] font-bold leading-none text-ink/[0.035]"
+            className="pointer-events-none absolute inset-0 select-none overflow-hidden rounded-xl3"
           >
-            01
+            <span className="absolute -right-2 -top-6 font-mono text-[132px] font-bold leading-none text-ink/[0.035]">
+              01
+            </span>
           </span>
 
           <p className="flex items-center gap-3 font-mono text-[10.5px] font-bold uppercase tracking-[0.24em] text-muted">
@@ -88,14 +90,7 @@ const Hero = () => {
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
-            <Magnetic>
-              <Button
-                onClick={() => window.open('/curriculo.pdf', '_blank', 'noopener')}
-                icon={<AiOutlineDownload size={17} />}
-              >
-                {t.hero.ctaPrimary}
-              </Button>
-            </Magnetic>
+            <ResumeMenu />
             <Magnetic strength={0.24}>
               <Link to="about" smooth offset={-110} duration={500}>
                 <Button variant="ghost" icon={<AiOutlineArrowRight size={15} />}>

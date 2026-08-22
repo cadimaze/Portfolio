@@ -65,7 +65,15 @@ export const translations = {
         }
       ],
       "eyebrow": "portfólio · 2026",
-      "toolkit": "ferramentas do dia a dia"
+      "toolkit": "ferramentas do dia a dia",
+      "resume": {
+        "menuLabel": "escolha o idioma do currículo",
+        "recommended": "recomendado",
+        "options": {
+          "pt": "Currículo em português",
+          "en": "Resume in English"
+        }
+      }
     },
     "skills": {
       "num": "01",
@@ -386,7 +394,15 @@ export const translations = {
         }
       ],
       "eyebrow": "portfolio · 2026",
-      "toolkit": "everyday toolkit"
+      "toolkit": "everyday toolkit",
+      "resume": {
+        "menuLabel": "choose the resume language",
+        "recommended": "recommended",
+        "options": {
+          "pt": "Currículo em português",
+          "en": "Resume in English"
+        }
+      }
     },
     "skills": {
       "num": "01",
@@ -707,7 +723,15 @@ export const translations = {
         }
       ],
       "eyebrow": "portafolio · 2026",
-      "toolkit": "herramientas del día a día"
+      "toolkit": "herramientas del día a día",
+      "resume": {
+        "menuLabel": "elige el idioma del currículum",
+        "recommended": "recomendado",
+        "options": {
+          "pt": "Currículo em português",
+          "en": "Resume in English"
+        }
+      }
     },
     "skills": {
       "num": "01",
