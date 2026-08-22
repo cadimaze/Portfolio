@@ -166,12 +166,12 @@ export const translations = {
       "items": [
         {
           "tags": [
-            "react native",
+            "next.js",
             "ia generativa",
-            "supabase",
-            "mobile"
+            "postgres",
+            "analytics"
           ],
-          "description": "App mobile em React Native/Expo com IA generativa aplicada à análise de dados de plantas de loja (Gemini Vision) e geração de listas por linguagem natural, com backend em Supabase."
+          "description": "App de planejamento diário que cruza o que você declarou querer, em texto livre, com o que de fato fez — as tarefas registradas por categoria de vida. A camada de analytics agrega os dados, a Claude API escreve os insights em pt-BR e um microserviço em FastAPI prevê a conclusão das tarefas."
         },
         {
           "tags": [
@@ -493,12 +493,12 @@ export const translations = {
       "items": [
         {
           "tags": [
-            "react native",
+            "next.js",
             "generative ai",
-            "supabase",
-            "mobile"
+            "postgres",
+            "analytics"
           ],
-          "description": "Mobile app in React Native/Expo with generative AI applied to store floor plan data analysis (Gemini Vision) and natural language list generation, with a Supabase backend."
+          "description": "Daily planning app that cross-references what you said you wanted, in free text, with what you actually did — the tasks logged by life category. An analytics layer aggregates the data, the Claude API writes the insights in natural language and a FastAPI microservice predicts task completion."
         },
         {
           "tags": [
@@ -820,12 +820,12 @@ export const translations = {
       "items": [
         {
           "tags": [
-            "react native",
+            "next.js",
             "ia generativa",
-            "supabase",
-            "mobile"
+            "postgres",
+            "analytics"
           ],
-          "description": "App móvil en React Native/Expo con IA generativa aplicada al análisis de datos de planos de tienda (Gemini Vision) y generación de listas por lenguaje natural, con backend en Supabase."
+          "description": "App de planificación diaria que cruza lo que dijiste que querías, en texto libre, con lo que realmente hiciste — las tareas registradas por categoría de vida. La capa de analytics agrega los datos, la Claude API escribe los insights en lenguaje natural y un microservicio en FastAPI predice la conclusión de las tareas."
         },
         {
           "tags": [

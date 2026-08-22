@@ -8,8 +8,8 @@ import { useLang } from '../i18n/LanguageContext'
 // Metadados fixos (não traduzidos) — na mesma ordem do dicionário
 const projectMeta = [
   {
-    slug: 'smartcart',
-    title: 'SmartCart',
+    slug: 'ritmo',
+    title: 'Ritmo',
     year: '2026',
     links: {},
   },
