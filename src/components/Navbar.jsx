@@ -1,83 +1,113 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { Link } from 'react-scroll'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'motion/react'
 import { useLang } from '../i18n/LanguageContext'
 import LanguageSwitcher from './LanguageSwitcher'
 
-const linkOrder = ['skills', 'certifications', 'portfolio', 'experience', 'contact']
+const links = [
+  { to: 'skills', key: 'skills' },
+  { to: 'projects', key: 'projects' },
+  { to: 'experience', key: 'experience' },
+  { to: 'certifications', key: 'certifications' },
+  { to: 'about', key: 'about' },
+]
 
 const Navbar = () => {
   const { t } = useLang()
-  const [nav, setNav] = useState(false)
-  const toggleNav = () => setNav(!nav)
-  const closeNav = () => setNav(false)
+  const [open, setOpen] = useState(false)
 
-  const menuVariants = {
-    open:   { x: 0,       transition: { stiffness: 20, damping: 15 } },
-    closed: { x: '-100%', transition: { stiffness: 20, damping: 15 } },
-  }
+  // trava o scroll do fundo enquanto a gaveta mobile está aberta
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
 
-  const navLinks = linkOrder.map((to) => ({ to, label: t.nav[to] }))
+  const scrollProps = { smooth: true, spy: true, offset: -110, duration: 500 }
 
   return (
-    <div className='fixed top-0 left-0 w-full z-50 border-b border-stone-800 bg-[#0b0906]/85 backdrop-blur-md'>
-      <div className='max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-8 h-16'>
-
-        <Link to="hero" smooth offset={50} duration={500}
-          className='cursor-pointer select-none font-mono text-sm md:text-base tracking-tight'>
-          <span className='text-amber-500'>~/</span>
-          <span className='text-stone-200'>guilherme-cadima</span>
-          <span className='text-amber-400 cursor-blink ml-0.5'>▮</span>
+    <header className="sticky top-0 z-50 px-4 pt-4 md:px-8">
+      <nav className="raised mx-auto flex max-w-[1120px] items-center gap-4 rounded-xl3 px-3 py-3 backdrop-blur-md md:px-4">
+        <Link
+          to="hero"
+          {...scrollProps}
+          className="group flex cursor-pointer select-none items-center gap-3 pl-1"
+        >
+          <span className="btn-accent grid h-10 w-10 place-items-center rounded-2xl text-[13px] font-extrabold text-white">
+            GC
+          </span>
+          <span className="hidden leading-tight sm:block">
+            <b className="block text-[14.5px] font-extrabold tracking-tight text-ink">
+              Guilherme Cadima
+            </b>
+            <small className="block font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
+              dev &amp; data engineer
+            </small>
+          </span>
         </Link>
 
-        <div className='hidden md:flex items-center gap-8'>
-          <ul className='flex gap-8 font-mono text-sm text-stone-400'>
-            {navLinks.map(({ label, to }) => (
-              <li key={to} className='group cursor-pointer transition-colors duration-200 hover:text-amber-400'>
-                <Link to={to} smooth offset={50} duration={500}>
-                  <span className='text-amber-600/60 group-hover:text-amber-400 transition-colors'>/</span>{label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className='pl-6 border-l border-stone-800'>
-            <LanguageSwitcher />
-          </div>
-        </div>
-
-        <div className='flex items-center gap-4 md:hidden'>
-          <LanguageSwitcher />
-          <div onClick={toggleNav} className='z-50 text-stone-300 cursor-pointer'>
-            {nav ? <AiOutlineClose size={22} /> : <AiOutlineMenu size={22} />}
-          </div>
-        </div>
-      </div>
-
-      <motion.div
-        initial={false}
-        animate={nav ? 'open' : 'closed'}
-        variants={menuVariants}
-        className='fixed left-0 top-0 w-full min-h-screen bg-[#0b0906] z-40 md:hidden'
-      >
-        <p className='font-mono text-xs text-stone-600 mt-24 mb-10 text-center'>
-          <span className='text-amber-500'>guilherme@cadima</span>:~$ {t.nav.menu}
-        </p>
-        <ul className='font-mono font-bold text-2xl space-y-8 text-center text-stone-300'>
-          {navLinks.map(({ label, to }) => (
+        <ul className="sunken-sm mx-auto hidden items-center gap-1 rounded-2xl p-1.5 lg:flex">
+          {links.map(({ to, key }) => (
             <li key={to}>
-              <Link to={to} onClick={closeNav} smooth offset={50} duration={500}
-                className='hover:text-amber-400 transition-colors'>
-                <span className='text-amber-600/60'>/</span>{label}
+              <Link
+                to={to}
+                {...scrollProps}
+                activeClass="raised-sm !text-accent"
+                className="pressable block cursor-pointer rounded-xl px-4 py-2 text-[13px] font-semibold text-muted hover:text-ink"
+              >
+                {t.nav[key]}
               </Link>
             </li>
           ))}
         </ul>
-        <div className='flex justify-center mt-12'>
-          <LanguageSwitcher className='text-base' />
+
+        <div className="ml-auto flex items-center gap-2 lg:ml-0">
+          <LanguageSwitcher />
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? t.ui.closeMenu : t.ui.openMenu}
+            aria-expanded={open}
+            className="raised-sm pressable grid h-11 w-11 place-items-center rounded-2xl text-ink lg:hidden"
+          >
+            {open ? <AiOutlineClose size={19} /> : <AiOutlineMenu size={19} />}
+          </button>
         </div>
-      </motion.div>
-    </div>
+      </nav>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.25, ease: [0.22, 0.8, 0.28, 1] }}
+            className="raised mx-auto mt-3 max-w-[1120px] rounded-xl3 p-4 lg:hidden"
+          >
+            <p className="mb-3 px-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
+              {t.nav.menu}
+            </p>
+            <ul className="grid gap-2">
+              {links.map(({ to, key }) => (
+                <li key={to}>
+                  <Link
+                    to={to}
+                    {...scrollProps}
+                    onClick={() => setOpen(false)}
+                    activeClass="!text-accent"
+                    className="sunken-sm pressable block cursor-pointer rounded-2xl px-4 py-3.5 text-[15px] font-bold text-ink"
+                  >
+                    {t.nav[key]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   )
 }
 

@@ -48,6 +48,6 @@ export const useLang = () => {
 export const renderRich = (text) =>
   text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
     part.startsWith('**') && part.endsWith('**')
-      ? <strong key={i} className="text-amber-400">{part.slice(2, -2)}</strong>
+      ? <strong key={i} className="font-bold text-accent">{part.slice(2, -2)}</strong>
       : part
   )

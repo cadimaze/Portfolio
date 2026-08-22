@@ -1,25 +1,31 @@
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Portfolio from "./components/Portfolio";
-import Skills from "./components/Skills";
-import Certifications from "./components/Certifications";
-import SiteLinks from "./components/SiteLinks";
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Certifications from './components/Certifications'
+import About from './components/About'
+import Footer from './components/Footer'
+import DotGrid from './components/fx/DotGrid'
+import ScrollProgress from './components/fx/ScrollProgress'
 
 export default function App() {
   return (
-    <>
-      <Navbar/>
-      <Hero/>
-      <Skills/>
-      <Certifications/>
-      <Portfolio/>
-      <Experience/>
-      <Contact/>
-      <SiteLinks/>
-      <Footer/>
-    </>
+    <div className="relative min-h-screen">
+      <DotGrid />
+      <ScrollProgress />
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <Hero />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Certifications />
+          <About />
+        </main>
+        <Footer />
+      </div>
+    </div>
   )
 }

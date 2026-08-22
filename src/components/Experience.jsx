@@ -1,80 +1,155 @@
-import { motion } from 'framer-motion'
-import Reveal from './Reveal'
-import { SectionHeader } from './Terminal'
+/* eslint-disable react/prop-types */
+import { useEffect, useRef, useState } from 'react'
+import { AiOutlineDown } from 'react-icons/ai'
+import { Card, Section, SectionHeader } from './ui'
+import GsapStagger from './fx/GsapStagger'
+import { gsap, reducedMotion } from '../lib/gsap'
 import { useLang } from '../i18n/LanguageContext'
 
 // Metadados fixos (não traduzidos) — na mesma ordem do dicionário
 const experienceMeta = [
-  { hash: 'e5d7a0f', head: true, company: 'Itaú Unibanco' },
-  { hash: 'd2b56a1', company: 'Itaú Unibanco' },
-  { hash: '3f8c112', company: 'DigiSystem — Front-end' },
-  { hash: 'b7e42dc', company: 'DigiSystem — Back-end' },
-  { hash: 'a1c09f4', company: 'Comando G8' },
+  { id: 'itau-dev', company: 'Itaú Unibanco', role: 'Back-end / Data Engineer', current: true },
+  { id: 'itau-est', company: 'Itaú Unibanco', role: 'Estágio — Python & AWS' },
+  { id: 'digi-front', company: 'DigiSystem', role: 'Front-end' },
+  { id: 'digi-back', company: 'DigiSystem', role: 'Back-end' },
+  { id: 'g8', company: 'Comando G8', role: 'Compras' },
 ]
+
+const VISIBLE_BULLETS = 4
+
+const ExperienceItem = ({ exp, t }) => {
+  const [expanded, setExpanded] = useState(false)
+  const bullets = exp.bullets || []
+  const collapsible = bullets.length > VISIBLE_BULLETS
+  const shown = expanded || !collapsible ? bullets : bullets.slice(0, VISIBLE_BULLETS)
+
+  return (
+    <div className="relative pb-6 pl-10 sm:pl-14">
+      {/* nó da linha do tempo */}
+      <span
+        className={`absolute left-0 top-6 grid h-7 w-7 place-items-center rounded-full sm:left-1 ${
+          exp.current ? 'btn-accent' : 'raised-sm'
+        }`}
+      >
+        <span
+          className={`h-2 w-2 rounded-full ${exp.current ? 'bg-white' : 'bg-muted/50'}`}
+        />
+      </span>
+
+      <Card className="p-6 sm:p-7">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+          <h3 className="text-[17px] font-extrabold tracking-tight text-ink">{exp.company}</h3>
+          {exp.current && (
+            <span className="rounded-lg bg-accent-wash px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-accent-deep">
+              {t.experience.current}
+            </span>
+          )}
+          <span className="ml-auto font-mono text-[11.5px] font-medium text-muted">
+            {exp.period}
+          </span>
+        </div>
+
+        <p className="mt-1 font-mono text-[11.5px] uppercase tracking-[0.12em] text-muted">
+          {exp.role}
+        </p>
+
+        <p className="mt-4 text-[13.5px] leading-7 text-ink/70">{exp.description}</p>
+
+        {bullets.length > 0 && (
+          <div className="sunken-sm mt-5 rounded-2xl p-5">
+            <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-muted">
+              {t.experience.highlights}
+            </p>
+            <ul className="grid gap-2.5">
+              {shown.map((bullet) => (
+                <li key={bullet} className="flex gap-3 text-[12.5px] leading-6 text-ink/70">
+                  <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70" />
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+
+            {collapsible && (
+              <button
+                type="button"
+                onClick={() => setExpanded((v) => !v)}
+                aria-expanded={expanded}
+                className="pressable raised-sm mt-4 inline-flex items-center gap-2 rounded-xl px-3.5 py-2 font-mono text-[11px] font-bold text-accent"
+              >
+                {expanded ? t.experience.less : `${t.experience.more} (${bullets.length})`}
+                <AiOutlineDown
+                  size={11}
+                  className={`transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`}
+                />
+              </button>
+            )}
+          </div>
+        )}
+      </Card>
+    </div>
+  )
+}
 
 const Experience = () => {
   const { t } = useLang()
-  const experiences = experienceMeta.map((m, i) => ({ ...m, ...t.experience.items[i] }))
+  const railRef = useRef(null)
+  const trackRef = useRef(null)
+  const experiences = experienceMeta.map((meta, i) => ({ ...meta, ...t.experience.items[i] }))
+
+  // o trilho se preenche conforme a linha do tempo é percorrida
+  useEffect(() => {
+    if (reducedMotion() || !railRef.current) return undefined
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        railRef.current,
+        { scaleY: 0 },
+        {
+          scaleY: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: trackRef.current,
+            start: 'top 65%',
+            end: 'bottom 75%',
+            scrub: 0.4,
+          },
+        },
+      )
+    })
+    return () => ctx.revert()
+  }, [])
 
   return (
-    <div className='max-w-[780px] mx-auto px-6 py-24' id="experience">
-      <Reveal>
-        <SectionHeader
-          path="~/experiência"
-          cmd={t.experience.cmd}
-          title={t.experience.title}
-          subtitle={t.experience.subtitle}
-        />
-      </Reveal>
+    <Section id="experience" className="max-w-[880px]">
+      <SectionHeader
+        num={t.experience.num}
+        title={t.experience.title}
+        subtitle={t.experience.subtitle}
+        meta={t.experience.meta}
+      />
 
-      <div className='relative'>
-        <div className='absolute left-[5px] top-3 bottom-2 w-px bg-gradient-to-b from-amber-500/60 via-amber-800/30 to-transparent' />
+      <div className="relative" ref={trackRef}>
+        {/* trilho entalhado + preenchimento que acompanha o scroll */}
+        <span
+          aria-hidden
+          className="sunken absolute bottom-6 left-[13px] top-6 w-[6px] overflow-hidden rounded-full sm:left-[17px]"
+        >
+          <span
+            ref={railRef}
+            className="block h-full w-full origin-top rounded-full"
+            style={{ background: 'linear-gradient(180deg, #6d9dff, #2f6bff)' }}
+          />
+        </span>
 
-        {experiences.map((exp, index) => (
-          <Reveal key={index} width="100%">
-            <motion.div
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5 }}
-              className='relative pl-8 pb-10'
-            >
-              <div className='absolute left-0 top-2 w-[11px] h-[11px] rounded-full bg-amber-400 border-2 border-[#0b0906] shadow-[0_0_10px_rgba(245,165,36,0.5)]' />
-
-              <div className='border border-stone-800 bg-[#100c07]/60 hover:border-amber-900/50 rounded-lg p-5 sm:p-6 transition-all duration-300'>
-                <div className='font-mono text-xs text-stone-500 mb-3 flex flex-wrap items-center gap-x-2 gap-y-1'>
-                  <span className="text-amber-500">commit {exp.hash}</span>
-                  {exp.head && (
-                    <span className="text-amber-400 border border-amber-800/60 bg-amber-950/30 rounded px-1.5 py-0.5">
-                      HEAD → main
-                    </span>
-                  )}
-                </div>
-
-                <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-2'>
-                  <h3 className='text-stone-100 text-base font-bold'>{exp.company}</h3>
-                  <span className='font-mono text-amber-400/70 text-xs'>{t.experience.dateLabel}: {exp.period}</span>
-                </div>
-
-                <p className='text-stone-400 text-sm leading-7'>{exp.description}</p>
-
-                {exp.bullets && (
-                  <ul className='mt-4 space-y-2 font-mono'>
-                    {exp.bullets.map((bullet, i) => (
-                      <li key={i} className='flex gap-2.5 text-stone-400 text-xs leading-6'>
-                        <span className='text-amber-500 flex-shrink-0'>+</span>
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </motion.div>
-          </Reveal>
-        ))}
+        <GsapStagger selector=":scope > div" y={26} stagger={0.1}>
+          {experiences.map((exp) => (
+            <div key={exp.id}>
+              <ExperienceItem exp={exp} t={t} />
+            </div>
+          ))}
+        </GsapStagger>
       </div>
-    </div>
-  );
-};
+    </Section>
+  )
+}
 
 export default Experience

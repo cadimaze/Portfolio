@@ -1,38 +1,18 @@
-import { useEffect, useRef } from 'react'
-import { motion, useInView, useAnimation } from 'framer-motion'
+/* eslint-disable react/prop-types */
+import { motion } from 'motion/react'
 
-// eslint-disable-next-line react/prop-types
-const Reveal = ({ children, width = 'fit-content' }) => {
-
-    const ref = useRef(null)
-
-    const isInView = useInView(ref, { once: true })
-
-    const mainControls = useAnimation()
-
-    useEffect(() => {
-        if (isInView) {
-            mainControls.start('visible')
-        }
-    }, [isInView, mainControls])
-
-  return (
-    <div ref={ref} style={{ position: 'relative', width, overflow: 'hidden' }}>
-
-        <motion.div
-        variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 }, 
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
-        >
-            {children}
-        </motion.div>
-        
-    </div>
-  )
-}
+/** Entrada suave: o elemento sobe e materializa quando entra na viewport. */
+const Reveal = ({ children, width = 'fit-content', delay = 0, y = 26 }) => (
+  <motion.div
+    initial={{ opacity: 0, y }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.15 }}
+    transition={{ duration: 0.55, delay, ease: [0.22, 0.8, 0.28, 1] }}
+    style={{ width }}
+    className="h-full"
+  >
+    {children}
+  </motion.div>
+)
 
 export default Reveal
