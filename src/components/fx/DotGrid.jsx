@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef } from 'react'
+import { useTheme } from '../../theme/ThemeContext'
 
 /**
  * Malha de pontos gravada na superfície: os pontos perto do ponteiro
@@ -8,11 +9,23 @@ import { useEffect, useRef } from 'react'
  */
 const DotGrid = ({ gap = 26, radius = 170 }) => {
   const canvasRef = useRef(null)
+  const { theme } = useTheme()
 
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
     const ctx = canvas.getContext('2d')
+    const css = getComputedStyle(document.documentElement)
+    const readColor = (name, fallback) => css.getPropertyValue(name).trim() || fallback
+    const readNumber = (name, fallback) => {
+      const value = parseFloat(css.getPropertyValue(name))
+      return Number.isNaN(value) ? fallback : value
+    }
+    const shadowRgb = readColor('--dot-shadow', '157,171,196')
+    const lightRgb = readColor('--dot-light', '255,255,255')
+    const accentRgb = readColor('--c-accent', '47 107 255').replace(/\s+/g, ',')
+    const shadowBase = readNumber('--dot-shadow-base', 0.34)
+    const lightBase = readNumber('--dot-light-base', 0.55)
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const pointer = { x: -9999, y: -9999 }
     let dots = []
@@ -55,18 +68,18 @@ const DotGrid = ({ gap = 26, radius = 170 }) => {
         const size = 1.15 + eased * 2.1
         ctx.beginPath()
         ctx.arc(d.x + 0.6, d.y + 0.6, size, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(157,171,196,${0.34 + eased * 0.3})`
+        ctx.fillStyle = `rgba(${shadowRgb},${shadowBase + eased * 0.3})`
         ctx.fill()
 
         ctx.beginPath()
         ctx.arc(d.x - 0.4, d.y - 0.4, size * 0.82, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(255,255,255,${0.55 + eased * 0.4})`
+        ctx.fillStyle = `rgba(${lightRgb},${lightBase + eased * 0.4})`
         ctx.fill()
 
         if (eased > 0.02) {
           ctx.beginPath()
           ctx.arc(d.x, d.y, size * 0.55, 0, Math.PI * 2)
-          ctx.fillStyle = `rgba(47,107,255,${eased * 0.5})`
+          ctx.fillStyle = `rgba(${accentRgb},${eased * 0.5})`
           ctx.fill()
         }
       }
@@ -116,7 +129,7 @@ const DotGrid = ({ gap = 26, radius = 170 }) => {
       window.removeEventListener('pointerleave', onLeave)
       window.removeEventListener('resize', onResize)
     }
-  }, [gap, radius])
+  }, [gap, radius, theme])
 
   return (
     <canvas

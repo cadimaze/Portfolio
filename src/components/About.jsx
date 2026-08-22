@@ -10,7 +10,7 @@ const EMAILJS_TEMPLATE_ID = 'template_jmrzaq7'
 const EMAILJS_PUBLIC_KEY = 'USl4G0x5KfUHQRvGy'
 
 const fieldClass =
-  'sunken-sm w-full rounded-2xl px-4 py-3.5 text-[13.5px] text-ink placeholder-muted/60 outline-none transition-shadow duration-200 focus:shadow-[inset_4px_4px_9px_rgba(157,171,196,.45),inset_-3px_-3px_7px_rgba(255,255,255,.92),0_0_0_2px_rgba(47,107,255,.35)]'
+  'field sunken-sm w-full rounded-2xl px-4 py-3.5 text-[13.5px] text-ink placeholder-muted/60 outline-none transition-shadow duration-200'
 
 const labelClass = 'mb-2 block font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-muted'
 
@@ -43,8 +43,8 @@ const About = () => {
 
   const statusLine = {
     sending: { text: a.sending, className: 'text-muted' },
-    success: { text: a.success, className: 'text-emerald-600' },
-    error: { text: a.error, className: 'text-red-500' },
+    success: { text: a.success, className: 'text-emerald-600 dark:text-emerald-400' },
+    error: { text: a.error, className: 'text-red-500 dark:text-red-400' },
   }[status]
 
   return (

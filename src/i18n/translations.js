@@ -336,7 +336,9 @@ export const translations = {
     "ui": {
       "language": "idioma",
       "openMenu": "abrir menu",
-      "closeMenu": "fechar menu"
+      "closeMenu": "fechar menu",
+      "themeDark": "ativar modo escuro",
+      "themeLight": "ativar modo claro"
     }
   },
   "en": {
@@ -663,7 +665,9 @@ export const translations = {
     "ui": {
       "language": "language",
       "openMenu": "open menu",
-      "closeMenu": "close menu"
+      "closeMenu": "close menu",
+      "themeDark": "switch to dark mode",
+      "themeLight": "switch to light mode"
     }
   },
   "es": {
@@ -990,7 +994,9 @@ export const translations = {
     "ui": {
       "language": "idioma",
       "openMenu": "abrir menú",
-      "closeMenu": "cerrar menú"
+      "closeMenu": "cerrar menú",
+      "themeDark": "activar modo oscuro",
+      "themeLight": "activar modo claro"
     }
   }
 }

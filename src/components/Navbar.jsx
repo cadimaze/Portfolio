@@ -4,6 +4,7 @@ import { Link } from 'react-scroll'
 import { AnimatePresence, motion } from 'motion/react'
 import { useLang } from '../i18n/LanguageContext'
 import LanguageSwitcher from './LanguageSwitcher'
+import ThemeToggle from './ThemeToggle'
 
 const links = [
   { to: 'skills', key: 'skills' },
@@ -65,6 +66,7 @@ const Navbar = () => {
 
         <div className="ml-auto flex items-center gap-2 lg:ml-0">
           <LanguageSwitcher />
+          <ThemeToggle />
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}

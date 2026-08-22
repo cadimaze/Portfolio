@@ -5,6 +5,26 @@
     <link rel="icon" type="image/png" href="/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#e8ecf3" />
+    <script>
+      // Aplica o tema antes da primeira pintura: sem piscada de branco em
+      // quem usa o modo escuro. A mesma regra do ThemeContext.
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme')
+          var dark =
+            saved === 'dark' ||
+            (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          if (dark) {
+            document.documentElement.classList.add('dark')
+            document.documentElement.style.colorScheme = 'dark'
+            var meta = document.querySelector('meta[name="theme-color"]')
+            if (meta) meta.setAttribute('content', '#121823')
+          }
+        } catch (e) {
+          /* localStorage indisponível: fica no tema claro */
+        }
+      })()
+    </script>
     <meta name="description" content="Guilherme Cadima — Engenheiro de Dados no Itaú Unibanco. Pipelines de dados bancários com Python (PySpark), AWS Glue e Databricks." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -60,7 +60,7 @@ const Projects = () => {
       />
 
       {/* faixa escura: quebra a página clara e dá respiro editorial */}
-      <div className="mb-6 overflow-hidden rounded-xl2 bg-[#121a2b] px-7 py-6 shadow-[inset_0_2px_10px_rgba(0,0,0,.55),12px_12px_26px_rgba(157,171,196,.5)]">
+      <div className="band mb-6 overflow-hidden rounded-xl2 px-7 py-6">
         <p className="flex flex-wrap items-center gap-3 font-mono text-[12px] leading-6 text-white/70">
           <span className="h-px w-8 bg-accent-soft/70" />
           {t.projects.band}
@@ -83,7 +83,7 @@ const Projects = () => {
               </div>
 
               {project.links.site && (
-                <p className="mt-1.5 flex items-center gap-2 font-mono text-[10.5px] font-bold uppercase tracking-[0.14em] text-emerald-600">
+                <p className="mt-1.5 flex items-center gap-2 font-mono text-[10.5px] font-bold uppercase tracking-[0.14em] text-emerald-600 dark:text-emerald-400">
                   <span className="led inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
                   {t.projects.live}
                 </p>

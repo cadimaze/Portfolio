@@ -12,7 +12,7 @@ const Frame = ({ children }) => (
       className="absolute inset-0 opacity-[0.55]"
       style={{
         backgroundImage:
-          'linear-gradient(rgba(157,171,196,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(157,171,196,.18) 1px, transparent 1px)',
+          'linear-gradient(var(--cover-grid) 1px, transparent 1px), linear-gradient(90deg, var(--cover-grid) 1px, transparent 1px)',
         backgroundSize: '22px 22px',
       }}
     />
@@ -75,7 +75,7 @@ const HiveCover = () => (
             key={`${r}-${c}`}
             points={`${x},${y} ${x + 13},${y + 7.5} ${x + 13},${y + 22.5} ${x},${y + 30} ${x - 13},${y + 22.5} ${x - 13},${y + 7.5}`}
             fill="none"
-            stroke="rgba(157,171,196,.55)"
+            stroke="var(--cover-line)"
             strokeWidth="1.2"
           />
         )
@@ -93,7 +93,7 @@ const HiveCover = () => (
         opacity={0.35 + i * 0.13}
       />
     ))}
-    <line x1="120" y1="104" x2="212" y2="104" stroke="rgba(157,171,196,.6)" strokeWidth="1.2" />
+    <line x1="120" y1="104" x2="212" y2="104" stroke="var(--cover-line)" strokeWidth="1.2" />
   </svg>
 )
 
@@ -141,11 +141,11 @@ const RitmoCover = () => (
           width="11"
           height={h}
           rx="4"
-          fill={i === 2 ? 'rgba(157,171,196,.4)' : 'url(#ritmoBar)'}
+          fill={i === 2 ? 'var(--cover-line-soft)' : 'url(#ritmoBar)'}
           opacity={i === 2 ? 1 : 0.5 + i * 0.12}
         />
       ))}
-      <line x1="6" y1="92" x2="114" y2="92" stroke="rgba(157,171,196,.6)" strokeWidth="1.2" />
+      <line x1="6" y1="92" x2="114" y2="92" stroke="var(--cover-line)" strokeWidth="1.2" />
 
       {/* o desequilíbrio que a IA aponta: o quanto faltou para a meta */}
       <rect

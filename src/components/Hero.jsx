@@ -127,7 +127,7 @@ const Hero = () => {
           <div className="raised rounded-xl3 p-6">
             <div className="flex items-center gap-2.5">
               <Dot />
-              <span className="font-mono text-[10.5px] font-bold uppercase tracking-[0.16em] text-emerald-700">
+              <span className="font-mono text-[10.5px] font-bold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-400">
                 {t.hero.status.split('·')[0].trim()}
               </span>
             </div>
