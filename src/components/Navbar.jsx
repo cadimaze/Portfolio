@@ -43,7 +43,7 @@ const Navbar = () => {
               Guilherme Cadima
             </b>
             <small className="block font-mono text-[10px] uppercase tracking-[0.14em] text-muted">
-              dev &amp; data engineer
+              data engineer
             </small>
           </span>
         </Link>

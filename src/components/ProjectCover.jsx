@@ -6,7 +6,7 @@
  */
 
 const Frame = ({ children }) => (
-  <div className="sunken relative h-[178px] overflow-hidden rounded-2xl">
+  <div className="sunken relative h-[190px] overflow-hidden rounded-2xl">
     <div
       aria-hidden
       className="absolute inset-0 opacity-[0.55]"
@@ -97,7 +97,57 @@ const HiveCover = () => (
   </svg>
 )
 
+
+/* SmartCart — planta de loja lida pela IA virando lista de compras */
+const SmartCartCover = () => (
+  <div className="flex w-full max-w-[300px] items-center gap-4">
+    <svg viewBox="0 0 120 108" className="h-[104px] w-[116px] shrink-0" role="img" aria-label="SmartCart">
+      {/* planta da loja: corredores e gôndolas */}
+      <rect x="6" y="6" width="108" height="96" rx="6" fill="none" stroke="rgba(157,171,196,.55)" strokeWidth="1.3" />
+      {[0, 1, 2].map((col) =>
+        [0, 1].map((row) => (
+          <rect
+            key={`${col}-${row}`}
+            x={17 + col * 30}
+            y={20 + row * 40}
+            width="20"
+            height="26"
+            rx="3"
+            fill="rgba(157,171,196,.20)"
+          />
+        )),
+      )}
+      {/* mira da leitura por IA */}
+      <g stroke="#2f6bff" strokeWidth="2" strokeLinecap="round" fill="none">
+        <path d="M44 30v-8h8M76 30v-8h-8M44 78v8h8M76 78v8h-8" />
+      </g>
+      <rect x="44" y="30" width="32" height="48" rx="4" fill="rgba(47,107,255,.12)" stroke="rgba(47,107,255,.5)" strokeWidth="1.2" />
+    </svg>
+
+    {/* lista gerada por linguagem natural */}
+    <div className="raised-sm w-full rounded-xl p-3">
+      {[80, 62, 70].map((w, i) => (
+        <div key={w} className="flex items-center gap-2 py-[5px]">
+          <span
+            className={`grid h-3.5 w-3.5 shrink-0 place-items-center rounded-[5px] ${
+              i === 2 ? 'sunken-sm' : 'btn-accent'
+            }`}
+          >
+            {i !== 2 && (
+              <svg viewBox="0 0 10 10" className="h-2 w-2">
+                <path d="M1.6 5.2l2.2 2.2L8.4 2.6" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            )}
+          </span>
+          <span className="h-1.5 rounded-full bg-muted/25" style={{ width: `${w}%` }} />
+        </div>
+      ))}
+    </div>
+  </div>
+)
+
 const covers = {
+  smartcart: SmartCartCover,
   'crud-lab': CrudCover,
   hive: HiveCover,
 }
@@ -105,7 +155,7 @@ const covers = {
 const ProjectCover = ({ slug, img, title }) => {
   if (img) {
     return (
-      <div className="sunken relative h-[178px] overflow-hidden rounded-2xl">
+      <div className="sunken relative h-[190px] overflow-hidden rounded-2xl">
         <img src={img} alt={title} loading="lazy" className="h-full w-full object-cover" />
       </div>
     )

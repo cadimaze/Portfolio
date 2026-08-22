@@ -8,6 +8,21 @@ import { useLang } from '../i18n/LanguageContext'
 // Metadados fixos (não traduzidos) — na mesma ordem do dicionário
 const projectMeta = [
   {
+    slug: 'smartcart',
+    title: 'SmartCart',
+    year: '2026',
+    links: {},
+  },
+  {
+    slug: 'hive',
+    title: 'Hive',
+    year: '2026',
+    links: {
+      site: 'https://hive-finapp.vercel.app',
+      github: 'https://github.com/cadimaze/planilha-de-gastos',
+    },
+  },
+  {
     slug: 'crud-lab',
     title: 'CRUD Lab',
     year: '2025',
@@ -24,15 +39,6 @@ const projectMeta = [
     links: {
       linkedin:
         'https://www.linkedin.com/posts/guilherme-cadima-b140871b5_nesta-quinta-feira-tive-a-incr%C3%ADvel-oportunidade-activity-7289291213399101440-cgfh?utm_source=share&utm_medium=member_desktop&rcm=ACoAADIFzYABse8DQ3CVsRi31i9LSAtXn3MUQek',
-    },
-  },
-  {
-    slug: 'hive',
-    title: 'Hive',
-    year: '2026',
-    links: {
-      site: 'https://hive-finapp.vercel.app',
-      github: 'https://github.com/cadimaze/planilha-de-gastos',
     },
   },
 ]
@@ -61,7 +67,7 @@ const Projects = () => {
         </p>
       </div>
 
-      <GsapStagger className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3" selector=":scope > div">
+      <GsapStagger className="grid grid-cols-1 gap-5 md:grid-cols-2" selector=":scope > div">
         {projects.map((project) => (
           <div key={project.slug}>
             <Card tilt max={8} className="flex h-full flex-col p-5">
@@ -92,6 +98,11 @@ const Projects = () => {
               </div>
 
               <div className="mt-auto flex flex-wrap items-center gap-2 pt-6">
+                {Object.keys(project.links).length === 0 && (
+                  <span className="sunken-sm rounded-xl px-3.5 py-2.5 font-mono text-[11px] font-bold uppercase tracking-wider text-muted">
+                    {t.projects.personal}
+                  </span>
+                )}
                 {project.links.site && (
                   <a
                     href={project.links.site}

@@ -8,12 +8,11 @@ import { useLang } from '../i18n/LanguageContext'
 
 // Metadados fixos (não traduzidos) — na mesma ordem do dicionário
 const experienceMeta = [
-  { id: 'itau-dev', company: 'Itaú Unibanco', role: 'Back-end / Data Engineer', current: true },
-  { id: 'itau-est', company: 'Itaú Unibanco', role: 'Estágio — Python & AWS' },
-  { id: 'digi-front', company: 'DigiSystem', role: 'Front-end' },
-  { id: 'digi-back', company: 'DigiSystem', role: 'Back-end' },
-  { id: 'g8', company: 'Comando G8', role: 'Compras' },
+  { id: 'itau-data', company: 'Itaú Unibanco', current: true },
+  { id: 'itau-intern', company: 'Itaú Unibanco' },
+  { id: 'digisystem', company: 'Digisystem' },
 ]
+
 
 const VISIBLE_BULLETS = 4
 

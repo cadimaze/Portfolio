@@ -1,44 +1,50 @@
-import { DiReact, DiJava, DiJsBadge, DiPython, DiGit, DiHtml5 } from 'react-icons/di'
+import { DiReact, DiJava, DiJsBadge, DiPython } from 'react-icons/di'
 import {
   SiAmazonapigateway, SiAmazoncloudwatch, SiAmazonsqs, SiTerraform, SiAwslambda,
-  SiDocker, SiJira, SiGithubactions, SiNodedotjs, SiOpenapiinitiative,
-  SiApachecassandra, SiAmazonrds, SiAmazons3, SiAmazonec2, SiKubernetes, SiAmazonecs,
+  SiGithubactions, SiNodedotjs, SiApachecassandra, SiAmazonrds, SiAmazons3,
+  SiAmazonecs, SiDatabricks, SiApacheairflow,
 } from 'react-icons/si'
 import { FaAws, FaUserShield } from 'react-icons/fa'
 import { GiBrain } from 'react-icons/gi'
-import { BsDatabase, BsSearch, BsBraces, BsEyeglasses, BsBug, BsClipboardCheck, BsStars, BsRobot } from 'react-icons/bs'
-import { MdArchitecture, MdCloud, MdOutlineModelTraining } from 'react-icons/md'
-import { TbApi } from 'react-icons/tb'
-import { HiOutlineCube } from 'react-icons/hi'
+import {
+  BsDatabase, BsSearch, BsBraces, BsEyeglasses, BsBug, BsClipboardCheck,
+  BsStars, BsLayers, BsShieldCheck, BsGraphUp,
+} from 'react-icons/bs'
+import { MdArchitecture, MdOutlineModelTraining, MdOutlineSupportAgent } from 'react-icons/md'
+import { TbArrowsShuffle } from 'react-icons/tb'
+import { LuBrainCircuit } from 'react-icons/lu'
 import { Card, IconTile, Section, SectionHeader } from './ui'
 import GsapStagger from './fx/GsapStagger'
 import { useLang } from '../i18n/LanguageContext'
 
 // Ícone de cada tecnologia, na mesma ordem do dicionário de traduções
 const techIcons = [
-  [MdArchitecture, BsBraces, BsEyeglasses, BsBug, DiGit],
-  [DiJava, DiPython, DiJsBadge, SiNodedotjs, DiReact, BsDatabase, DiHtml5],
-  [TbApi, SiOpenapiinitiative, SiAmazonapigateway, SiAmazonsqs],
+  [BsDatabase, MdArchitecture, SiDatabricks, BsLayers, TbArrowsShuffle],
   [FaAws, BsSearch, SiApachecassandra, SiAmazonrds, SiAmazons3],
-  [SiAwslambda, SiAmazonec2, SiAmazoncloudwatch, FaUserShield, SiTerraform],
-  [SiDocker, SiKubernetes, SiAmazonecs],
-  [SiGithubactions, MdCloud, BsClipboardCheck, SiJira],
-  [GiBrain, BsStars, MdOutlineModelTraining, BsRobot],
+  [DiPython, DiJsBadge, DiJava, SiNodedotjs, DiReact],
+  [SiAwslambda, SiAmazonecs, SiAmazonsqs, SiAmazonapigateway, SiAmazoncloudwatch, FaUserShield, SiTerraform],
+  [BsShieldCheck, BsEyeglasses, BsBug, SiGithubactions, BsClipboardCheck],
+  [BsStars, LuBrainCircuit, MdOutlineModelTraining, GiBrain, BsGraphUp],
+  [SiApacheairflow, MdOutlineSupportAgent],
 ]
 
-const categoryIcons = [MdArchitecture, BsBraces, TbApi, FaAws, SiAwslambda, HiOutlineCube, SiGithubactions, GiBrain]
+// Ícone da categoria (o "botão" extrudado no topo do card)
+const categoryIcons = [
+  SiDatabricks, FaAws, BsBraces, SiAwslambda, BsShieldCheck, LuBrainCircuit, SiApacheairflow,
+]
 
-// Bento: os dois primeiros blocos são largos, o resto preenche a malha
+// Bento: blocos largos abrem e fecham a malha, os estreitos formam a faixa do meio
 const spans = [
   'sm:col-span-2 lg:col-span-3',
   'sm:col-span-2 lg:col-span-3',
   'lg:col-span-2',
   'lg:col-span-2',
   'lg:col-span-2',
-  'lg:col-span-2',
-  'lg:col-span-2',
-  'lg:col-span-2',
+  'sm:col-span-2 lg:col-span-3',
+  'sm:col-span-2 lg:col-span-3',
 ]
+
+const isWide = (index) => index === 0 || index === 1 || index === 5 || index === 6
 
 const Skills = () => {
   const { t } = useLang()
@@ -58,7 +64,7 @@ const Skills = () => {
       >
         {t.skills.categories.map((category, index) => {
           const CategoryIcon = categoryIcons[index]
-          const wide = index < 2
+          const wide = isWide(index)
           return (
             <div key={category.name} className={spans[index]}>
               <Card tilt max={7} className="h-full p-6">
@@ -77,15 +83,13 @@ const Skills = () => {
                   {category.name}
                 </h3>
 
-                <ul
-                  className={`mt-4 grid gap-x-4 gap-y-2.5 ${wide ? 'sm:grid-cols-2' : ''}`}
-                >
+                <ul className={`mt-4 grid gap-x-4 gap-y-2.5 ${wide ? 'sm:grid-cols-2' : ''}`}>
                   {category.techs.map((name, idx) => {
                     const Icon = techIcons[index][idx]
                     return (
                       <li key={name} className="flex items-center gap-2.5">
-                        <span className="text-[15px] text-accent/70">{Icon && <Icon />}</span>
-                        <span className="font-mono text-[12px] text-ink/70">{name}</span>
+                        <span className="shrink-0 text-[15px] text-accent/70">{Icon && <Icon />}</span>
+                        <span className="font-mono text-[12px] leading-5 text-ink/70">{name}</span>
                       </li>
                     )
                   })}

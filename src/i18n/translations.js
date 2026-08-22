@@ -1,7 +1,9 @@
 // Dicionário de traduções — PT (BR), EN, ES.
-// Texto entre **asteriscos** é renderizado com destaque (ver renderRich em LanguageContext).
-// Conteúdo longo (skills, experiência, projetos, certificações) é o mesmo de antes;
-// apenas a estrutura foi reorganizada para o redesign.
+// Conteúdo alinhado ao currículo de 21/08/2026 (Engenheiro de Dados —
+// Databricks, PySpark e arquitetura de dados em ambiente bancário).
+// Os níveis declarados no currículo ("em estudo aplicado", "familiaridade",
+// "básico") são preservados aqui — não inflar habilidades.
+// Texto entre **asteriscos** vira destaque (ver renderRich em LanguageContext).
 
 export const LANGS = [
   { code: 'pt', label: 'PT' },
@@ -20,32 +22,19 @@ export const translations = {
       "menu": "navegação"
     },
     "hero": {
+      "eyebrow": "portfólio · 2026",
       "status": "Disponível para novos projetos · São Paulo, BR",
       "greeting": "Olá, eu sou",
       "roles": [
-        "backend developer",
-        "data engineer",
-        "ml enthusiast",
-        "tech enthusiast"
+        "engenheiro de dados",
+        "databricks & pyspark",
+        "etl/elt distribuído",
+        "dados bancários em escala"
       ],
-      "description": "Desenvolvedor de Software & Engenheiro de Dados com 6 anos de experiência, especializado em Python, Java, AWS Cloud e APIs REST.",
+      "description": "Engenheiro de Dados no Itaú Unibanco. Construo pipelines de dados bancários com Python (PySpark), AWS Glue e Databricks, em ambiente de alta exigência de governança e compliance.",
       "ctaPrimary": "Baixar currículo",
       "ctaSecondary": "Falar comigo",
-      "scroll": "role para explorar",
-      "stats": [
-        {
-          "value": "6+",
-          "label": "anos de experiência"
-        },
-        {
-          "value": "3+",
-          "label": "projetos entregues"
-        },
-        {
-          "value": "7",
-          "label": "certificações"
-        }
-      ],
+      "toolkit": "ferramentas do dia a dia",
       "spec": [
         {
           "k": "base",
@@ -53,19 +42,31 @@ export const translations = {
         },
         {
           "k": "foco",
-          "v": "Dados & Back-end"
+          "v": "Engenharia de Dados"
         },
         {
           "k": "stack",
-          "v": "Python · Java · AWS"
+          "v": "PySpark · Databricks · AWS"
         },
         {
           "k": "situação",
           "v": "Aberto a propostas"
         }
       ],
-      "eyebrow": "portfólio · 2026",
-      "toolkit": "ferramentas do dia a dia",
+      "stats": [
+        {
+          "value": "6+",
+          "label": "anos de experiência"
+        },
+        {
+          "value": "4",
+          "label": "projetos entregues"
+        },
+        {
+          "value": "7",
+          "label": "certificações"
+        }
+      ],
       "resume": {
         "menuLabel": "escolha o idioma do currículo",
         "recommended": "recomendado",
@@ -78,43 +79,21 @@ export const translations = {
     "skills": {
       "num": "01",
       "title": "o que eu sei fazer",
-      "subtitle": "Tecnologias e ferramentas que uso no dia a dia para construir soluções robustas e escaláveis.",
-      "meta": "8 categorias · 40+ tecnologias",
-      "level": "nível",
+      "subtitle": "Tecnologias que uso para levar dado bruto até solução analítica confiável — com o nível real de profundidade em cada uma.",
+      "meta": "7 categorias · 30+ tecnologias",
       "categories": [
         {
-          "name": "engenharia de software",
+          "name": "dados & big data",
           "techs": [
-            "Design de Software",
-            "Clean Code",
-            "Code Review",
-            "Debugging",
-            "Git (Avançado)"
+            "SQL — consultas complexas",
+            "Modelagem de dados",
+            "Databricks (Spark/PySpark)",
+            "Delta Lake (em estudo aplicado)",
+            "ETL/ELT distribuído"
           ]
         },
         {
-          "name": "linguagens & frameworks",
-          "techs": [
-            "Java",
-            "Python (PySpark)",
-            "JavaScript / TypeScript",
-            "Node.js",
-            "React / React Native",
-            "SQL",
-            "HTML / CSS"
-          ]
-        },
-        {
-          "name": "apis & integração",
-          "techs": [
-            "APIs REST",
-            "OpenAPI 3.0",
-            "API Gateway",
-            "SQS (Mensageria)"
-          ]
-        },
-        {
-          "name": "cloud & dados (aws)",
+          "name": "cloud de dados (aws)",
           "techs": [
             "AWS Glue",
             "Athena",
@@ -124,39 +103,52 @@ export const translations = {
           ]
         },
         {
+          "name": "linguagens",
+          "techs": [
+            "Python (PySpark)",
+            "JavaScript / TypeScript",
+            "Java (básico)",
+            "Node.js (básico)",
+            "React / React Native"
+          ]
+        },
+        {
           "name": "compute & infra (aws)",
           "techs": [
             "Lambda",
-            "EC2",
+            "ECS / EC2",
+            "SQS",
+            "API Gateway",
             "CloudWatch",
             "IAM",
-            "Terraform"
+            "Terraform (IaC)"
           ]
         },
         {
-          "name": "contêineres & orquestração",
+          "name": "governança & qualidade",
           "techs": [
-            "Docker",
-            "Kubernetes (K8s)",
-            "Amazon ECS"
-          ]
-        },
-        {
-          "name": "devops & qualidade",
-          "techs": [
+            "Conformidade de dados bancários",
+            "Rastreabilidade e qualidade",
+            "Testes automatizados (TAAC)",
             "CI/CD",
-            "ServiceNow",
-            "Testes Automatizados",
-            "Scrum / Kanban"
+            "Code review"
           ]
         },
         {
-          "name": "machine learning & ia",
+          "name": "ia & mlops",
           "techs": [
-            "Machine Learning",
-            "IA Generativa",
-            "MLOps",
-            "Claude Code"
+            "IA generativa no dia a dia",
+            "Feature stores (estudo aplicado)",
+            "Pipelines para IA",
+            "Versionamento de modelos",
+            "Observabilidade (conceitos)"
+          ]
+        },
+        {
+          "name": "orquestração & fluxos",
+          "techs": [
+            "Airflow (familiaridade)",
+            "ServiceNow"
           ]
         }
       ]
@@ -164,8 +156,9 @@ export const translations = {
     "projects": {
       "num": "02",
       "title": "projetos selecionados",
-      "subtitle": "Coisas que construí com foco em qualidade, usabilidade e boas práticas — algumas delas no ar agora mesmo.",
+      "subtitle": "Coisas que construí do zero — do modelo de dados ao deploy. Algumas estão no ar agora mesmo.",
       "meta": "clique e explore",
+      "band": "cada projeto abaixo foi construído do zero — do banco ao deploy.",
       "live": "no ar",
       "viewSite": "Abrir site",
       "code": "Código",
@@ -173,12 +166,30 @@ export const translations = {
       "items": [
         {
           "tags": [
+            "react native",
+            "ia generativa",
+            "supabase",
+            "mobile"
+          ],
+          "description": "App mobile em React Native/Expo com IA generativa aplicada à análise de dados de plantas de loja (Gemini Vision) e geração de listas por linguagem natural, com backend em Supabase."
+        },
+        {
+          "tags": [
+            "firebase",
+            "pwa",
+            "modelagem de dados",
+            "tailwind"
+          ],
+          "description": "Controle financeiro pessoal com modelagem de despesas e orçamento, sincronização em tempo real via Firebase e autenticação Google. Dashboard, Transações, Histórico, Simulador, Investimentos, Cartões e Assinaturas."
+        },
+        {
+          "tags": [
             "educacional",
             "javascript",
             "interativo",
             "didático"
           ],
-          "description": "Plataforma educacional onde alunos aprendem e praticam operações CRUD de forma visual e didática. Execute cenários reais em tempo real, visualize o que acontece em cada etapa e entenda na prática como Create, Read, Update e Delete funcionam — sem precisar configurar nada."
+          "description": "Plataforma educacional onde alunos aprendem e praticam operações CRUD de forma visual. Execute cenários reais em tempo real, veja o que acontece em cada etapa e entenda na prática como Create, Read, Update e Delete funcionam."
         },
         {
           "tags": [
@@ -187,23 +198,14 @@ export const translations = {
             "2º-lugar"
           ],
           "description": "2º lugar em Hackathon com foco em StackSpot AI, utilizando Agent, Knowledge Source e QuickCommand para resolver o desafio proposto com agilidade e criatividade."
-        },
-        {
-          "tags": [
-            "firebase",
-            "pwa",
-            "javascript",
-            "tailwind"
-          ],
-          "description": "PWA de controle financeiro pessoal com sincronização em tempo real via Firebase. Dashboard, Transações, Histórico, Simulador, Investimentos, Cartões e Assinaturas — com autenticação via Google."
         }
       ],
-      "band": "cada projeto abaixo foi construído do zero — do banco ao deploy."
+      "personal": "projeto pessoal"
     },
     "experience": {
       "num": "03",
       "title": "trajetória profissional",
-      "subtitle": "Minha evolução ao longo dos anos e as principais contribuições em cada etapa.",
+      "subtitle": "Onde trabalhei e o que efetivamente entreguei em cada etapa.",
       "meta": "linha do tempo",
       "current": "atual",
       "highlights": "principais entregas",
@@ -211,64 +213,62 @@ export const translations = {
       "less": "recolher",
       "items": [
         {
-          "period": "Abril 2025 — Agosto 2026",
-          "description": "Atuação como Desenvolvedor Back-End Jr. (Engenheiro de Dados), desenvolvendo e sustentando APIs REST em Java e Node.js e pipelines de dados com Python e Terraform na AWS, com deploy de aplicações containerizadas e adoção da filosofia DevOps.",
+          "period": "Abril 2025 — atualmente",
+          "description": "Engenharia de dados sobre produtos bancários: pipelines de ETL/ELT distribuído com AWS Glue e Databricks, modelagem em SQL e infraestrutura como código, em ambiente regulado.",
           "bullets": [
-            "Desenvolvimento aprofundado de pipelines de dados com AWS Glue, utilizando Python (PySpark) e Terraform para provisionamento e automação de recursos.",
-            "Desenvolvimento, evolução e sustentação de APIs REST em Java e Node.js, seguindo a especificação OpenAPI 3.0, com contratos versionados e tratamento de erros padronizado.",
-            "Atuação ampla com serviços AWS no processamento, orquestração e disponibilização de dados: Athena, Keyspaces, RDS, Aurora, S3, ECS, EC2, SQS, Lambda, Glue, IAM, API Gateway e CloudWatch.",
-            "Deploy e sustentação de aplicações containerizadas em ECS e EC2, com monitoramento, métricas e alarmes via CloudWatch.",
-            "Integração assíncrona entre serviços com SQS, garantindo desacoplamento, resiliência e reprocessamento seguro de mensagens.",
-            "Participação ativa em code reviews e aplicação de princípios de clean code e design de software, com foco em legibilidade e debugging eficiente em produção.",
-            "Engenharia dos dados trabalhados, garantindo qualidade, consistência e eficiência nas transformações e ingestões.",
-            "Estruturação de projetos com metodologias ágeis (Scrum/Kanban), garantindo entregas iterativas e bem documentadas.",
-            "Mentalidade DevOps com foco em automação, observabilidade e melhoria contínua dos fluxos de dados.",
-            "Implementação de estratégias robustas de tratamento de erros e falhas nos processos de ETL.",
-            "Testes unitários e validações automatizadas com o framework TAAC.",
-            "Experiência prática com pipelines de CI/CD, otimizando deploys e validações em ambientes produtivos."
-          ]
+            "Desenvolvimento de pipelines de dados bancários com AWS Glue e Databricks, utilizando Python (PySpark) para ETL/ELT distribuído sobre grandes volumes de dados.",
+            "Modelagem e arquitetura de dados com SQL em Athena, Aurora/RDS e Keyspaces, oferecendo suporte a soluções analíticas e de negócio.",
+            "Provisionamento e automação de infraestrutura de dados como código com Terraform, garantindo ambientes replicáveis e auditáveis.",
+            "Atuação com dados reais de produtos bancários, aplicando padrões de qualidade, consistência e conformidade exigidos em ambiente regulado.",
+            "Integração assíncrona entre serviços com SQS, garantindo desacoplamento, resiliência e reprocessamento seguro de dados.",
+            "Colaboração com frentes de IA e ciência de dados, incluindo desenvolvimento e sustentação de APIs REST (Java/Node.js) que suportam esses fluxos.",
+            "Participação ativa em code reviews e definição de boas práticas de engenharia, com foco em legibilidade, manutenibilidade e confiabilidade.",
+            "Adoção de mentalidade DevOps: automação, observabilidade e melhoria contínua de pipelines, com testes automatizados (framework TAAC) e CI/CD."
+          ],
+          "role": "Desenvolvedor Back-End Jr. (Engenheiro de Dados)"
         },
         {
           "period": "Abril 2024 — Abril 2025",
-          "description": "Estágio com foco em desenvolvimento Python e Terraform para gerenciamento de recursos na AWS Lambda, integração de serviços cloud e adoção da filosofia DevOps.",
+          "description": "Estágio focado em Python e Terraform para gerenciar recursos de dados na AWS, integrando serviços cloud com mentalidade DevOps.",
           "bullets": [
-            "Desenvolvimento em Python e Terraform para o gerenciamento de recursos na AWS Lambda.",
-            "Utilização de serviços como API Gateway, SQS, Lambda, S3 e ServiceNow.",
-            "Uso de metodologias ágeis no desenvolvimento e organização de projetos.",
-            "Mentalidade e filosofia DevOps aplicada à infraestrutura AWS Cloud.",
-            "Tratativa de eventos, incidentes e fluxos com a ServiceNow.",
-            "Experiência em Integração e Entrega Contínuas (CI/CD) e troubleshooting nos produtos desenvolvidos.",
-            "Desenvolvimento de APIs seguindo a especificação OpenAPI 3.0, com foco em padronização de contratos e integração entre sistemas."
-          ]
+            "Desenvolvimento em Python e Terraform para gerenciamento de recursos de dados na AWS Lambda.",
+            "Construção e integração de soluções com API Gateway, SQS, Lambda, S3 e ServiceNow.",
+            "Desenvolvimento de APIs seguindo OpenAPI 3.0, com foco em padronização de contratos e integração entre sistemas.",
+            "Aplicação de mentalidade DevOps à infraestrutura de dados em nuvem (AWS)."
+          ],
+          "role": "Estagiário — Python, Terraform & AWS"
         },
         {
-          "period": "Set 2023 — Dez 2023",
-          "description": "Participação ativa no desenvolvimento do DORA, prontuário eletrônico inovador. Contribuições em integração de dados, performance e segurança, sempre com foco em usabilidade."
-        },
-        {
-          "period": "Dez 2021 — Set 2023",
-          "description": "Gestão de projetos utilizando eSQL (IBM Toolkit), estudos intensificados de AWS com acesso a ferramentas para treinamento. Conquista de diversos Badges IBM. Projeto FGC-SPG destinado à segmentação eficiente de tipos de clientes."
-        },
-        {
-          "period": "Set 2021 — Dez 2021",
-          "description": "Colaboração no departamento de compras, adquirindo conhecimento em processos de aquisição e gestão de suprimentos."
+          "period": "Dezembro 2021 — Dezembro 2023",
+          "description": "Desenvolvimento back-end e front-end em projetos de segmentação de clientes e prontuário eletrônico, com foco em qualidade e confiabilidade dos dados.",
+          "bullets": [
+            "Contribuição para o projeto FGCSPG, de segmentação de tipos de clientes, com foco em qualidade e confiabilidade dos dados.",
+            "Participação no desenvolvimento do DORA (prontuário eletrônico), com foco em integração de dados, performance e segurança.",
+            "Estudos intensificados de AWS Solution Architect e certificações técnicas relacionadas a dados e integração."
+          ],
+          "role": "Desenvolvedor Back-End & Front-End"
         }
       ]
     },
     "certifications": {
       "num": "04",
-      "title": "formação complementar",
-      "subtitle": "Certificações conquistadas ao longo da carreira em plataformas de tecnologia, IA e cloud.",
-      "meta": "7 credenciais",
-      "issued": "emitido por",
+      "title": "formação e certificações",
+      "subtitle": "Bacharelado em Ciência da Computação e certificações conquistadas em dados, IA, cloud e integração.",
+      "meta": "8 credenciais",
+      "issued": "por",
       "items": [
+        {
+          "name": "Bacharelado em Ciência da Computação",
+          "issuer": "Universidade Paulista (UNIP) · 2021—2025",
+          "tag": "formação"
+        },
         {
           "name": "Machine Learning Associate",
           "issuer": "IOX — Itaú",
           "tag": "machine-learning"
         },
         {
-          "name": "Associate — Generative AI",
+          "name": "Generative AI Associate",
           "issuer": "IOX — Itaú",
           "tag": "inteligência-artificial"
         },
@@ -306,9 +306,9 @@ export const translations = {
       "meta": "resposta em até 24h",
       "cardTitle": "quem sou eu",
       "paragraphs": [
-        "Me chamo **Guilherme Cadima**, tenho 25 anos e moro em São Paulo, Capital. Sou Desenvolvedor de Software graduado em Ciência da Computação pela Universidade Paulista, com foco em Engenharia de Dados e desenvolvimento back-end.",
-        "Apaixonado por tecnologia há 6 anos, trabalho diariamente com Python, Java, AWS Cloud e pipelines de dados — transformando dados brutos em soluções escaláveis e confiáveis. Uso IAs como ferramenta de produtividade para acelerar e aprimorar o desenvolvimento.",
-        "Tenho uma paixão crescente por **Machine Learning** — estudo algoritmos, modelos preditivos e aplicações práticas com Python. Meu próximo objetivo é atuar de forma dedicada nessa área, unindo minha base sólida em Engenharia de Dados com a inteligência dos modelos.",
+        "Me chamo **Guilherme Cadima**, tenho 25 anos e moro em São Paulo. Sou **Engenheiro de Dados no Itaú Unibanco** e graduado em Ciência da Computação pela Universidade Paulista.",
+        "Meu dia a dia é construir pipelines de dados bancários com **Python (PySpark)**, **AWS Glue** e **Databricks** — ETL/ELT distribuído sobre grandes volumes, modelagem de dados em SQL e infraestrutura como código com Terraform, dentro dos padrões de governança e compliance de uma instituição financeira.",
+        "Estudo **MLOps e feature stores** de forma aplicada e trabalho perto dos times de IA e ciência de dados. Uso IA generativa todo dia para acelerar experimentação e desenvolvimento.",
         "Fora do código, sou pai de uma linda menina, torcedor roxo do São Paulo FC, fã de academia, animais, Super-Heróis, RPG de Mesa e Cinema. Meu livro favorito é **“1984”** de George Orwell."
       ],
       "statExp": "anos de experiência",
@@ -328,8 +328,8 @@ export const translations = {
       "error": "Não consegui enviar. Tente novamente ou me chame por e-mail."
     },
     "footer": {
-      "role": "desenvolvedor de software & engenheiro de dados",
-      "copyright": "© 2026 guilherme cadima — feito com react & tailwind",
+      "role": "engenheiro de dados · databricks, pyspark & aws",
+      "copyright": "© 2026 guilherme cadima",
       "madeWith": "feito com React, Tailwind e muito café",
       "top": "voltar ao topo"
     },
@@ -349,32 +349,19 @@ export const translations = {
       "menu": "navigation"
     },
     "hero": {
+      "eyebrow": "portfolio · 2026",
       "status": "Available for new projects · São Paulo, BR",
       "greeting": "Hi, I'm",
       "roles": [
-        "backend developer",
         "data engineer",
-        "ml enthusiast",
-        "tech enthusiast"
+        "databricks & pyspark",
+        "distributed etl/elt",
+        "banking data at scale"
       ],
-      "description": "Software Developer & Data Engineer with 6 years of experience, specialized in Python, Java, AWS Cloud and REST APIs.",
+      "description": "Data Engineer at Itaú Unibanco. I build banking data pipelines with Python (PySpark), AWS Glue and Databricks, in an environment with high governance and compliance requirements.",
       "ctaPrimary": "Download resume",
       "ctaSecondary": "Get in touch",
-      "scroll": "scroll to explore",
-      "stats": [
-        {
-          "value": "6+",
-          "label": "years of experience"
-        },
-        {
-          "value": "3+",
-          "label": "projects delivered"
-        },
-        {
-          "value": "7",
-          "label": "certifications"
-        }
-      ],
+      "toolkit": "everyday toolkit",
       "spec": [
         {
           "k": "base",
@@ -382,19 +369,31 @@ export const translations = {
         },
         {
           "k": "focus",
-          "v": "Data & Back-end"
+          "v": "Data Engineering"
         },
         {
           "k": "stack",
-          "v": "Python · Java · AWS"
+          "v": "PySpark · Databricks · AWS"
         },
         {
           "k": "status",
           "v": "Open to offers"
         }
       ],
-      "eyebrow": "portfolio · 2026",
-      "toolkit": "everyday toolkit",
+      "stats": [
+        {
+          "value": "6+",
+          "label": "years of experience"
+        },
+        {
+          "value": "4",
+          "label": "projects delivered"
+        },
+        {
+          "value": "7",
+          "label": "certifications"
+        }
+      ],
       "resume": {
         "menuLabel": "choose the resume language",
         "recommended": "recommended",
@@ -407,43 +406,21 @@ export const translations = {
     "skills": {
       "num": "01",
       "title": "what i can do",
-      "subtitle": "Technologies and tools I use daily to build robust and scalable solutions.",
-      "meta": "8 categories · 40+ technologies",
-      "level": "level",
+      "subtitle": "The technologies I use to take raw data all the way to reliable analytical solutions — with the honest depth level for each one.",
+      "meta": "7 categories · 30+ technologies",
       "categories": [
         {
-          "name": "software engineering",
+          "name": "data & big data",
           "techs": [
-            "Software Design",
-            "Clean Code",
-            "Code Review",
-            "Debugging",
-            "Git (Advanced)"
+            "SQL — complex queries",
+            "Data modeling",
+            "Databricks (Spark/PySpark)",
+            "Delta Lake (applied study)",
+            "Distributed ETL/ELT"
           ]
         },
         {
-          "name": "languages & frameworks",
-          "techs": [
-            "Java",
-            "Python (PySpark)",
-            "JavaScript / TypeScript",
-            "Node.js",
-            "React / React Native",
-            "SQL",
-            "HTML / CSS"
-          ]
-        },
-        {
-          "name": "apis & integration",
-          "techs": [
-            "REST APIs",
-            "OpenAPI 3.0",
-            "API Gateway",
-            "SQS (Messaging)"
-          ]
-        },
-        {
-          "name": "cloud & data (aws)",
+          "name": "data cloud (aws)",
           "techs": [
             "AWS Glue",
             "Athena",
@@ -453,39 +430,52 @@ export const translations = {
           ]
         },
         {
+          "name": "languages",
+          "techs": [
+            "Python (PySpark)",
+            "JavaScript / TypeScript",
+            "Java (basic)",
+            "Node.js (basic)",
+            "React / React Native"
+          ]
+        },
+        {
           "name": "compute & infra (aws)",
           "techs": [
             "Lambda",
-            "EC2",
+            "ECS / EC2",
+            "SQS",
+            "API Gateway",
             "CloudWatch",
             "IAM",
-            "Terraform"
+            "Terraform (IaC)"
           ]
         },
         {
-          "name": "containers & orchestration",
+          "name": "governance & quality",
           "techs": [
-            "Docker",
-            "Kubernetes (K8s)",
-            "Amazon ECS"
-          ]
-        },
-        {
-          "name": "devops & quality",
-          "techs": [
+            "Banking data compliance",
+            "Traceability and quality",
+            "Automated testing (TAAC)",
             "CI/CD",
-            "ServiceNow",
-            "Automated Testing",
-            "Scrum / Kanban"
+            "Code review"
           ]
         },
         {
-          "name": "machine learning & ai",
+          "name": "ai & mlops",
           "techs": [
-            "Machine Learning",
-            "Generative AI",
-            "MLOps",
-            "Claude Code"
+            "Generative AI daily",
+            "Feature stores (applied study)",
+            "Pipelines for AI",
+            "Model versioning",
+            "Observability (concepts)"
+          ]
+        },
+        {
+          "name": "orchestration & workflows",
+          "techs": [
+            "Airflow (familiarity)",
+            "ServiceNow"
           ]
         }
       ]
@@ -493,8 +483,9 @@ export const translations = {
     "projects": {
       "num": "02",
       "title": "selected projects",
-      "subtitle": "Things I built with a focus on quality, usability and best practices — some of them live right now.",
+      "subtitle": "Things I built from scratch — from the data model to the deploy. Some are live right now.",
       "meta": "click and explore",
+      "band": "every project below was built from scratch — from database to deploy.",
       "live": "live",
       "viewSite": "Open site",
       "code": "Code",
@@ -502,12 +493,30 @@ export const translations = {
       "items": [
         {
           "tags": [
+            "react native",
+            "generative ai",
+            "supabase",
+            "mobile"
+          ],
+          "description": "Mobile app in React Native/Expo with generative AI applied to store floor plan data analysis (Gemini Vision) and natural language list generation, with a Supabase backend."
+        },
+        {
+          "tags": [
+            "firebase",
+            "pwa",
+            "data modeling",
+            "tailwind"
+          ],
+          "description": "Personal finance management with expense and budget data modeling, real-time sync via Firebase and Google authentication. Dashboard, Transactions, History, Simulator, Investments, Cards and Subscriptions."
+        },
+        {
+          "tags": [
             "educational",
             "javascript",
             "interactive",
             "didactic"
           ],
-          "description": "Educational platform where students learn and practice CRUD operations in a visual, hands-on way. Run real scenarios in real time, see what happens at each step and understand how Create, Read, Update and Delete work in practice — with zero setup."
+          "description": "Educational platform where students learn and practice CRUD operations visually. Run real scenarios in real time, see what happens at each step and understand in practice how Create, Read, Update and Delete work."
         },
         {
           "tags": [
@@ -516,23 +525,14 @@ export const translations = {
             "2nd-place"
           ],
           "description": "2nd place in a Hackathon focused on StackSpot AI, using Agent, Knowledge Source and QuickCommand to solve the proposed challenge with agility and creativity."
-        },
-        {
-          "tags": [
-            "firebase",
-            "pwa",
-            "javascript",
-            "tailwind"
-          ],
-          "description": "Personal finance PWA with real-time sync via Firebase. Dashboard, Transactions, History, Simulator, Investments, Cards and Subscriptions — with Google authentication."
         }
       ],
-      "band": "every project below was built from scratch — from database to deploy."
+      "personal": "personal project"
     },
     "experience": {
       "num": "03",
-      "title": "professional journey",
-      "subtitle": "My evolution over the years and the main contributions at each stage.",
+      "title": "professional path",
+      "subtitle": "Where I worked and what I actually delivered at each step.",
       "meta": "timeline",
       "current": "current",
       "highlights": "key deliveries",
@@ -540,64 +540,62 @@ export const translations = {
       "less": "collapse",
       "items": [
         {
-          "period": "April 2025 — August 2026",
-          "description": "Working as a Back-End Jr. Developer (Data Engineer), building and maintaining REST APIs in Java and Node.js and data pipelines with Python and Terraform on AWS, deploying containerized applications and adopting a DevOps philosophy.",
+          "period": "April 2025 — Present",
+          "description": "Data engineering on banking products: distributed ETL/ELT pipelines with AWS Glue and Databricks, SQL modeling and infrastructure as code, in a regulated environment.",
           "bullets": [
-            "In-depth development of data pipelines with AWS Glue, using Python (PySpark) and Terraform for resource provisioning and automation.",
-            "Development, evolution and maintenance of REST APIs in Java and Node.js, following the OpenAPI 3.0 specification, with versioned contracts and standardized error handling.",
-            "Broad work with AWS services for data processing, orchestration and availability: Athena, Keyspaces, RDS, Aurora, S3, ECS, EC2, SQS, Lambda, Glue, IAM, API Gateway and CloudWatch.",
-            "Deploy and maintenance of containerized applications on ECS and EC2, with monitoring, metrics and alarms via CloudWatch.",
-            "Asynchronous integration between services with SQS, ensuring decoupling, resilience and safe message reprocessing.",
-            "Active participation in code reviews and application of clean code and software design principles, focused on readability and efficient debugging in production.",
-            "Data engineering of the processed data, ensuring quality, consistency and efficiency in transformations and ingestions.",
-            "Project structuring with agile methodologies (Scrum/Kanban), ensuring iterative and well-documented deliveries.",
-            "DevOps mindset focused on automation, observability and continuous improvement of data flows.",
-            "Implementation of robust error and failure handling strategies in ETL processes.",
-            "Unit tests and automated validations with the TAAC framework.",
-            "Hands-on experience with CI/CD pipelines, optimizing deploys and validations in production environments."
-          ]
+            "Development of banking data pipelines with AWS Glue and Databricks, using Python (PySpark) for distributed ETL/ELT over large data volumes.",
+            "Data modeling and architecture with SQL on Athena, Aurora/RDS and Keyspaces, supporting analytical and business solutions.",
+            "Provisioning and automation of data infrastructure as code with Terraform, ensuring reproducible and auditable environments.",
+            "Work with real banking product data, applying the quality, consistency and compliance standards required in a regulated environment.",
+            "Asynchronous integration between services with SQS, ensuring decoupling, resilience and safe data reprocessing.",
+            "Collaboration with AI and data science teams, including development and maintenance of REST APIs (Java/Node.js) that support these flows.",
+            "Active participation in code reviews and in defining engineering best practices, focused on readability, maintainability and reliability.",
+            "DevOps mindset: automation, observability and continuous improvement of pipelines, with automated testing (TAAC framework) and CI/CD."
+          ],
+          "role": "Jr. Back-End Developer (Data Engineer)"
         },
         {
           "period": "April 2024 — April 2025",
-          "description": "Internship focused on Python and Terraform development to manage AWS Lambda resources, integrate cloud services and adopt a DevOps philosophy.",
+          "description": "Internship focused on Python and Terraform to manage data resources on AWS, integrating cloud services with a DevOps mindset.",
           "bullets": [
-            "Development in Python and Terraform to manage AWS Lambda resources.",
-            "Use of services such as API Gateway, SQS, Lambda, S3 and ServiceNow.",
-            "Use of agile methodologies in project development and organization.",
-            "DevOps mindset and philosophy applied to AWS Cloud infrastructure.",
-            "Handling events, incidents and workflows with ServiceNow.",
-            "Experience with Continuous Integration and Continuous Delivery (CI/CD) and troubleshooting in developed products.",
-            "API development following the OpenAPI 3.0 specification, focused on contract standardization and system integration."
-          ]
+            "Development in Python and Terraform to manage data resources on AWS Lambda.",
+            "Building and integrating solutions with API Gateway, SQS, Lambda, S3 and ServiceNow.",
+            "Development of APIs following OpenAPI 3.0, focused on contract standardization and integration between systems.",
+            "Application of a DevOps mindset to cloud data infrastructure (AWS)."
+          ],
+          "role": "Intern — Python, Terraform & AWS"
         },
         {
-          "period": "Sep 2023 — Dec 2023",
-          "description": "Active participation in the development of DORA, an innovative electronic medical record. Contributions to data integration, performance and security, always focused on usability."
-        },
-        {
-          "period": "Dec 2021 — Sep 2023",
-          "description": "Project management using eSQL (IBM Toolkit), intensive AWS studies with access to training tools. Earned several IBM Badges. FGC-SPG project aimed at efficient customer segmentation."
-        },
-        {
-          "period": "Sep 2021 — Dec 2021",
-          "description": "Collaboration in the purchasing department, gaining knowledge in procurement processes and supply management."
+          "period": "December 2021 — December 2023",
+          "description": "Back-end and front-end development on customer segmentation and electronic medical record projects, focused on data quality and reliability.",
+          "bullets": [
+            "Contribution to the FGCSPG project, on customer type segmentation, focused on data quality and reliability.",
+            "Participation in the development of DORA (electronic medical record), focused on data integration, performance and security.",
+            "Intensified studies of AWS Solution Architect and technical certifications related to data and integration."
+          ],
+          "role": "Back-End & Front-End Developer"
         }
       ]
     },
     "certifications": {
       "num": "04",
-      "title": "complementary education",
-      "subtitle": "Certifications earned throughout my career across technology, AI and cloud platforms.",
-      "meta": "7 credentials",
-      "issued": "issued by",
+      "title": "education and certifications",
+      "subtitle": "B.Sc. in Computer Science plus certifications earned in data, AI, cloud and integration.",
+      "meta": "8 credentials",
+      "issued": "by",
       "items": [
+        {
+          "name": "B.Sc. in Computer Science",
+          "issuer": "Universidade Paulista (UNIP) · 2021—2025",
+          "tag": "education"
+        },
         {
           "name": "Machine Learning Associate",
           "issuer": "IOX — Itaú",
           "tag": "machine-learning"
         },
         {
-          "name": "Associate — Generative AI",
+          "name": "Generative AI Associate",
           "issuer": "IOX — Itaú",
           "tag": "artificial-intelligence"
         },
@@ -607,9 +605,9 @@ export const translations = {
           "tag": "ai-for-coding"
         },
         {
-          "name": "MySQL Certifications",
+          "name": "MySQL certifications",
           "issuer": "MySQL / Oracle",
-          "tag": "database"
+          "tag": "databases"
         },
         {
           "name": "IBM Integration Bus / API",
@@ -635,13 +633,13 @@ export const translations = {
       "meta": "reply within 24h",
       "cardTitle": "who i am",
       "paragraphs": [
-        "My name is **Guilherme Cadima**, I am 25 years old and live in São Paulo, Brazil. I am a Software Developer with a degree in Computer Science from Universidade Paulista, focused on Data Engineering and back-end development.",
-        "Passionate about technology for 6 years, I work daily with Python, Java, AWS Cloud and data pipelines — turning raw data into scalable and reliable solutions. I use AI as a productivity tool to accelerate and improve development.",
-        "I have a growing passion for **Machine Learning** — I study algorithms, predictive models and practical applications with Python. My next goal is to work dedicatedly in this field, combining my solid Data Engineering foundation with the intelligence of models.",
-        "Beyond code, I am the father of a lovely girl, a passionate São Paulo FC fan, and a fan of the gym, animals, Super-Heroes, tabletop RPG and Cinema. My favorite book is **“1984”** by George Orwell."
+        "My name is **Guilherme Cadima**, I'm 25 and I live in São Paulo, Brazil. I'm a **Data Engineer at Itaú Unibanco** and hold a B.Sc. in Computer Science from Universidade Paulista.",
+        "My daily work is building banking data pipelines with **Python (PySpark)**, **AWS Glue** and **Databricks** — distributed ETL/ELT over large volumes, SQL data modeling and infrastructure as code with Terraform, within the governance and compliance standards of a financial institution.",
+        "I study **MLOps and feature stores** in an applied way and work closely with AI and data science teams. I use generative AI every day to speed up experimentation and development.",
+        "Outside of code, I am the father of a beautiful girl, a die-hard São Paulo FC fan, and a fan of the gym, animals, superheroes, tabletop RPGs and cinema. My favourite book is **“1984”** by George Orwell."
       ],
       "statExp": "years of experience",
-      "statProjects": "delivered projects",
+      "statProjects": "projects delivered",
       "formTitle": "send me a message",
       "formHint": "Fill in the fields and I will reply to your e-mail.",
       "labelName": "name",
@@ -657,8 +655,8 @@ export const translations = {
       "error": "Could not send. Please try again or reach me by e-mail."
     },
     "footer": {
-      "role": "software developer & data engineer",
-      "copyright": "© 2026 guilherme cadima — built with react & tailwind",
+      "role": "data engineer · databricks, pyspark & aws",
+      "copyright": "© 2026 guilherme cadima",
       "madeWith": "built with React, Tailwind and a lot of coffee",
       "top": "back to top"
     },
@@ -678,32 +676,19 @@ export const translations = {
       "menu": "navegación"
     },
     "hero": {
+      "eyebrow": "portafolio · 2026",
       "status": "Disponible para nuevos proyectos · São Paulo, BR",
       "greeting": "Hola, soy",
       "roles": [
-        "backend developer",
-        "data engineer",
-        "ml enthusiast",
-        "tech enthusiast"
+        "ingeniero de datos",
+        "databricks & pyspark",
+        "etl/elt distribuido",
+        "datos bancarios a escala"
       ],
-      "description": "Desarrollador de Software e Ingeniero de Datos con 6 años de experiencia, especializado en Python, Java, AWS Cloud y APIs REST.",
+      "description": "Ingeniero de Datos en Itaú Unibanco. Construyo pipelines de datos bancarios con Python (PySpark), AWS Glue y Databricks, en un entorno de alta exigencia de gobernanza y compliance.",
       "ctaPrimary": "Descargar CV",
       "ctaSecondary": "Hablar conmigo",
-      "scroll": "desplázate para explorar",
-      "stats": [
-        {
-          "value": "6+",
-          "label": "años de experiencia"
-        },
-        {
-          "value": "3+",
-          "label": "proyectos entregados"
-        },
-        {
-          "value": "7",
-          "label": "certificaciones"
-        }
-      ],
+      "toolkit": "herramientas del día a día",
       "spec": [
         {
           "k": "base",
@@ -711,19 +696,31 @@ export const translations = {
         },
         {
           "k": "enfoque",
-          "v": "Datos & Back-end"
+          "v": "Ingeniería de Datos"
         },
         {
           "k": "stack",
-          "v": "Python · Java · AWS"
+          "v": "PySpark · Databricks · AWS"
         },
         {
           "k": "estado",
           "v": "Abierto a propuestas"
         }
       ],
-      "eyebrow": "portafolio · 2026",
-      "toolkit": "herramientas del día a día",
+      "stats": [
+        {
+          "value": "6+",
+          "label": "años de experiencia"
+        },
+        {
+          "value": "4",
+          "label": "proyectos entregados"
+        },
+        {
+          "value": "7",
+          "label": "certificaciones"
+        }
+      ],
       "resume": {
         "menuLabel": "elige el idioma del currículum",
         "recommended": "recomendado",
@@ -736,43 +733,21 @@ export const translations = {
     "skills": {
       "num": "01",
       "title": "lo que sé hacer",
-      "subtitle": "Tecnologías y herramientas que uso a diario para construir soluciones robustas y escalables.",
-      "meta": "8 categorías · 40+ tecnologías",
-      "level": "nivel",
+      "subtitle": "Las tecnologías que uso para llevar el dato crudo hasta una solución analítica confiable — con el nivel real de profundidad en cada una.",
+      "meta": "7 categorías · 30+ tecnologías",
       "categories": [
         {
-          "name": "ingeniería de software",
+          "name": "datos & big data",
           "techs": [
-            "Diseño de Software",
-            "Clean Code",
-            "Code Review",
-            "Debugging",
-            "Git (Avanzado)"
+            "SQL — consultas complejas",
+            "Modelado de datos",
+            "Databricks (Spark/PySpark)",
+            "Delta Lake (en estudio aplicado)",
+            "ETL/ELT distribuido"
           ]
         },
         {
-          "name": "lenguajes & frameworks",
-          "techs": [
-            "Java",
-            "Python (PySpark)",
-            "JavaScript / TypeScript",
-            "Node.js",
-            "React / React Native",
-            "SQL",
-            "HTML / CSS"
-          ]
-        },
-        {
-          "name": "apis & integración",
-          "techs": [
-            "APIs REST",
-            "OpenAPI 3.0",
-            "API Gateway",
-            "SQS (Mensajería)"
-          ]
-        },
-        {
-          "name": "cloud & datos (aws)",
+          "name": "cloud de datos (aws)",
           "techs": [
             "AWS Glue",
             "Athena",
@@ -782,39 +757,52 @@ export const translations = {
           ]
         },
         {
+          "name": "lenguajes",
+          "techs": [
+            "Python (PySpark)",
+            "JavaScript / TypeScript",
+            "Java (básico)",
+            "Node.js (básico)",
+            "React / React Native"
+          ]
+        },
+        {
           "name": "compute & infra (aws)",
           "techs": [
             "Lambda",
-            "EC2",
+            "ECS / EC2",
+            "SQS",
+            "API Gateway",
             "CloudWatch",
             "IAM",
-            "Terraform"
+            "Terraform (IaC)"
           ]
         },
         {
-          "name": "contenedores & orquestación",
+          "name": "gobernanza & calidad",
           "techs": [
-            "Docker",
-            "Kubernetes (K8s)",
-            "Amazon ECS"
-          ]
-        },
-        {
-          "name": "devops & calidad",
-          "techs": [
+            "Conformidad de datos bancarios",
+            "Trazabilidad y calidad",
+            "Pruebas automatizadas (TAAC)",
             "CI/CD",
-            "ServiceNow",
-            "Pruebas Automatizadas",
-            "Scrum / Kanban"
+            "Code review"
           ]
         },
         {
-          "name": "machine learning & ia",
+          "name": "ia & mlops",
           "techs": [
-            "Machine Learning",
-            "IA Generativa",
-            "MLOps",
-            "Claude Code"
+            "IA generativa a diario",
+            "Feature stores (estudio aplicado)",
+            "Pipelines para IA",
+            "Versionado de modelos",
+            "Observabilidad (conceptos)"
+          ]
+        },
+        {
+          "name": "orquestación & flujos",
+          "techs": [
+            "Airflow (familiaridad)",
+            "ServiceNow"
           ]
         }
       ]
@@ -822,8 +810,9 @@ export const translations = {
     "projects": {
       "num": "02",
       "title": "proyectos seleccionados",
-      "subtitle": "Cosas que construí con foco en calidad, usabilidad y buenas prácticas — algunas están en línea ahora mismo.",
+      "subtitle": "Cosas que construí desde cero — del modelo de datos al deploy. Algunas están en línea ahora mismo.",
       "meta": "haz clic y explora",
+      "band": "cada proyecto de abajo fue construido desde cero — de la base de datos al deploy.",
       "live": "en línea",
       "viewSite": "Abrir sitio",
       "code": "Código",
@@ -831,12 +820,30 @@ export const translations = {
       "items": [
         {
           "tags": [
+            "react native",
+            "ia generativa",
+            "supabase",
+            "mobile"
+          ],
+          "description": "App móvil en React Native/Expo con IA generativa aplicada al análisis de datos de planos de tienda (Gemini Vision) y generación de listas por lenguaje natural, con backend en Supabase."
+        },
+        {
+          "tags": [
+            "firebase",
+            "pwa",
+            "modelado de datos",
+            "tailwind"
+          ],
+          "description": "Control financiero personal con modelado de gastos y presupuesto, sincronización en tiempo real vía Firebase y autenticación con Google. Dashboard, Transacciones, Historial, Simulador, Inversiones, Tarjetas y Suscripciones."
+        },
+        {
+          "tags": [
             "educativo",
             "javascript",
             "interactivo",
             "didáctico"
           ],
-          "description": "Plataforma educativa donde los alumnos aprenden y practican operaciones CRUD de forma visual y didáctica. Ejecuta escenarios reales en tiempo real, visualiza lo que ocurre en cada paso y entiende en la práctica cómo funcionan Create, Read, Update y Delete — sin configurar nada."
+          "description": "Plataforma educativa donde los alumnos aprenden y practican operaciones CRUD de forma visual. Ejecuta escenarios reales en tiempo real, observa lo que ocurre en cada etapa y entiende en la práctica cómo funcionan Create, Read, Update y Delete."
         },
         {
           "tags": [
@@ -844,24 +851,15 @@ export const translations = {
             "hackathon",
             "2º-lugar"
           ],
-          "description": "2º lugar en un Hackathon centrado en StackSpot AI, utilizando Agent, Knowledge Source y QuickCommand para resolver el desafío propuesto con agilidad y creatividad."
-        },
-        {
-          "tags": [
-            "firebase",
-            "pwa",
-            "javascript",
-            "tailwind"
-          ],
-          "description": "PWA de control financiero personal con sincronización en tiempo real vía Firebase. Dashboard, Transacciones, Historial, Simulador, Inversiones, Tarjetas y Suscripciones — con autenticación vía Google."
+          "description": "2º lugar en un Hackathon con foco en StackSpot AI, utilizando Agent, Knowledge Source y QuickCommand para resolver el desafío propuesto con agilidad y creatividad."
         }
       ],
-      "band": "cada proyecto de abajo fue construido desde cero — de la base de datos al deploy."
+      "personal": "proyecto personal"
     },
     "experience": {
       "num": "03",
       "title": "trayectoria profesional",
-      "subtitle": "Mi evolución a lo largo de los años y las principales contribuciones en cada etapa.",
+      "subtitle": "Dónde trabajé y qué entregué efectivamente en cada etapa.",
       "meta": "línea de tiempo",
       "current": "actual",
       "highlights": "principales entregas",
@@ -869,76 +867,74 @@ export const translations = {
       "less": "recoger",
       "items": [
         {
-          "period": "Abril 2025 — Agosto 2026",
-          "description": "Actuación como Desarrollador Back-End Jr. (Ingeniero de Datos), desarrollando y manteniendo APIs REST en Java y Node.js y pipelines de datos con Python y Terraform en AWS, con despliegue de aplicaciones containerizadas y adopción de la filosofía DevOps.",
+          "period": "Abril 2025 — actualmente",
+          "description": "Ingeniería de datos sobre productos bancarios: pipelines de ETL/ELT distribuido con AWS Glue y Databricks, modelado en SQL e infraestructura como código, en un entorno regulado.",
           "bullets": [
-            "Desarrollo avanzado de pipelines de datos con AWS Glue, utilizando Python (PySpark) y Terraform para el aprovisionamiento y la automatización de recursos.",
-            "Desarrollo, evolución y mantenimiento de APIs REST en Java y Node.js, siguiendo la especificación OpenAPI 3.0, con contratos versionados y manejo estandarizado de errores.",
-            "Actuación amplia con servicios AWS en el procesamiento, la orquestación y la disponibilización de datos: Athena, Keyspaces, RDS, Aurora, S3, ECS, EC2, SQS, Lambda, Glue, IAM, API Gateway y CloudWatch.",
-            "Despliegue y mantenimiento de aplicaciones containerizadas en ECS y EC2, con monitoreo, métricas y alarmas vía CloudWatch.",
-            "Integración asíncrona entre servicios con SQS, garantizando desacoplamiento, resiliencia y reprocesamiento seguro de mensajes.",
-            "Participación activa en code reviews y aplicación de principios de clean code y diseño de software, con foco en legibilidad y depuración eficiente en producción.",
-            "Ingeniería de los datos trabajados, garantizando calidad, consistencia y eficiencia en las transformaciones e ingestas.",
-            "Estructuración de proyectos con metodologías ágiles (Scrum/Kanban), garantizando entregas iterativas y bien documentadas.",
-            "Mentalidad DevOps enfocada en automatización, observabilidad y mejora continua de los flujos de datos.",
-            "Implementación de estrategias robustas de manejo de errores y fallos en los procesos de ETL.",
-            "Pruebas unitarias y validaciones automatizadas con el framework TAAC.",
-            "Experiencia práctica con pipelines de CI/CD, optimizando despliegues y validaciones en entornos productivos."
-          ]
+            "Desarrollo de pipelines de datos bancarios con AWS Glue y Databricks, utilizando Python (PySpark) para ETL/ELT distribuido sobre grandes volúmenes de datos.",
+            "Modelado y arquitectura de datos con SQL en Athena, Aurora/RDS y Keyspaces, dando soporte a soluciones analíticas y de negocio.",
+            "Aprovisionamiento y automatización de infraestructura de datos como código con Terraform, garantizando entornos replicables y auditables.",
+            "Trabajo con datos reales de productos bancarios, aplicando los estándares de calidad, consistencia y conformidad exigidos en un entorno regulado.",
+            "Integración asíncrona entre servicios con SQS, garantizando desacoplamiento, resiliencia y reprocesamiento seguro de datos.",
+            "Colaboración con equipos de IA y ciencia de datos, incluyendo desarrollo y mantenimiento de APIs REST (Java/Node.js) que soportan esos flujos.",
+            "Participación activa en code reviews y en la definición de buenas prácticas de ingeniería, con foco en legibilidad, mantenibilidad y confiabilidad.",
+            "Mentalidad DevOps: automatización, observabilidad y mejora continua de pipelines, con pruebas automatizadas (framework TAAC) y CI/CD."
+          ],
+          "role": "Desarrollador Back-End Jr. (Ingeniero de Datos)"
         },
         {
           "period": "Abril 2024 — Abril 2025",
-          "description": "Pasantía enfocada en el desarrollo con Python y Terraform para la gestión de recursos en AWS Lambda, integración de servicios cloud y adopción de la filosofía DevOps.",
+          "description": "Prácticas centradas en Python y Terraform para gestionar recursos de datos en AWS, integrando servicios cloud con mentalidad DevOps.",
           "bullets": [
-            "Desarrollo en Python y Terraform para la gestión de recursos en AWS Lambda.",
-            "Uso de servicios como API Gateway, SQS, Lambda, S3 y ServiceNow.",
-            "Uso de metodologías ágiles en el desarrollo y organización de proyectos.",
-            "Mentalidad y filosofía DevOps aplicada a la infraestructura AWS Cloud.",
-            "Gestión de eventos, incidentes y flujos con ServiceNow.",
-            "Experiencia con Integración y Entrega Continuas (CI/CD) y troubleshooting en los productos desarrollados.",
-            "Desarrollo de APIs siguiendo la especificación OpenAPI 3.0, con foco en la estandarización de contratos e integración entre sistemas."
-          ]
+            "Desarrollo en Python y Terraform para la gestión de recursos de datos en AWS Lambda.",
+            "Construcción e integración de soluciones con API Gateway, SQS, Lambda, S3 y ServiceNow.",
+            "Desarrollo de APIs siguiendo OpenAPI 3.0, con foco en la estandarización de contratos y la integración entre sistemas.",
+            "Aplicación de una mentalidad DevOps a la infraestructura de datos en la nube (AWS)."
+          ],
+          "role": "Prácticas — Python, Terraform & AWS"
         },
         {
-          "period": "Sep 2023 — Dic 2023",
-          "description": "Participación activa en el desarrollo de DORA, un historial médico electrónico innovador. Contribuciones en integración de datos, rendimiento y seguridad, siempre con foco en la usabilidad."
-        },
-        {
-          "period": "Dic 2021 — Sep 2023",
-          "description": "Gestión de proyectos utilizando eSQL (IBM Toolkit), estudios intensivos de AWS con acceso a herramientas de formación. Obtención de varios Badges IBM. Proyecto FGC-SPG destinado a la segmentación eficiente de tipos de clientes."
-        },
-        {
-          "period": "Sep 2021 — Dic 2021",
-          "description": "Colaboración en el departamento de compras, adquiriendo conocimiento en procesos de adquisición y gestión de suministros."
+          "period": "Diciembre 2021 — Diciembre 2023",
+          "description": "Desarrollo back-end y front-end en proyectos de segmentación de clientes e historia clínica electrónica, con foco en calidad y confiabilidad de los datos.",
+          "bullets": [
+            "Contribución al proyecto FGCSPG, de segmentación de tipos de clientes, con foco en calidad y confiabilidad de los datos.",
+            "Participación en el desarrollo de DORA (historia clínica electrónica), con foco en integración de datos, rendimiento y seguridad.",
+            "Estudios intensificados de AWS Solution Architect y certificaciones técnicas relacionadas con datos e integración."
+          ],
+          "role": "Desarrollador Back-End & Front-End"
         }
       ]
     },
     "certifications": {
       "num": "04",
-      "title": "formación complementaria",
-      "subtitle": "Certificaciones obtenidas a lo largo de mi carrera en plataformas de tecnología, IA y cloud.",
-      "meta": "7 credenciales",
-      "issued": "emitido por",
+      "title": "formación y certificaciones",
+      "subtitle": "Licenciatura en Ciencias de la Computación y certificaciones obtenidas en datos, IA, cloud e integración.",
+      "meta": "8 credenciales",
+      "issued": "por",
       "items": [
+        {
+          "name": "Licenciatura en Ciencias de la Computación",
+          "issuer": "Universidade Paulista (UNIP) · 2021—2025",
+          "tag": "formación"
+        },
         {
           "name": "Machine Learning Associate",
           "issuer": "IOX — Itaú",
           "tag": "machine-learning"
         },
         {
-          "name": "Associate — Generative AI",
+          "name": "Generative AI Associate",
           "issuer": "IOX — Itaú",
           "tag": "inteligencia-artificial"
         },
         {
           "name": "DEVA — AI Coding Agents",
           "issuer": "Cognition",
-          "tag": "ia-para-programación"
+          "tag": "ia-para-codificación"
         },
         {
           "name": "Certificaciones en MySQL",
           "issuer": "MySQL / Oracle",
-          "tag": "base-de-datos"
+          "tag": "bases-de-datos"
         },
         {
           "name": "IBM Integration Bus / API",
@@ -964,10 +960,10 @@ export const translations = {
       "meta": "respuesta en 24h",
       "cardTitle": "quién soy",
       "paragraphs": [
-        "Me llamo **Guilherme Cadima**, tengo 25 años y vivo en São Paulo, Brasil. Soy Desarrollador de Software graduado en Ciencia de la Computación por la Universidade Paulista, con foco en Ingeniería de Datos y desarrollo back-end.",
-        "Apasionado por la tecnología desde hace 6 años, trabajo a diario con Python, Java, AWS Cloud y pipelines de datos — transformando datos en bruto en soluciones escalables y confiables. Uso IAs como herramienta de productividad para acelerar y mejorar el desarrollo.",
-        "Tengo una pasión creciente por el **Machine Learning** — estudio algoritmos, modelos predictivos y aplicaciones prácticas con Python. Mi próximo objetivo es dedicarme de lleno a esta área, uniendo mi sólida base en Ingeniería de Datos con la inteligencia de los modelos.",
-        "Fuera del código, soy padre de una hermosa niña, hincha del São Paulo FC, fan del gimnasio, los animales, los Superhéroes, el RPG de mesa y el Cine. Mi libro favorito es **“1984”** de George Orwell."
+        "Me llamo **Guilherme Cadima**, tengo 25 años y vivo en São Paulo, Brasil. Soy **Ingeniero de Datos en Itaú Unibanco** y licenciado en Ciencias de la Computación por la Universidade Paulista.",
+        "Mi día a día es construir pipelines de datos bancarios con **Python (PySpark)**, **AWS Glue** y **Databricks** — ETL/ELT distribuido sobre grandes volúmenes, modelado de datos en SQL e infraestructura como código con Terraform, dentro de los estándares de gobernanza y compliance de una institución financiera.",
+        "Estudio **MLOps y feature stores** de forma aplicada y trabajo cerca de los equipos de IA y ciencia de datos. Uso IA generativa todos los días para acelerar la experimentación y el desarrollo.",
+        "Fuera del código, soy padre de una niña preciosa, hincha del São Paulo FC y fan del gimnasio, los animales, los superhéroes, los juegos de rol de mesa y el cine. Mi libro favorito es **“1984”** de George Orwell."
       ],
       "statExp": "años de experiencia",
       "statProjects": "proyectos entregados",
@@ -986,8 +982,8 @@ export const translations = {
       "error": "No se pudo enviar. Inténtalo de nuevo o escríbeme por e-mail."
     },
     "footer": {
-      "role": "desarrollador de software e ingeniero de datos",
-      "copyright": "© 2026 guilherme cadima — hecho con react & tailwind",
+      "role": "ingeniero de datos · databricks, pyspark & aws",
+      "copyright": "© 2026 guilherme cadima",
       "madeWith": "hecho con React, Tailwind y mucho café",
       "top": "volver arriba"
     },

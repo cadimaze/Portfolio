@@ -70,7 +70,7 @@ const About = () => {
 
             <div className="mt-7 flex gap-3">
               <Stat value="6+" label={a.statExp} />
-              <Stat value="3+" label={a.statProjects} />
+              <Stat value="4" label={a.statProjects} />
             </div>
           </Card>
         </Reveal>
