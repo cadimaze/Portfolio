@@ -62,7 +62,7 @@ const About = () => {
 
             <div className="mt-5 space-y-4">
               {a.paragraphs.map((para, i) => (
-                <p key={i} className="text-[13.5px] leading-8 text-ink/70">
+                <p key={i} className="text-[13.5px] leading-8 text-ink/80">
                   {renderRich(para)}
                 </p>
               ))}

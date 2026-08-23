@@ -52,7 +52,7 @@ const ExperienceItem = ({ exp, t }) => {
           {exp.role}
         </p>
 
-        <p className="mt-4 text-[13.5px] leading-7 text-ink/70">{exp.description}</p>
+        <p className="mt-4 text-[13.5px] leading-7 text-ink/80">{exp.description}</p>
 
         {bullets.length > 0 && (
           <div className="sunken-sm mt-5 rounded-2xl p-5">
@@ -61,7 +61,7 @@ const ExperienceItem = ({ exp, t }) => {
             </p>
             <ul className="grid gap-2.5">
               {shown.map((bullet) => (
-                <li key={bullet} className="flex gap-3 text-[12.5px] leading-6 text-ink/70">
+                <li key={bullet} className="flex gap-3 text-[12.5px] leading-6 text-ink/80">
                   <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70" />
                   <span>{bullet}</span>
                 </li>

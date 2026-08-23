@@ -136,7 +136,6 @@ body {
   font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
   background-color: var(--bg);
   color: var(--ink);
-  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
@@ -232,11 +231,11 @@ body::before {
   transform: rotateX(var(--rx)) rotateY(var(--ry)) translateZ(var(--lift));
   transform-style: preserve-3d;
   transition: transform 0.5s cubic-bezier(0.22, 0.8, 0.28, 1), box-shadow 0.4s ease;
-  will-change: transform;
   position: relative;
 }
 
 .tilt[data-active='true'] {
+  will-change: transform;
   transition: transform 0.08s linear, box-shadow 0.4s ease;
   box-shadow: 20px 24px 44px var(--sh-dark), -12px -12px 26px var(--sh-light);
 }
@@ -263,8 +262,11 @@ body::before {
   opacity: 1;
 }
 
+/* O conteúdo fica no plano do cartão. Elevá-lo em Z fazia o navegador
+   rasterizar o texto e depois escalar a camada — daí o texto "fora de
+   foco". A profundidade continua vindo da inclinação e do reflexo. */
 .tilt > * {
-  transform: translateZ(18px);
+  transform: none;
 }
 
 /* --------------------------------------------------------- miscelânea */

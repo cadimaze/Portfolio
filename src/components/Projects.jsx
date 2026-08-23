@@ -89,7 +89,7 @@ const Projects = () => {
                 </p>
               )}
 
-              <p className="mt-3 line-clamp-5 text-[13.5px] leading-7 text-ink/65">{project.description}</p>
+              <p className="mt-3 line-clamp-5 text-[13.5px] leading-7 text-ink/80">{project.description}</p>
 
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (

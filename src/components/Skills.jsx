@@ -89,7 +89,7 @@ const Skills = () => {
                     return (
                       <li key={name} className="flex items-center gap-2.5">
                         <span className="shrink-0 text-[15px] text-accent/70">{Icon && <Icon />}</span>
-                        <span className="font-mono text-[12px] leading-5 text-ink/70">{name}</span>
+                        <span className="font-mono text-[12px] leading-5 text-ink/85">{name}</span>
                       </li>
                     )
                   })}
